@@ -1,0 +1,1882 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-16T14:41:26.736Z",
+  "entries": {
+    "memory:memory/2026-06-07.md:1:26": {
+      "key": "memory:memory/2026-06-07.md:1:26",
+      "path": "memory/2026-06-07.md",
+      "startLine": 1,
+      "endLine": 26,
+      "source": "memory",
+      "snippet": "# 2026-06-07 Memory ## Guangzhou Trip Planning (15-21 Jun 2026) - Jack is planning a trip to Guangzhou, 15-21 June 2026 (6 nights) - 2 people traveling, need twin bed rooms - Key locations for Days 1-2: 中山大学附属第一医院 (Yuexiu District) and 上下九步行街 (Liwan District) - Both key locations are on Metro Line 1 — strategic hotel area is Beijing Road / Gongyuanqian - Budget: MYR 1xx/night (budget-conscious) - Created project workspace at ~/topics/guangzhou26/ - Hotel research file saved at ~/topics/guangzhou26/hotel-research.md - Did 3 rounds of hotel research via Trip.com browser search: 1. Initial search — general hotels near Yuexiu/Shangxiajiu 2. Refined for twin bed rooms 3. Refined again for",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-07T14:55:31.521Z",
+      "lastRecalledAt": "2026-06-07T14:56:44.926Z",
+      "queryHashes": [
+        "b960cdb6abfd",
+        "30a00991b7c0"
+      ],
+      "recallDays": [
+        "2026-06-07"
+      ],
+      "conceptTags": [
+        "15-21",
+        "1-2",
+        "1xx/night",
+        "budget-conscious",
+        "topics/guangzhou26",
+        "trip.com",
+        "yuexiu/shangxiajiu",
+        "guangzhou"
+      ]
+    },
+    "memory:memory/2026-06-07.md:23:43": {
+      "key": "memory:memory/2026-06-07.md:23:43",
+      "path": "memory/2026-06-07.md",
+      "startLine": 23,
+      "endLine": 43,
+      "source": "memory",
+      "snippet": "- Jack is planning a trip to Guangzhou, 15-21 June 2026 (6 nights) - 2 people traveling, need twin bed rooms - Key locations for Days 1-2: 中山大学附属第一医院 (Yuexiu District) and 上下九步行街 (Liwan District) - Both key locations are on Metro Line 1 — strategic hotel area is Beijing Road / Gongyuanqian - Budget: MYR 1xx/night (budget-conscious) - Created project workspace at ~/topics/guangzhou26/ - Hotel research file saved at ~/topics/guangzhou26/hotel-research.md - Transport guide saved at ~/topics/guangzhou26/transport-guide.md - Did 3 rounds of hotel research via Trip.com browser search: 1. Initial search — general hotels near Yuexiu/Shangxiajiu 2. Refined for twin bed rooms 3. Refined again fo",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-07T14:55:31.521Z",
+      "lastRecalledAt": "2026-06-07T14:56:44.926Z",
+      "queryHashes": [
+        "b960cdb6abfd",
+        "30a00991b7c0"
+      ],
+      "recallDays": [
+        "2026-06-07"
+      ],
+      "conceptTags": [
+        "15-21",
+        "1-2",
+        "1xx/night",
+        "budget-conscious",
+        "topics/guangzhou26",
+        "trip.com",
+        "yuexiu/shangxiajiu",
+        "jack"
+      ]
+    },
+    "memory:memory/2026-06-07.md:97:116": {
+      "key": "memory:memory/2026-06-07.md:97:116",
+      "path": "memory/2026-06-07.md",
+      "startLine": 97,
+      "endLine": 116,
+      "source": "memory",
+      "snippet": "- ✅ Better: First analyze which metro line serves the most destinations, then search along that line - ❌ Mistake: Only searched Trip.com and Agoda — missed hotels on other platforms (Meituan, Booking.com) - ✅ Better: Cast a wider net across multiple booking platforms - ❌ Mistake: Concluded too quickly that 星河悦智·S was the best option without exploring Line 1 corridor hotels - ✅ Better: Always compare options along the primary destination line vs hub-based options - Key insight: For Guangzhou, Line 1 (east-west through old city) is the golden line — 上下九, 医院, 北京路, 天河 all on Line 1 # 2026-06-07 Daily Notes ## Jack's Medical Research Requests (hospital topic, Telegram group) ### Request 1: Thre",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-07T14:56:44.926Z",
+      "lastRecalledAt": "2026-06-28T14:56:10.070Z",
+      "queryHashes": [
+        "30a00991b7c0",
+        "7a2ccc7c293e"
+      ],
+      "recallDays": [
+        "2026-06-07",
+        "2026-06-28"
+      ],
+      "conceptTags": [
+        "trip.com",
+        "booking.com",
+        "hub-based",
+        "east-west",
+        "better",
+        "first",
+        "analyze",
+        "which"
+      ]
+    },
+    "memory:memory/2026-06-07.md:128:134": {
+      "key": "memory:memory/2026-06-07.md:128:134",
+      "path": "memory/2026-06-07.md",
+      "startLine": 128,
+      "endLine": 134,
+      "source": "memory",
+      "snippet": "- 现场挂号（带护照，早上7点前排队） - 护照=就诊卡，旅游签证即可 - 中山一院地址：越秀区中山二路58号，地铁烈士陵园站 ### Key context - Jack appears to be helping someone (likely Malaysian) find gynecology/reproductive doctors in Guangzhou - Web research was challenging — multiple attempts with different search engines had issues (baidu captcha, google blocked, bing empty results). Eventually got data from hospital official pages via browser tool.",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-07T14:56:44.926Z",
+      "lastRecalledAt": "2026-06-07T14:56:44.926Z",
+      "queryHashes": [
+        "30a00991b7c0"
+      ],
+      "recallDays": [
+        "2026-06-07"
+      ],
+      "conceptTags": [
+        "gynecology/reproductive",
+        "现场",
+        "挂号",
+        "护照",
+        "早上",
+        "排队",
+        "旅游",
+        "签证"
+      ]
+    },
+    "memory:memory/2026-06-07.md:39:64": {
+      "key": "memory:memory/2026-06-07.md:39:64",
+      "path": "memory/2026-06-07.md",
+      "startLine": 39,
+      "endLine": 64,
+      "source": "memory",
+      "snippet": "- Important caveat: At this budget, most default rooms are Queen/King — need to verify twin availability on booking page ### Lavande Hotel (丽枫酒店) Comparison — Agoda Search - Jack specifically asked to check Agoda for Lavande Hotel (丽枫酒店广州火车站越秀国际会展中心店) - Spent significant effort trying to search Agoda via browser — anti-bot measures very aggressive - Search box errors, redirects to wrong locations (Peschici, Italy), 0 results pages - Eventually got to hotel detail page via autocomplete selection - **Lavande Hotel Agoda findings:** - 2-star, 9.4/10 rating (1,722 reviews) - Location: 白云区三元里, 15 Yuangang Rd — near 三元里/Guangzhou Railway Station - NO elevator ⚠️ - Standard Queen Room: MYR",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-07T14:56:44.926Z",
+      "lastRecalledAt": "2026-06-07T14:56:44.926Z",
+      "queryHashes": [
+        "30a00991b7c0"
+      ],
+      "recallDays": [
+        "2026-06-07"
+      ],
+      "conceptTags": [
+        "queen/king",
+        "anti-bot",
+        "2-star",
+        "9.4/10",
+        "三元里/guangzhou",
+        "important",
+        "caveat",
+        "budget"
+      ]
+    },
+    "memory:memory/2026-06-07.md:142:147": {
+      "key": "memory:memory/2026-06-07.md:142:147",
+      "path": "memory/2026-06-07.md",
+      "startLine": 142,
+      "endLine": 147,
+      "source": "memory",
+      "snippet": "### Key Lessons This Session - Hotel search strategy was wrong: focused on transport hubs (Line 2) instead of the destination line (Line 1). Jack's own find (逸方酒店 at 陈家祠 Line 1+8) was far superior. - Agoda/Trip.com anti-bot measures make browser automation very difficult. Autocomplete is the only reliable Agoda path. - Chinese hotel terminology: 双床房 = twin beds ✅, 双人房 = one double bed ❌, 大床房 = one king/queen ❌ - When search can't find a user-mentioned entity, ask for full name/address immediately rather than blind searching - Always present decision framework and tradeoffs, not just \"best\" recommendations",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-22T16:11:53.571Z",
+      "lastRecalledAt": "2026-06-22T16:11:53.571Z",
+      "queryHashes": [
+        "f47df2b4103d"
+      ],
+      "recallDays": [
+        "2026-06-23"
+      ],
+      "conceptTags": [
+        "agoda/trip.com",
+        "anti-bot",
+        "king/queen",
+        "user-mentioned",
+        "name/address",
+        "key",
+        "lessons",
+        "hotel"
+      ]
+    },
+    "memory:memory/2026-05-29.md:1:25": {
+      "key": "memory:memory/2026-05-29.md:1:25",
+      "path": "memory/2026-05-29.md",
+      "startLine": 1,
+      "endLine": 25,
+      "source": "memory",
+      "snippet": "# 2026-05-29 Daily Notes ## News Pipeline Improvement Project (In Progress) ### Goal Jack wants me to study 4 sample daily news emails generated by ActivePiece automation and compare against my own daily news output to identify quality/stability gaps. Improve my pipelines to match ActivePiece's steady quality and performance. ### Key Constraints - **TEST_MODE**: No image generation or email sending during testing — only after Jack approves - Target: match ActivePiece's consistent quality (my output fluctuates — some days good, some days fewer than 5 AI articles) - Same sources used by both ActivePiece and my bot ### Project Workspace - `~/topics/news` (NOT ~/.openclaw/workspace — Jack ex",
+      "recallCount": 7,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 7,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-26T03:31:37.061Z",
+      "lastRecalledAt": "2026-07-06T09:44:18.863Z",
+      "queryHashes": [
+        "fb03bf74f5d0",
+        "ff5cbdc9dd34",
+        "4b0a5c7c049c",
+        "ba364efabb71",
+        "cbf593166d1b",
+        "dd8321688c26",
+        "c6a4d89498b0"
+      ],
+      "recallDays": [
+        "2026-06-26",
+        "2026-06-29",
+        "2026-07-06"
+      ],
+      "conceptTags": [
+        "quality/stability",
+        "test-mode",
+        "topics/news",
+        "openclaw/workspace",
+        "news",
+        "pipeline",
+        "improvement",
+        "project"
+      ]
+    },
+    "memory:memory/2026-05-29.md:127:147": {
+      "key": "memory:memory/2026-05-29.md:127:147",
+      "path": "memory/2026-05-29.md",
+      "startLine": 127,
+      "endLine": 147,
+      "source": "memory",
+      "snippet": "- \"AI News\" (not \"🧠 AI & Machine Learning\") - \"Science & Tech News\" (not \"💻 Science & Technology\") - \"News Relevant to Local AI Startup\" (not \"🌏 Relevant to Penang AI Startup\") 4. **Summary length**: change to exactly 2 sentences, not 2-3 5. **Email subject**: change to \"Daily AI & Tech Pulse\" (not \"Daily AI & Tech News\") 6. **HTML design**: simplify — remove gradients, colored section backgrounds, shadows. Use clean white background with subtle separators 7. **Source culling**: HuggingFace/DeepMind blog posts are too niche for this audience — they should be deprioritized or removed from the AI article pool. ActivePiece uses mainstream news only 8. **Article format**: ActivePiece",
+      "recallCount": 4,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 4,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-26T03:31:37.061Z",
+      "lastRecalledAt": "2026-07-06T09:44:10.432Z",
+      "queryHashes": [
+        "fb03bf74f5d0",
+        "ff5cbdc9dd34",
+        "4b0a5c7c049c",
+        "cbf593166d1b"
+      ],
+      "recallDays": [
+        "2026-06-26",
+        "2026-06-29",
+        "2026-07-06"
+      ],
+      "conceptTags": [
+        "2-3",
+        "huggingface/deepmind",
+        "news",
+        "not",
+        "machine",
+        "learning",
+        "science",
+        "tech"
+      ]
+    },
+    "memory:memory/2026-05-29.md:306:324": {
+      "key": "memory:memory/2026-05-29.md:306:324",
+      "path": "memory/2026-05-29.md",
+      "startLine": 306,
+      "endLine": 324,
+      "source": "memory",
+      "snippet": "- **Energy (3)**: Germany power price swings, India renewable bottlenecks, China cheap electricity for AI data centers - All clean, no Chinese text ✅ ### Recipients preserved: swlee@grundfos.com (To), siaw.chen.lee@intel.com (Cc), soonee.ong@gmail.com (Bcc) - Note: This was already the original recipient list for ESG. Not changed. --- ## All 3 Pipelines Status | Pipeline | Script | TEST_MODE | Quality Upgraded | Recipients | |----------|--------|-----------|-----------------|------------| | AI & Tech | daily-news-cron.sh | ON (default=true) | ✅ All 18 fixes | soonee.ong@gmail.com (To), siaw.chen.lee@intel.com (Cc) | | General News | daily-general-news.sh | ON (default=true) | ✅ All improv",
+      "recallCount": 4,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 4,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-26T03:31:37.061Z",
+      "lastRecalledAt": "2026-07-16T07:11:37.348Z",
+      "queryHashes": [
+        "fb03bf74f5d0",
+        "ff5cbdc9dd34",
+        "4b0a5c7c049c",
+        "c52715eb878e"
+      ],
+      "recallDays": [
+        "2026-06-26",
+        "2026-06-29",
+        "2026-07-16"
+      ],
+      "conceptTags": [
+        "grundfos.com",
+        "siaw.chen.lee",
+        "intel.com",
+        "soonee.ong",
+        "gmail.com",
+        "test-mode",
+        "daily-news-cron.sh",
+        "daily-general-news.sh"
+      ]
+    },
+    "memory:memory/2026-05-29.md:93:116": {
+      "key": "memory:memory/2026-05-29.md:93:116",
+      "path": "memory/2026-05-29.md",
+      "startLine": 93,
+      "endLine": 116,
+      "source": "memory",
+      "snippet": "--- ## FULL COMPARISON: ActivePiece vs. My Pipeline ### Structural Differences | Feature | ActivePiece | My Pipeline | |---------|-------------|------------| | AI articles | **Exactly 5** (always) | \"5-7\" range → LLM sometimes picks fewer | | Sci/Tech articles | **Exactly 3** (always) | **Exactly 3** (prompt says 3) | | Local/Penang articles | **Exactly 1** (always) | **Exactly 1** (prompt says 1) | | Total articles | **Always 9** | Fluctuates 5-11 | | Header image | Pollinations 1024×600 nologo=true | Pollinations 1024×1024 (square!), with logo | | Section headers | Plain text: \"AI News\", \"Science & Tech News\", \"News Relevant to Local AI Startup\" | Emoji headers: \"🧠 AI & Machine Learning",
+      "recallCount": 7,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 7,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-26T03:31:37.061Z",
+      "lastRecalledAt": "2026-06-28T17:04:33.955Z",
+      "queryHashes": [
+        "fb03bf74f5d0",
+        "8e3f1ab2b853",
+        "7a2ccc7c293e",
+        "ff5cbdc9dd34",
+        "81370ef8fc49",
+        "b722ebcef3f2",
+        "4b0a5c7c049c"
+      ],
+      "recallDays": [
+        "2026-06-26",
+        "2026-06-27",
+        "2026-06-28",
+        "2026-06-29"
+      ],
+      "conceptTags": [
+        "5-7",
+        "sci/tech",
+        "local/penang",
+        "5-11",
+        "full",
+        "comparison",
+        "activepiece",
+        "pipeline"
+      ]
+    },
+    "memory:memory/2026-05-29.md:113:131": {
+      "key": "memory:memory/2026-05-29.md:113:131",
+      "path": "memory/2026-05-29.md",
+      "startLine": 113,
+      "endLine": 131,
+      "source": "memory",
+      "snippet": "| Aspect | ActivePiece | My Pipeline | |-------|------------|------------| | AI topic diversity | Always mixes: industry, regulation, research, societal, corporate | Sometimes clusters on similar topics | | AI/Tech separation | Clean — AI articles never appear in Sci/Tech section | Aggressive AI-overlap filter may miss some, or over-filter | | Summary length | Exactly 2 sentences, consistently | 2-3 sentences, inconsistent | | Local relevance | Explains WHY it matters for Penang startups in 2nd sentence | Also explains, but prompt is wordier | | Source quality | Uses mainstream: CNBC, NBC, Forbes, CNA, PBS, CBS | Mixed: mainstream + HuggingFace blog + DeepMind blog (too niche) | | Sci/Tech f",
+      "recallCount": 5,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 5,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-26T03:31:37.061Z",
+      "lastRecalledAt": "2026-06-28T17:04:33.955Z",
+      "queryHashes": [
+        "fb03bf74f5d0",
+        "ff5cbdc9dd34",
+        "81370ef8fc49",
+        "b722ebcef3f2",
+        "4b0a5c7c049c"
+      ],
+      "recallDays": [
+        "2026-06-26",
+        "2026-06-29"
+      ],
+      "conceptTags": [
+        "ai/tech",
+        "sci/tech",
+        "ai-overlap",
+        "over-filter",
+        "2-3",
+        "aspect",
+        "activepiece",
+        "pipeline"
+      ]
+    },
+    "memory:memory/2026-05-29.md:256:292": {
+      "key": "memory:memory/2026-05-29.md:256:292",
+      "path": "memory/2026-05-29.md",
+      "startLine": 256,
+      "endLine": 292,
+      "source": "memory",
+      "snippet": "## General News Pipeline Upgrade (8:30 PM) Jack asked to apply the same quality improvements to `scripts/daily-general-news.sh`. ### Changes Applied (matching AI/Tech pipeline): - Removed 🌏 🇲🇾 emoji from section headers → \"Global News\", \"Asia News\", \"Malaysia News\" - Image: 1024×600 nologo=true (was 1024×1024) - Added TEST_MODE (default=true) - Added NewsAPI excludeDomains (pypi.org, softpedia.com, globenewswire.com, etc.) - Added dedup tracking (state/dedup-general.txt) - Layman title rewrite instruction in all 3 LLM prompts - Zero assumed knowledge + 2-sentence structure - Reader persona defined per section - English-only enforcement in all prompts - Simplified HTML (solid #1a3a2a hea",
+      "recallCount": 4,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 4,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-26T03:31:37.061Z",
+      "lastRecalledAt": "2026-07-06T09:44:18.863Z",
+      "queryHashes": [
+        "fb03bf74f5d0",
+        "ba364efabb71",
+        "dd8321688c26",
+        "c6a4d89498b0"
+      ],
+      "recallDays": [
+        "2026-06-26",
+        "2026-07-06"
+      ],
+      "conceptTags": [
+        "scripts/daily-general-news.sh",
+        "ai/tech",
+        "test-mode",
+        "pypi.org",
+        "softpedia.com",
+        "globenewswire.com",
+        "state/dedup-general.txt",
+        "2-sentence"
+      ]
+    },
+    "memory:memory/2026-05-29.md:23:40": {
+      "key": "memory:memory/2026-05-29.md:23:40",
+      "path": "memory/2026-05-29.md",
+      "startLine": 23,
+      "endLine": 40,
+      "source": "memory",
+      "snippet": "- **Structure**: Header image (Pollinations AI) → AI News (5 articles) → Science & Tech News (3) → News Relevant to Local AI Startup (1) = **9 articles total** - **Consistent article counts**: exactly 5 AI, 3 Sci/Tech, 1 Local — no range/flexibility - **Each article**: Headline → 2-sentence summary → \"Read more\" link (no fluff, no preamble) - **Clean section headers**: \"AI News\", \"Science & Tech News\", \"News Relevant to Local AI Startup\" — no emoji, no decorative formatting - **Diverse AI topics**: valuation, infrastructure, employment, public backlash, corporate investment - **Sci/Tech truly non-AI**: facial recognition (civil liberties), satellite economics, Ebola surveillance - **Penang s",
+      "recallCount": 3,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 3,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-26T20:50:41.865Z",
+      "lastRecalledAt": "2026-06-28T17:04:09.109Z",
+      "queryHashes": [
+        "8e3f1ab2b853",
+        "81370ef8fc49",
+        "b722ebcef3f2"
+      ],
+      "recallDays": [
+        "2026-06-27",
+        "2026-06-29"
+      ],
+      "conceptTags": [
+        "sci/tech",
+        "range/flexibility",
+        "2-sentence",
+        "non-ai",
+        "structure",
+        "header",
+        "image",
+        "pollinations"
+      ]
+    },
+    "memory:memory/2026-05-29.md:49:76": {
+      "key": "memory:memory/2026-05-29.md:49:76",
+      "path": "memory/2026-05-29.md",
+      "startLine": 49,
+      "endLine": 76,
+      "source": "memory",
+      "snippet": "- Penang: Restaurant AI automation (strong local relevance to Penang hawker centres/cafés) - **Better Sci/Tech quality**: all 3 are substantial, newsworthy stories — no minor packages this time - **Penang section notably strong**: directly relevant to Malaysia/food-service industry ### Cross-Sample Consistency Summary (3/4 samples) | Aspect | Sample 1 (May 26) | Sample 2 (May 27) | Sample 3 (May 28) | |-------|---------|---------|---------| | AI articles | 5 ✅ | 5 ✅ | 5 ✅ | | Sci/Tech articles | 3 ✅ | 3 ✅ | 3 ✅ | | Local/Penang | 1 ✅ | 1 ✅ | 1 ✅ | | Header image | Pollinations ✅ | Pollinations ✅ | Pollinations ✅ | | Summary style | 2 sentences | 2 sentences | 2 sentences | | Read more links",
+      "recallCount": 3,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 3,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-28T14:56:10.070Z",
+      "lastRecalledAt": "2026-06-28T17:04:09.109Z",
+      "queryHashes": [
+        "7a2ccc7c293e",
+        "81370ef8fc49",
+        "b722ebcef3f2"
+      ],
+      "recallDays": [
+        "2026-06-28",
+        "2026-06-29"
+      ],
+      "conceptTags": [
+        "centres/cafés",
+        "sci/tech",
+        "malaysia/food-service",
+        "cross-sample",
+        "3/4",
+        "local/penang",
+        "penang",
+        "restaurant"
+      ]
+    },
+    "memory:memory/2026-06-28.md:72:85": {
+      "key": "memory:memory/2026-06-28.md:72:85",
+      "path": "memory/2026-06-28.md",
+      "startLine": 72,
+      "endLine": 85,
+      "source": "memory",
+      "snippet": "Multiple re-runs happened during debugging: - 17:24, 18:01, 18:12, 18:23, 18:35, 18:41, 18:55, 19:06 - All eventually succeeded with the fixes applied ### Summary All major issues from previous days RESOLVED: 1. ✅ Asia query length (< 500 chars) 2. ✅ RSS validation (all HTTP 200) 3. ✅ Timezone bug (yesterdayTitles now working) 4. ✅ Topic dedup removed (was blocking fresh articles) 5. ✅ Age filter for RSS articles in select-news.ts 6. ✅ FTP greeting issue fixed 7. ✅ State file stores publishedAt (not workflow runtime)",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-28T14:56:10.070Z",
+      "lastRecalledAt": "2026-07-13T03:39:47.886Z",
+      "queryHashes": [
+        "7a2ccc7c293e",
+        "cb896bda7ba8"
+      ],
+      "recallDays": [
+        "2026-06-28",
+        "2026-07-13"
+      ],
+      "conceptTags": [
+        "re-runs",
+        "select-news.ts",
+        "multiple",
+        "runs",
+        "happened",
+        "debugging",
+        "all",
+        "eventually"
+      ]
+    },
+    "memory:memory/2026-06-07.md:128:144": {
+      "key": "memory:memory/2026-06-07.md:128:144",
+      "path": "memory/2026-06-07.md",
+      "startLine": 128,
+      "endLine": 144,
+      "source": "memory",
+      "snippet": "- 现场挂号（带护照，早上7点前排队） - 护照=就诊卡，旅游签证即可 - 中山一院地址：越秀区中山二路58号，地铁烈士陵园站 ### Key context - Jack appears to be helping someone (likely Malaysian) find gynecology/reproductive doctors in Guangzhou - Web research was challenging — multiple attempts with different search engines had issues (baidu captcha, google blocked, bing empty results). Eventually got data from hospital official pages via browser tool. ### Learning Repository Created - Created ~/topics/learning.md with 13 categorized learnings from the entire hotel/trip research conversation - 4 categories: Travel Planning (L01-L05), Web Scraping (L06-L09), Project Management (L10-L11), Communication (L12-L13) - Structured with consistent format: C",
+      "recallCount": 6,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 6,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-28T16:56:51.949Z",
+      "lastRecalledAt": "2026-07-14T17:54:58.436Z",
+      "queryHashes": [
+        "c31cfa6a7539",
+        "f047a8e1e720",
+        "f4c3999ed000",
+        "b26653e39a8c",
+        "e39535027f1f",
+        "241e64bcdf8b"
+      ],
+      "recallDays": [
+        "2026-06-29",
+        "2026-07-06",
+        "2026-07-14",
+        "2026-07-15"
+      ],
+      "conceptTags": [
+        "gynecology/reproductive",
+        "topics/learning.md",
+        "hotel/trip",
+        "l01-l05",
+        "l06-l09",
+        "l10-l11",
+        "l12-l13",
+        "现场"
+      ]
+    },
+    "memory:memory/2026-06-07.md:111:133": {
+      "key": "memory:memory/2026-06-07.md:111:133",
+      "path": "memory/2026-06-07.md",
+      "startLine": 111,
+      "endLine": 133,
+      "source": "memory",
+      "snippet": "- 许丽绵 主任医师（名中医）— 广中医一附院（三甲）— 近40年经验，博士生导师，全国学术地位最高，排名第一 **Final ranking: 许丽绵 > 赖毛华 > 蔡中琼** ### Request 2: Four doctors at 中山大学附属第一医院 (Zhongshan 1st Hospital) Jack asked about: 陈玉清, 游泽山, 牛刚, 徐成康 - 陈玉清 — 主任医师/教授，宫腔镜/盆底/生育力保护，SCI产出多 - 游泽山 — 主任医师/教授，~40年经验，曾任东院副院长，高危妊娠/优生，排名最高 - 牛刚 — ⚠️ 副主任医师（不是主任），微创手术/内异症 - 徐成康 — 主任医师/教授，宫颈机能不全特色（有宫颈环扎术工作室），内异症 **Final ranking: 游泽山 > 陈玉清 ≈ 徐成康 > 牛刚** ### Malaysia挂号指南 Jack specified this is for a Malaysian from Malaysia. Provided guide covering: - 微信预约（护照注册） - 国际医疗部/特需门诊（推荐外国人） - 现场挂号（带护照，早上7点前排队） - 护照=就诊卡，旅游签证即可 - 中山一院地址：越秀区中山二路58号，地铁烈士陵园站 ### Key context - Jack appears to be helping someone (likely Malaysian) find gynecology/reproductive doctors in Guang",
+      "recallCount": 4,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 4,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-28T16:56:51.949Z",
+      "lastRecalledAt": "2026-07-05T16:33:52.481Z",
+      "queryHashes": [
+        "c31cfa6a7539",
+        "f047a8e1e720",
+        "f4c3999ed000",
+        "b26653e39a8c"
+      ],
+      "recallDays": [
+        "2026-06-29",
+        "2026-07-06"
+      ],
+      "conceptTags": [
+        "主任医师/教授",
+        "宫腔镜/盆底/生育力保护",
+        "高危妊娠/优生",
+        "微创手术/内异症",
+        "国际医疗部/特需门诊",
+        "gynecology/reproductive",
+        "主任",
+        "医师"
+      ]
+    },
+    "memory:memory/2026-06-08.md:22:46": {
+      "key": "memory:memory/2026-06-08.md:22:46",
+      "path": "memory/2026-06-08.md",
+      "startLine": 22,
+      "endLine": 46,
+      "source": "memory",
+      "snippet": "- SCI in Fertility and Sterility, JMIG etc. ### Jack Asked for 出诊时间 (Clinic Schedule) - All search/gateways blocked: Baidu CAPTCHA, 好大夫 WAF, 114 GEO-block (503 for MY IP), hospital dynamic pages can't be scraped - Could not retrieve any schedule info - Advised Jack to check via WeChat official account or call +86-20-28823388 ### 广东省妇幼保健院 Address - 越秀院区: 广州市越秀区广园西路13号 (Metro: 广州火车站 Line 2/5) - 番禺院区: 广州市番禺区兴南大道521号 (Metro: 汉溪长隆 Line 3 + bus) ### 赖毛华 Hospital Campuses - 广医一院 has 4 campuses: 沿江(院本部), 海印, 花地湾, 大坦沙 - 妇科一般在沿江院区, but couldn't verify 赖毛华's specific campus - 广医一院官网 IP黑名单 (420 error) ### Learning.md Compiled - Jack asked to compile all key learnings into ~/topics/learning.md - Crea",
+      "recallCount": 4,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 4,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-28T16:56:51.949Z",
+      "lastRecalledAt": "2026-07-05T16:33:52.481Z",
+      "queryHashes": [
+        "c31cfa6a7539",
+        "f047a8e1e720",
+        "f4c3999ed000",
+        "b26653e39a8c"
+      ],
+      "recallDays": [
+        "2026-06-29",
+        "2026-07-06"
+      ],
+      "conceptTags": [
+        "gateway",
+        "search/gateways",
+        "geo-block",
+        "86-20-28823388",
+        "2/5",
+        "learning.md",
+        "topics/learning.md",
+        "sci"
+      ]
+    },
+    "memory:memory/2026-05-24.md:100:121": {
+      "key": "memory:memory/2026-05-24.md:100:121",
+      "path": "memory/2026-05-24.md",
+      "startLine": 100,
+      "endLine": 121,
+      "source": "memory",
+      "snippet": "**Return calendar prices (KUL→TBS, Jul 15 dep, all airlines cheapest):** - Sep: MYR 2,639-2,976 (cheapest Tue/Thu ~MYR 2,639) - Oct 1-14: MYR 2,894-2,976 - Oct 15-17: spike to MYR 3,204-3,955 (school holidays) - Oct 18-end: MYR 2,895-2,976 **IMPORTANT:** These are KUL→TBS prices. Add MYR 200-400 for PEN→KUL domestic leg. **China Southern not showing in Jul 15-Sep 30 results** — may not operate this route for longer stays or dates. ### Jack's Travel Context - Interested in long-haul travel to Georgia (Tbilisi) - Prefers thorough research using browser automation tools - Currency preference: MYR - Specifically asked about Qatar+MH and China Southern routes ### Summary Sent to Jack - Best Q",
+      "recallCount": 4,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 4,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-28T16:56:51.949Z",
+      "lastRecalledAt": "2026-07-05T16:33:52.481Z",
+      "queryHashes": [
+        "c31cfa6a7539",
+        "f047a8e1e720",
+        "f4c3999ed000",
+        "b26653e39a8c"
+      ],
+      "recallDays": [
+        "2026-06-29",
+        "2026-07-06"
+      ],
+      "conceptTags": [
+        "639-2",
+        "tue/thu",
+        "1-14",
+        "894-2",
+        "15-17",
+        "204-3",
+        "18-end",
+        "895-2"
+      ]
+    },
+    "memory:memory/2026-05-29.md:160:176": {
+      "key": "memory:memory/2026-05-29.md:160:176",
+      "path": "memory/2026-05-29.md",
+      "startLine": 160,
+      "endLine": 176,
+      "source": "memory",
+      "snippet": "**R3. Significance integrated** — ActivePiece builds significance into 2nd sentence. We bolt it on or skip it. Fix: Restructure to Sentence 1 = what happened, Sentence 2 = why it matters **R4. Reader persona defined** — ActivePiece writes for a business-savvy founder who isn't an ML engineer. Our pipeline writes for nobody specific. Fix: Define persona: \"Write for a tech-curious business founder who doesn't write code\" **R5. Article selection quality** — ActivePiece picks real-world impact stories (chips, military, policy, music industry). We pick HuggingFace blog posts and model release notes. Fix: \"Prioritize articles about real-world impact over model release notes and tool launches\" *",
+      "recallCount": 3,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 3,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-28T16:56:51.949Z",
+      "lastRecalledAt": "2026-06-28T16:56:53.966Z",
+      "queryHashes": [
+        "c31cfa6a7539",
+        "f047a8e1e720",
+        "f4c3999ed000"
+      ],
+      "recallDays": [
+        "2026-06-29"
+      ],
+      "conceptTags": [
+        "business-savvy",
+        "tech-curious",
+        "real-world",
+        "significance",
+        "integrated",
+        "activepiece",
+        "builds",
+        "2nd"
+      ]
+    },
+    "memory:memory/2026-05-29.md:170:202": {
+      "key": "memory:memory/2026-05-29.md:170:202",
+      "path": "memory/2026-05-29.md",
+      "startLine": 170,
+      "endLine": 202,
+      "source": "memory",
+      "snippet": "**R8. Jargon avoidance** — ActivePiece explains technical terms in context. We use HBM, TFLOPS, CLDN18.2 without explanation. Fix: \"If you use a technical term, briefly explain it in plain English within the sentence\" ### Combined Implementation List (18 items) **Structural Gaps (10)** 1. Fix article counts (5 AI + 3 Sci/Tech + 1 Local) 2. Image dimensions (1024×600 nologo=true) 3. Remove emoji from section headers 4. Exactly 2-sentence summaries 5. Rename email subject to \"Daily AI & Tech Pulse\" 6. Simplify HTML template 7. Deprioritize niche/PyPI feeds for Sci/Tech 8. Clean duplicate code in script 9. Better local-section framing (regional, not strictly Penang) 10. Add \"Read more\" link f",
+      "recallCount": 4,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 4,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-28T16:56:51.949Z",
+      "lastRecalledAt": "2026-07-16T07:11:37.348Z",
+      "queryHashes": [
+        "c31cfa6a7539",
+        "f047a8e1e720",
+        "f4c3999ed000",
+        "c52715eb878e"
+      ],
+      "recallDays": [
+        "2026-06-29",
+        "2026-07-16"
+      ],
+      "conceptTags": [
+        "cldn18.2",
+        "sci/tech",
+        "2-sentence",
+        "niche/pypi",
+        "local-section",
+        "jargon",
+        "avoidance",
+        "activepiece"
+      ]
+    },
+    "memory:memory/2026-06-28.md:19:49": {
+      "key": "memory:memory/2026-06-28.md:19:49",
+      "path": "memory/2026-06-28.md",
+      "startLine": 19,
+      "endLine": 49,
+      "source": "memory",
+      "snippet": "- Server was sending \"220\" greeting which was consumed as the USER command response - Fix: Added `socket.once('data', ...)` at start of `connect` callback to consume and discard the greeting before sending USER **4. Made `main()` async in `upload-ftp.ts`** - Needed to support `await` inside Promise executor ### Key state file format - Format: `ts|utc|title|url` where `ts` = article's `publishedAt` milliseconds (NOT workflow runtime) - This was fixed in previous session; confirmed working today ### Key files modified - `~/projects/daily-news-general-site/scripts/normalize-news.ts` — timezone fix - `~/projects/daily-news-general-site/scripts/select-news.ts` — age filter for RSS articles - `",
+      "recallCount": 8,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 8,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-28T17:03:05.386Z",
+      "lastRecalledAt": "2026-07-13T03:39:47.886Z",
+      "queryHashes": [
+        "ff5cbdc9dd34",
+        "4b0a5c7c049c",
+        "ff96c1cfa6d8",
+        "8d1a2878b6bf",
+        "ba364efabb71",
+        "dd8321688c26",
+        "c6a4d89498b0",
+        "cb896bda7ba8"
+      ],
+      "recallDays": [
+        "2026-06-29",
+        "2026-07-06",
+        "2026-07-13"
+      ],
+      "conceptTags": [
+        "socket.once",
+        "upload-ftp.ts",
+        "server",
+        "was",
+        "sending",
+        "greeting",
+        "which",
+        "consumed"
+      ]
+    },
+    "memory:memory/2026-05-29.md:36:54": {
+      "key": "memory:memory/2026-05-29.md:36:54",
+      "path": "memory/2026-05-29.md",
+      "startLine": 36,
+      "endLine": 54,
+      "source": "memory",
+      "snippet": "4. **My Sci/Tech**: sometimes overlaps with AI. ActivePiece keeps them truly separate. ### ActivePiece Sample 2 — May 27 Daily AI & Tech Pulse - **Structure**: Same 5 AI + 3 Sci/Tech + 1 Penang = 9 articles ✅ - AI topics: Huawei sanctions chip, US Army AI war games, Pope Leo XIV AI encyclical, UMG/TikTok/Spotify AI deals, GNN fuel cell research - Sci/Tech: PyPI packages \"intelligence-suite\" + \"chip-brain\" (minor/new packages — weaker filtering here), HIBP Bhutan government breach - Penang: Pope's Tower of Babel (loose local connection) - **Quality concern**: Sci/Tech section had 2 minor PyPI packages — not major tech stories. ActivePiece's filtering seems weaker for this section. ### Activ",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-28T17:03:09.380Z",
+      "lastRecalledAt": "2026-06-28T17:04:09.109Z",
+      "queryHashes": [
+        "81370ef8fc49",
+        "b722ebcef3f2"
+      ],
+      "recallDays": [
+        "2026-06-29"
+      ],
+      "conceptTags": [
+        "sci/tech",
+        "umg/tiktok/spotify",
+        "intelligence-suite",
+        "chip-brain",
+        "minor/new",
+        "sci",
+        "tech",
+        "sometimes"
+      ]
+    },
+    "memory:memory/2026-05-29.md:74:101": {
+      "key": "memory:memory/2026-05-29.md:74:101",
+      "path": "memory/2026-05-29.md",
+      "startLine": 74,
+      "endLine": 101,
+      "source": "memory",
+      "snippet": "- **Structure**: Same 5 AI + 3 Sci/Tech + 1 Local = 9 articles ✅ - AI topics: Meta cloud service ($200B+ data centers), Illinois AI Safety Bill SB315, Cognition/Devin $1B+ valuation, YouTube AI video auto-labeling, AI antibiotics/superbugs - Sci/Tech: Hermeus Mach 5 jet (Altman/Thiel funded), Pentagon $9.7B Microsoft deal, Japan National Intelligence Council — ALL STRONG - Local: StarHub SIM-based \"Digital Passports\" for AI agents — direct Penang relevance - **Best overall sample**: All sections strong, no weak entries - Header image: Pollinations (seed=1780012834720, width=1024x600, nologo=true) ### Cross-Sample Consistency Summary (4/4 samples — COMPLETE) | Aspect | Sample 1 (May 26) | Sa",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-28T17:03:09.380Z",
+      "lastRecalledAt": "2026-06-28T17:04:09.109Z",
+      "queryHashes": [
+        "81370ef8fc49",
+        "b722ebcef3f2"
+      ],
+      "recallDays": [
+        "2026-06-29"
+      ],
+      "conceptTags": [
+        "sci/tech",
+        "cognition/devin",
+        "auto-labeling",
+        "antibiotics/superbugs",
+        "altman/thiel",
+        "9.7b",
+        "sim-based",
+        "cross-sample"
+      ]
+    },
+    "memory:memory/2026-06-28.md:42:80": {
+      "key": "memory:memory/2026-06-28.md:42:80",
+      "path": "memory/2026-06-28.md",
+      "startLine": 42,
+      "endLine": 80,
+      "source": "memory",
+      "snippet": "const pubMs = new Date(a.publishedAt).getTime(); const ageMs = now - pubMs; const maxAge = mode === 'malaysia' ? 72 * 3600000 : 48 * 3600000; if (ageMs > maxAge) { skipped++; continue; } ``` ### Note: Venezuela earthquake - AP (June 27, different URL) vs Al Jazeera (June 25) — different URLs means cross-day dedup doesn't block - This is a follow-up story, not true replication — working as designed - The earthquake was in state but NOT selected today (model chose other articles) ### State file - `~/projects/daily-news-general-site/state/recent-urls.json` — 569 entries after June 28 rebuild - Hardcoded 3000 entry cap ### Newsletter verification - ✅ HK bookstore (June 25, ~83h old) — blocked",
+      "recallCount": 3,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 3,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-28T18:22:16.301Z",
+      "lastRecalledAt": "2026-07-13T03:39:47.886Z",
+      "queryHashes": [
+        "ff96c1cfa6d8",
+        "8d1a2878b6bf",
+        "cb896bda7ba8"
+      ],
+      "recallDays": [
+        "2026-06-29",
+        "2026-07-13"
+      ],
+      "conceptTags": [
+        "a.publishedat",
+        "cross-day",
+        "follow-up",
+        "const",
+        "pubms",
+        "new",
+        "date",
+        "gettime"
+      ]
+    },
+    "memory:memory/2026-07-03.md:19:49": {
+      "key": "memory:memory/2026-07-03.md:19:49",
+      "path": "memory/2026-07-03.md",
+      "startLine": 19,
+      "endLine": 49,
+      "source": "memory",
+      "snippet": "- Created `/home/ubuntu/restart-tunnel.sh` — quick tunnel restart script - Set up 2-hourly cron check for zone status (originally 30 min, changed by Jack) ## Cron Job - Zone check every 2 hours: checks Cloudflare API for zone status, will announce in Telegram group when `status: \"active\"` (though functionally already working) ## Key Lesson Cloudflare dashboard/zone status can show `pending` even when DNS is already routing correctly globally. Public DNS checks (external resolvers) are more reliable than the Cloudflare API status field for determining real-time availability. ## Lobster Automation — Projects Directory Change - **Projects moved:** `projects-list/` is now the sole active",
+      "recallCount": 4,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 4,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-05T15:45:19.020Z",
+      "lastRecalledAt": "2026-07-16T14:41:26.736Z",
+      "queryHashes": [
+        "2742ef5d9628",
+        "c52715eb878e",
+        "8d0ae593fbf4"
+      ],
+      "recallDays": [
+        "2026-07-05",
+        "2026-07-16"
+      ],
+      "conceptTags": [
+        "home/ubuntu/restart-tunnel.sh",
+        "2-hourly",
+        "dashboard/zone",
+        "real-time",
+        "projects-list",
+        "created",
+        "home",
+        "ubuntu"
+      ]
+    },
+    "memory:memory/2026-07-03.md:42:73": {
+      "key": "memory:memory/2026-07-03.md:42:73",
+      "path": "memory/2026-07-03.md",
+      "startLine": 42,
+      "endLine": 73,
+      "source": "memory",
+      "snippet": "- `.env` — `SMTP_PASSWORD`, `LOBSTER_SERVER_URL=http://localhost:3099` - `package.json` — deps: nodemailer, zod, tsx, dotenv ## AI Subject Generation — Pattern The lobster server (this environment) has Ollama access. Pattern: 1. Lobster server exposes `POST /api/generate-subject` — calls local Ollama 2. Script step calls `http://localhost:3099/api/generate-subject` to get subject 3. Falls back to title-casing first sentence if server unreachable **Ollama is reachable here:** `http://localhost:11434` (Windows Ollama on host, bridged to WSL) **Ollama cloud:** `https://ollama.com/api` — blocked from this Linux env (needs auth) ## Browser Form — email-nudge - `GET /form/nudge` — HTML form (",
+      "recallCount": 4,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 4,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-05T15:45:19.020Z",
+      "lastRecalledAt": "2026-07-16T14:41:26.736Z",
+      "queryHashes": [
+        "2742ef5d9628",
+        "b26653e39a8c",
+        "8d0ae593fbf4"
+      ],
+      "recallDays": [
+        "2026-07-05",
+        "2026-07-06",
+        "2026-07-16"
+      ],
+      "conceptTags": [
+        "smtp-password",
+        "lobster-server-url",
+        "package.json",
+        "api/generate-subject",
+        "3099/api/generate-subject",
+        "title-casing",
+        "ollama.com/api",
+        "email-nudge"
+      ]
+    },
+    "memory:memory/2026-07-02.md:179:199": {
+      "key": "memory:memory/2026-07-02.md:179:199",
+      "path": "memory/2026-07-02.md",
+      "startLine": 179,
+      "endLine": 199,
+      "source": "memory",
+      "snippet": "### Attempted Fixes (July 2, 2026) 1. **A record `104.16.0.1`** at mschosting → hangs (CF edge can't find zone config, pending) 2. **localtunnel** — works via direct URL, but CNAME approach fails because localtunnel checks Host header and only accepts its own subdomain 3. **cloudflared tunnel** — same Host header rejection issue 4. **NS delegation** — set at mschosting, but zone is `full` type and still `pending` 5. **CNAME at mschosting → `*.loca.lt`** — 503 Tunnel Unavailable because tunnel service rejects `automation.ewizt.com` Host header ### Current Working Solution - **Direct cloudflared URL** works: `https://covering-garcia-blowing-privacy.trycloudflare.com/health` → `{\"ok\":true}` -",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-05T15:45:19.020Z",
+      "lastRecalledAt": "2026-07-05T15:45:19.020Z",
+      "queryHashes": [
+        "2742ef5d9628"
+      ],
+      "recallDays": [
+        "2026-07-05"
+      ],
+      "conceptTags": [
+        "104.16.0.1",
+        "loca.lt",
+        "automation.ewizt.com",
+        "attempted",
+        "fixes",
+        "july",
+        "record",
+        "mschosting"
+      ]
+    },
+    "memory:memory/2026-07-02.md:100:119": {
+      "key": "memory:memory/2026-07-02.md:100:119",
+      "path": "memory/2026-07-02.md",
+      "startLine": 100,
+      "endLine": 119,
+      "source": "memory",
+      "snippet": "- Jack added NS records at mschosting for `automation.ewizt.com → dante.ns.cloudflare.com + gail.ns.cloudflare.com` - But zone is `full` type (needs full nameserver switch) not `partial` (CNAME-only) - All tunnel services reject custom Host headers — security feature prevents `automation.ewizt.com` from routing through `*.trycloudflare.com` or `*.loca.lt` ### Attempted Fixes (July 2, 2026) 1. **A record `104.16.0.1`** at mschosting → hangs (CF edge can't find zone config, pending) 2. **localtunnel** — works via direct URL, but CNAME approach fails because localtunnel checks Host header and only accepts its own subdomain 3. **cloudflared tunnel** — same Host header rejection issue 4. **NS de",
+      "recallCount": 4,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 4,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-05T15:45:19.020Z",
+      "lastRecalledAt": "2026-07-06T09:44:18.863Z",
+      "queryHashes": [
+        "2742ef5d9628",
+        "ba364efabb71",
+        "dd8321688c26",
+        "c6a4d89498b0"
+      ],
+      "recallDays": [
+        "2026-07-05",
+        "2026-07-06"
+      ],
+      "conceptTags": [
+        "automation.ewizt.com",
+        "dante.ns.cloudflare.com",
+        "gail.ns.cloudflare.com",
+        "cname-only",
+        "trycloudflare.com",
+        "loca.lt",
+        "104.16.0.1",
+        "jack"
+      ]
+    },
+    "memory:memory/2026-07-03.md:1:27": {
+      "key": "memory:memory/2026-07-03.md:1:27",
+      "path": "memory/2026-07-03.md",
+      "startLine": 1,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "# Memory — 2026-07-03 ## Cloudflare Zone — LIVE and Working Despite Cloudflare dashboard showing `pending`, **DNS is fully operational**: - `ewizt.com` NS → `dante.ns.cloudflare.com` + `gail.ns.cloudflare.com` ✅ (NS switch propagated globally) - `automation.ewizt.com` CNAME → `eef22362-998e-4c28-bc74-9eee54aa32c2.cfargotunnel.com` ✅ - Tunnel `automation-v3` (ID: `eef22362-998e-4c28-bc74-9eee54aa32c2`) — **healthy**, 4 active edge connections - Lobster server at `:3099` — responding `{\"ok\":true}` ✅ - Jack tested from phone on LTE — confirmed working: `https://automation.ewizt.com/health` returns `{\"ok\":true}` **Zone status discrepancy:** Cloudflare API shows `status: \"pending\"` even thoug",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-05T15:45:19.020Z",
+      "lastRecalledAt": "2026-07-05T15:45:19.020Z",
+      "queryHashes": [
+        "2742ef5d9628"
+      ],
+      "recallDays": [
+        "2026-07-05"
+      ],
+      "conceptTags": [
+        "ewizt.com",
+        "dante.ns.cloudflare.com",
+        "gail.ns.cloudflare.com",
+        "automation.ewizt.com",
+        "automation-v3",
+        "automation.ewizt.com/health",
+        "cloudflare",
+        "zone"
+      ]
+    },
+    "memory:memory/2026-07-02.md:1:36": {
+      "key": "memory:memory/2026-07-02.md:1:36",
+      "path": "memory/2026-07-02.md",
+      "startLine": 1,
+      "endLine": 36,
+      "source": "memory",
+      "snippet": "# 2026-07-02 — Lobster Automation v0.2 Shipped + Tunnel Troubleshooting ## v0.2 — Robustness Release (commit `06d6c48`, tag `v0.2`) All 3 modules implemented, tested, and pushed to GitHub: ### Module 1: Smart Retry & Error Classification - `retry-engine.ts` — `classifyError()` categorises errors into `transient`, `fatal`, `rate_limited` - HTTP 429 respects `Retry-After` header - HTTP 400–499 (except 429) → immediate fatal - HTTP 5xx / network errors → exponential backoff - 11/11 tests pass ### Module 2: State-Based Selective Replay - `POST /runs/:id/replay` — finds last successful step, clears child records, rebuilds state, resumes - Returns `202 Accepted` with replay metadata - Tested w",
+      "recallCount": 3,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 3,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-05T15:45:19.020Z",
+      "lastRecalledAt": "2026-07-13T03:39:49.751Z",
+      "queryHashes": [
+        "2742ef5d9628",
+        "cb896bda7ba8",
+        "bf991c9b85b6"
+      ],
+      "recallDays": [
+        "2026-07-05",
+        "2026-07-13"
+      ],
+      "conceptTags": [
+        "network",
+        "v0.2",
+        "retry-engine.ts",
+        "rate-limited",
+        "retry-after",
+        "11/11",
+        "state-based",
+        "id/replay"
+      ]
+    },
+    "memory:memory/2026-07-04.md:1:32": {
+      "key": "memory:memory/2026-07-04.md:1:32",
+      "path": "memory/2026-07-04.md",
+      "startLine": 1,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "# 2026-07-04 ## lobster-automation relay project (PHP relay on ewizt.com) Goal: replace ngrok with a self-hosted relay queue on ewizt.com, so WSL doesn't need ngrok. ### Architecture - External callers POST to ewizt.com webhook endpoint - ewizt.com queues webhook payload in SQLite - WSL lobster server long-polls ewizt.com for queued webhooks (near-instant, no polling delay) - WSL processes and posts result back; caller checks result via GET ### PHP files written (in ~/works/lobster-automation/relay-php/) - `shared.php` — SQLite queue helper (DB at `queue.sqlite`, TOKEN=`NsufkdwqJWfr4GwFko7R`) - `webhook.php` — POST `/relay/webhook/:name` — receives+queues webhooks, returns run_id - `poll",
+      "recallCount": 5,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 5,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-05T16:26:52.348Z",
+      "lastRecalledAt": "2026-07-16T14:41:26.736Z",
+      "queryHashes": [
+        "7f1b2eb24ce5",
+        "969b343e3645",
+        "f1c5be5b1817",
+        "8d0ae593fbf4"
+      ],
+      "recallDays": [
+        "2026-07-06",
+        "2026-07-16"
+      ],
+      "conceptTags": [
+        "lobster-automation",
+        "ewizt.com",
+        "self-hosted",
+        "long-polls",
+        "near-instant",
+        "shared.php",
+        "queue.sqlite",
+        "webhook.php"
+      ]
+    },
+    "memory:memory/2026-07-05.md:138:172": {
+      "key": "memory:memory/2026-07-05.md:138:172",
+      "path": "memory/2026-07-05.md",
+      "startLine": 138,
+      "endLine": 172,
+      "source": "memory",
+      "snippet": "- Bandwidth: ~10.2 KB/hr idle (vs 20.5 KB/hr with 55s — 50% reduction) - Poll cycles: ~33/hr (vs ~65/hr with 55s) ### PHP Debugging on ewizt.com - `check.php` — test `max_execution_time`, `set_time_limit(0)`, `default_socket_timeout` - `debug-poll.php` — standalone 110s loop test (confirmed LiteSpeed doesn't kill it mid-sleep) - LiteSpeed kills PHP when the **connection itself times out** (not PHP execution) - The 500 error at 120s was LiteSpeed's connection timeout, not PHP's fault ### Architecture Summary - WSL initiates ALL connections outbound — no inbound ports needed, works through NAT/CGNAT - Long-poll: WSL holds connection open for 110s, ewizt PHP holds until webhook or timeout - S",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-05T16:26:52.348Z",
+      "lastRecalledAt": "2026-07-05T16:26:54.293Z",
+      "queryHashes": [
+        "7f1b2eb24ce5",
+        "969b343e3645"
+      ],
+      "recallDays": [
+        "2026-07-06"
+      ],
+      "conceptTags": [
+        "10.2",
+        "kb/hr",
+        "20.5",
+        "33/hr",
+        "65/hr",
+        "ewizt.com",
+        "check.php",
+        "max-execution-time"
+      ]
+    },
+    "memory:memory/2026-07-05.md:1:31": {
+      "key": "memory:memory/2026-07-05.md:1:31",
+      "path": "memory/2026-07-05.md",
+      "startLine": 1,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "# 2026-07-05 ## ewizt Relay — Long-Poll Optimized ### LiteSpeed Connection Timeout Discovery - ewizt.com runs LiteSpeed (not Apache/nginx) - LiteSpeed has a hard **Connection Timeout of ~120s** — kills requests regardless of PHP `set_time_limit` - `set_time_limit(0)` works in PHP, but LiteSpeed still cuts at 120s - `sleep(120)` works fine (LiteSpeed doesn't timeout during sleep) - Initial poll was 55s — conservative guess. Could push to 290s PHP, but LiteSpeed kills at 120s ### Final Settings - **poll.php**: `set_time_limit(0)` + `$max_wait = 110` (safely under 120s LiteSpeed limit) - **WSL relay-poller**: fetch timeout = 130s (110s + 20s buffer) - Bandwidth: ~10.2 KB/hr idle (vs 20.5 KB/",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-05T16:26:52.348Z",
+      "lastRecalledAt": "2026-07-05T16:26:54.293Z",
+      "queryHashes": [
+        "7f1b2eb24ce5",
+        "969b343e3645"
+      ],
+      "recallDays": [
+        "2026-07-06"
+      ],
+      "conceptTags": [
+        "long-poll",
+        "ewizt.com",
+        "apache/nginx",
+        "set-time-limit",
+        "poll.php",
+        "max-wait",
+        "relay-poller",
+        "10.2"
+      ]
+    },
+    "memory:memory/2026-07-02.md:115:137": {
+      "key": "memory:memory/2026-07-02.md:115:137",
+      "path": "memory/2026-07-02.md",
+      "startLine": 115,
+      "endLine": 137,
+      "source": "memory",
+      "snippet": "- CNAME at mschosting currently pointing to: `lobster-d68639f4.loca.lt` (not working due to Host header) ### Fundamental Blocker All tunnel services (localtunnel, cloudflared, serveo, localhost.run) validate the Host header and only accept their own domain. CNAME routing doesn't work because: 1. Browser → `automation.ewizt.com` → CNAME → `tunnel-service.com` 2. Browser sends `Host: automation.ewizt.com` to `tunnel-service.com` 3. Tunnel service rejects because it expects `Host: <assigned-subdomain>.tunnel-service.com` ### Real Fix Requires - **Option A:** Wait for Cloudflare zone `pending` → `active` (zone auto-activates when NS delegation propagates) - **Option B:** Switch full nameserver",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-05T16:26:52.348Z",
+      "lastRecalledAt": "2026-07-05T16:26:54.293Z",
+      "queryHashes": [
+        "7f1b2eb24ce5",
+        "969b343e3645"
+      ],
+      "recallDays": [
+        "2026-07-06"
+      ],
+      "conceptTags": [
+        "lobster-d68639f4.loca.lt",
+        "localhost.run",
+        "automation.ewizt.com",
+        "tunnel-service.com",
+        "assigned-subdomain",
+        "auto-activates",
+        "cname",
+        "mschosting"
+      ]
+    },
+    "memory:memory/2026-07-05.md:26:62": {
+      "key": "memory:memory/2026-07-05.md:26:62",
+      "path": "memory/2026-07-05.md",
+      "startLine": 26,
+      "endLine": 62,
+      "source": "memory",
+      "snippet": "- Long-poll: WSL holds connection open for 110s, ewizt PHP holds until webhook or timeout - Self-managing loop inside server process — no cron, no external scheduler - Stale watchdog: restarts poller if no successful poll for 5min ### ewizt.com PHP Files (relay/) - `shared.php` — SQLite helper, auth token `NsufkdwqJWfr4GwFko7R` - `webhook.php` — POST + GET (browser-friendly) webhook endpoint - `poll.php` — long-poll up to 110s - `result.php` — GET+POST result tracking - `status.php` — queue stats - `log.php` — JSONL event log - `.htaccess` — clean URL rewrites ### Token - Fixed: `NsufkdwqJWfr4GwFko7R` (used for FORM_SECRET, RELAY_TOKEN, all relay endpoints) - Hardcoded in `shared.php` on e",
+      "recallCount": 3,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 3,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-05T16:26:52.348Z",
+      "lastRecalledAt": "2026-07-06T09:44:23.852Z",
+      "queryHashes": [
+        "7f1b2eb24ce5",
+        "969b343e3645",
+        "f1c5be5b1817"
+      ],
+      "recallDays": [
+        "2026-07-06"
+      ],
+      "conceptTags": [
+        "long-poll",
+        "self-managing",
+        "ewizt.com",
+        "shared.php",
+        "webhook.php",
+        "browser-friendly",
+        "poll.php",
+        "result.php"
+      ]
+    },
+    "memory:memory/2026-07-02.md:194:221": {
+      "key": "memory:memory/2026-07-02.md:194:221",
+      "path": "memory/2026-07-02.md",
+      "startLine": 194,
+      "endLine": 221,
+      "source": "memory",
+      "snippet": "1. Browser → `automation.ewizt.com` → CNAME → `tunnel-service.com` 2. Browser sends `Host: automation.ewizt.com` to `tunnel-service.com` 3. Tunnel service rejects because it expects `Host: <assigned-subdomain>.tunnel-service.com` ### Real Fix Requires - **Option A:** Wait for Cloudflare zone `pending` → `active` (zone auto-activates when NS delegation propagates) - **Option B:** Switch full nameservers from mschosting to Cloudflare (zone becomes `full` and active) - **Option C:** Use Cloudflare Workers as a proxy layer (rewrites Host header) — but zone needs to be active ### Key Learning - **Cannot test tunnel from WSL** — WSL DNS resolves `automation.ewizt.com` to private IPv6 - **Cannot",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-05T16:26:52.348Z",
+      "lastRecalledAt": "2026-07-05T16:26:54.293Z",
+      "queryHashes": [
+        "7f1b2eb24ce5",
+        "969b343e3645"
+      ],
+      "recallDays": [
+        "2026-07-06"
+      ],
+      "conceptTags": [
+        "automation.ewizt.com",
+        "tunnel-service.com",
+        "assigned-subdomain",
+        "auto-activates",
+        "browser",
+        "cname",
+        "tunnel",
+        "service.com"
+      ]
+    },
+    "memory:memory/2026-07-04.md:24:36": {
+      "key": "memory:memory/2026-07-04.md:24:36",
+      "path": "memory/2026-07-04.md",
+      "startLine": 24,
+      "endLine": 36,
+      "source": "memory",
+      "snippet": "- **Next step needed:** move relay files into `/wrello/relay/` via FTP, or ask Jack to set up subdomain ### Pending - Move relay files to `/wrello/relay/` on FTP - Update lobster server to poll ewizt.com instead of ngrok for webhooks - Eventually decommission ngrok tunnel ### Other context - lobster server running at WSL, ngrok tunnel: `https://unruly-kick-guide.ngrok-free.dev` - Form secret (ngrok): `NsufkdwqJWfr4GwFko7R` - Email: bot@ewizt.com, SMTP via ewizt.com:465 - Projects dir: `projects-list/`, email-nudge flow is live",
+      "recallCount": 5,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 5,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-05T16:33:52.481Z",
+      "lastRecalledAt": "2026-07-16T14:41:26.736Z",
+      "queryHashes": [
+        "b26653e39a8c",
+        "f1c5be5b1817",
+        "c52715eb878e",
+        "8d0ae593fbf4"
+      ],
+      "recallDays": [
+        "2026-07-06",
+        "2026-07-16"
+      ],
+      "conceptTags": [
+        "wrello/relay",
+        "ewizt.com",
+        "unruly-kick-guide.ngrok-free.dev",
+        "projects-list",
+        "email-nudge",
+        "step",
+        "needed",
+        "relay"
+      ]
+    },
+    "memory:memory/2026-07-02.md:74:104": {
+      "key": "memory:memory/2026-07-02.md:74:104",
+      "path": "memory/2026-07-02.md",
+      "startLine": 74,
+      "endLine": 104,
+      "source": "memory",
+      "snippet": "- HTTP 5xx / network errors → exponential backoff - 11/11 tests pass ### Module 2: State-Based Selective Replay - `POST /runs/:id/replay` — finds last successful step, clears child records, rebuilds state, resumes - Returns `202 Accepted` with replay metadata - Tested with real `daily-news-tech-site` flow — replay correctly skipped completed steps ### Module 3: Heartbeat Watchdog - `watchdog.ts` + `cron.ts` — auto-discovers scheduled flows from YAML files - `expected_runs` table in SQLite tracks cron schedule - Hourly check: if `now > next_expected + grace` → fires alert - Tested: backdated `next_expected_at` → alert fired correctly ### Git Config Fix - Repo had split branches: `master` (",
+      "recallCount": 5,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 5,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-06T09:44:10.428Z",
+      "lastRecalledAt": "2026-07-13T03:39:49.751Z",
+      "queryHashes": [
+        "ba364efabb71",
+        "dd8321688c26",
+        "c6a4d89498b0",
+        "cb896bda7ba8",
+        "bf991c9b85b6"
+      ],
+      "recallDays": [
+        "2026-07-06",
+        "2026-07-13"
+      ],
+      "conceptTags": [
+        "network",
+        "11/11",
+        "state-based",
+        "id/replay",
+        "daily-news-tech-site",
+        "watchdog.ts",
+        "cron.ts",
+        "auto-discovers"
+      ]
+    },
+    "memory:memory/2026-07-02.md:155:182": {
+      "key": "memory:memory/2026-07-02.md:155:182",
+      "path": "memory/2026-07-02.md",
+      "startLine": 155,
+      "endLine": 182,
+      "source": "memory",
+      "snippet": "- Tested with real `daily-news-tech-site` flow — replay correctly skipped completed steps ### Module 3: Heartbeat Watchdog - `watchdog.ts` + `cron.ts` — auto-discovers scheduled flows from YAML files - `expected_runs` table in SQLite tracks cron schedule - Hourly check: if `now > next_expected + grace` → fires alert - Tested: backdated `next_expected_at` → alert fired correctly ### Git Config Fix - Repo had split branches: `master` (old) and `main` (v0.2) - Merged `main` into `master` via GitHub PR - Deleted local `master` branch - Set GitHub default branch to `main` - Set `push.default = matching` to prevent future split-brain ## Cloudflare Tunnel — DNS Resolution Issue (Updated) ### Th",
+      "recallCount": 4,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 4,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-06T09:44:10.428Z",
+      "lastRecalledAt": "2026-07-13T03:39:49.751Z",
+      "queryHashes": [
+        "ba364efabb71",
+        "dd8321688c26",
+        "c6a4d89498b0",
+        "bf991c9b85b6"
+      ],
+      "recallDays": [
+        "2026-07-06",
+        "2026-07-13"
+      ],
+      "conceptTags": [
+        "daily-news-tech-site",
+        "watchdog.ts",
+        "cron.ts",
+        "auto-discovers",
+        "expected-runs",
+        "next-expected",
+        "next-expected-at",
+        "v0.2"
+      ]
+    },
+    "memory:memory/2026-07-05.md:163:200": {
+      "key": "memory:memory/2026-07-05.md:163:200",
+      "path": "memory/2026-07-05.md",
+      "startLine": 163,
+      "endLine": 200,
+      "source": "memory",
+      "snippet": "- Fixed: `NsufkdwqJWfr4GwFko7R` (used for FORM_SECRET, RELAY_TOKEN, all relay endpoints) - Hardcoded in `shared.php` on ewizt.com + `server-deployment/.env` on WSL ### Ngrok Disabled - Killed ngrok process - Removed from `~/.bashrc` auto-start - ewizt relay is primary and sufficient ## Tunnel.md Updated - Doc now reflects 110s poll, LiteSpeed timeout, PHP file inventory, bandwidth stats - Committed to GitHub (`lobster-automation` repo) # 2026-07-05 — Addendum (appended post-compaction) ## Daily News Site — Email/WhatsApp Pipeline Fixes ### Full flow tested end-to-end - **Subscribe** → verification email sent via SMTP socket to ewizt.com:465 - **Verify** → clicks link, status=verified in",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-06T09:44:10.432Z",
+      "lastRecalledAt": "2026-07-06T09:44:23.852Z",
+      "queryHashes": [
+        "cbf593166d1b",
+        "f1c5be5b1817"
+      ],
+      "recallDays": [
+        "2026-07-06"
+      ],
+      "conceptTags": [
+        "form-secret",
+        "relay-token",
+        "shared.php",
+        "ewizt.com",
+        "server-deployment",
+        "auto-start",
+        "tunnel.md",
+        "lobster-automation"
+      ]
+    },
+    "memory:memory/2026-07-05.md:57:93": {
+      "key": "memory:memory/2026-07-05.md:57:93",
+      "path": "memory/2026-07-05.md",
+      "startLine": 57,
+      "endLine": 93,
+      "source": "memory",
+      "snippet": "- **Subscribe** → verification email sent via SMTP socket to ewizt.com:465 - **Verify** → clicks link, status=verified in DB - **Unsubscribe** → one-click GET `?unsub=1&email=xxx`, row deleted from SQLite - Bot protection (Imunify360) on ewizt.com — Playwright stealth mode passes it; real browsers fine ### Key files on ewizt.com (FTP: ewizt.com, user: clawftpewizt, pass: Zgk64r28a) - `/daily-news/index.php` — main site with subscription/unsub handlers - `/daily-news/subscriptions.db` — SQLite DB, schema: email, status, token, created_at, verified_at - `daily-news-index.php` — NOT the served file (old copy) ### PHP unsubscribe handler (in index.php) ```php // One-click unsubscribe (no confi",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-06T09:44:10.432Z",
+      "lastRecalledAt": "2026-07-06T09:44:23.852Z",
+      "queryHashes": [
+        "cbf593166d1b",
+        "f1c5be5b1817"
+      ],
+      "recallDays": [
+        "2026-07-06"
+      ],
+      "conceptTags": [
+        "ewizt.com",
+        "one-click",
+        "daily-news/index.php",
+        "subscription/unsub",
+        "daily-news/subscriptions.db",
+        "created-at",
+        "verified-at",
+        "daily-news-index.php"
+      ]
+    },
+    "memory:memory/2026-07-05.md:87:121": {
+      "key": "memory:memory/2026-07-05.md:87:121",
+      "path": "memory/2026-07-05.md",
+      "startLine": 87,
+      "endLine": 121,
+      "source": "memory",
+      "snippet": "## Daily News General Site — WhatsApp Notification Added ### Project: ~/projects/daily-news-general-site - Scripts: scripts/notify-whatsapp.ts (newly created) - WhatsApp credentials: WHATSAPP_INSTANCE_ID, WHATSAPP_TOKEN (copied from tech site) - WhatsApp recipients: 60198614133, 60124142639, 60164788448, 60172183526 - Template (Mandarin): ``` 📰 每日新闻速递 — {date} 🔥 头条：\"{title}\" 还有{N}条新闻，点击阅读 → 📖 阅读：{url} 由 ewizt.com 发送 ``` ### Changes committed this session - package.json: removed `send:email` from daily script - scripts/notify-whatsapp.ts: new file — top pick with quotes, multi-recipient loop, date-aware news file sort - .env: added WHATSAPP_INSTANCE_ID, WHATSAPP_TOKEN, WHATSA",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-06T09:44:10.432Z",
+      "lastRecalledAt": "2026-07-06T09:44:10.432Z",
+      "queryHashes": [
+        "cbf593166d1b"
+      ],
+      "recallDays": [
+        "2026-07-06"
+      ],
+      "conceptTags": [
+        "projects/daily-news-general-site",
+        "scripts/notify-whatsapp.ts",
+        "whatsapp-instance-id",
+        "whatsapp-token",
+        "ewizt.com",
+        "package.json",
+        "multi-recipient",
+        "date-aware"
+      ]
+    },
+    "memory:memory/2026-07-05.md:191:229": {
+      "key": "memory:memory/2026-07-05.md:191:229",
+      "path": "memory/2026-07-05.md",
+      "startLine": 191,
+      "endLine": 229,
+      "source": "memory",
+      "snippet": "- SMTP: ewizt.com:465, AUTH LOGIN bot@ewizt.com / n59Sun8K8 - nodemailer in send-email.ts works; PHP mail() broken (silently fails) ### DB subscribers (as of this session) - ongse@ewizt.com — verified - siewv6723@gmail.com — verified (added manually) ## Daily News General Site — WhatsApp Notification Added ### Project: ~/projects/daily-news-general-site - Scripts: scripts/notify-whatsapp.ts (newly created) - WhatsApp credentials: WHATSAPP_INSTANCE_ID, WHATSAPP_TOKEN (copied from tech site) - WhatsApp recipients: 60198614133, 60124142639, 60164788448, 60172183526 - Template (Mandarin): ``` 📰 每日新闻速递 — {date} 🔥 头条：\"{title}\" 还有{N}条新闻，点击阅读 → 📖 阅读：{url} 由 ewizt.com 发送 ``` ### Ch",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-06T09:44:10.432Z",
+      "lastRecalledAt": "2026-07-06T09:44:10.432Z",
+      "queryHashes": [
+        "cbf593166d1b"
+      ],
+      "recallDays": [
+        "2026-07-06"
+      ],
+      "conceptTags": [
+        "ewizt.com",
+        "send-email.ts",
+        "gmail.com",
+        "projects/daily-news-general-site",
+        "scripts/notify-whatsapp.ts",
+        "whatsapp-instance-id",
+        "whatsapp-token",
+        "smtp"
+      ]
+    },
+    "memory:memory/2026-07-02.md:238:257": {
+      "key": "memory:memory/2026-07-02.md:238:257",
+      "path": "memory/2026-07-02.md",
+      "startLine": 238,
+      "endLine": 257,
+      "source": "memory",
+      "snippet": "### Zone Status - Zone ID: `dd87354c379af8298b669730a7f25b08` - Zone status: `pending` (step 2 of setup) - Zone type: `full` - NS delegation was added at mschosting, then removed by Jack during troubleshooting - **NS delegation needs to be restored** for zone to activate ### What Needs to Happen for `automation.ewizt.com` to Work 1. Jack adds NS records at mschosting for `automation.ewizt.com` → `dante.ns.cloudflare.com` + `gail.ns.cloudflare.com` 2. Wait for propagation (minutes to 24h) 3. Zone changes from `pending` → `active` 4. Cloudflare starts serving DNS for `automation.ewizt.com` 5. Add CNAME record in Cloudflare DNS pointing `automation.ewizt.com` → tunnel ingress 6. Ingress rules",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-06T09:44:23.852Z",
+      "lastRecalledAt": "2026-07-06T09:44:23.852Z",
+      "queryHashes": [
+        "f1c5be5b1817"
+      ],
+      "recallDays": [
+        "2026-07-06"
+      ],
+      "conceptTags": [
+        "automation.ewizt.com",
+        "dante.ns.cloudflare.com",
+        "gail.ns.cloudflare.com",
+        "zone",
+        "status",
+        "dd87354c379af8298b669730a7f25b08",
+        "pending",
+        "step"
+      ]
+    },
+    "memory:memory/2026-07-05.md:247:281": {
+      "key": "memory:memory/2026-07-05.md:247:281",
+      "path": "memory/2026-07-05.md",
+      "startLine": 247,
+      "endLine": 281,
+      "source": "memory",
+      "snippet": "- When cron time hits → triggers flow directly (no HTTP call) with `trigger_type: cron` - Prevents duplicate runs (checks if successful run already happened for that cron slot) - Auto-advances to next cron slot after execution - Enable/disable individual schedules at runtime - Env vars: `SCHEDULER_ENABLED`, `SCHEDULER_INTERVAL_MS` (default 60000), `SCHEDULER_TIMEZONE` ### API endpoints added to router.ts - `GET /schedules` — list all scheduled flows (cron, next run, last run, enabled) - `GET /schedules/:name` — detail + recent run history - `POST /schedules/:name/enable` — re-enable disabled schedule - `POST /schedules/:name/disable` — pause schedule - `POST /schedules/:name/run` — manually",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-13T03:39:47.886Z",
+      "lastRecalledAt": "2026-07-13T03:39:47.886Z",
+      "queryHashes": [
+        "cb896bda7ba8"
+      ],
+      "recallDays": [
+        "2026-07-13"
+      ],
+      "conceptTags": [
+        "router",
+        "trigger-type",
+        "auto-advances",
+        "enable/disable",
+        "scheduler-enabled",
+        "scheduler-interval-ms",
+        "scheduler-timezone",
+        "router.ts"
+      ]
+    },
+    "memory:memory/2026-07-10.md:1:30": {
+      "key": "memory:memory/2026-07-10.md:1:30",
+      "path": "memory/2026-07-10.md",
+      "startLine": 1,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "# 2026-07-10 Daily Notes ## Home Directory Cleanup Session (00:36–01:02 AM) Jack asked to review and clean up `~/` directory. Significant cleanup done: ### Deleted - `bun.lock` — leftover bun lockfile - `openclaw-gateway.log` — old OpenClaw gateway log (May 5) - `go/`, `goinst/`, `gopath/` — ~2 GB of unused Go installations (no Go projects exist, Go not used) - `intelephense/` — empty PHP IntelliSense cache - `data/` — old simplecms SQLite DB (979 KB, May 4) - `~/topics/guangzhou26/` — local-only git repo, no remote - `~/projects/` — all old pre-Lobster projects (daily-news-tech, daily-news-tech-site, daily-news-esg, daily-news-general, daily-news-general-site, SiNova, .trash-context-clea",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-13T03:39:49.751Z",
+      "lastRecalledAt": "2026-07-13T03:39:49.751Z",
+      "queryHashes": [
+        "bf991c9b85b6"
+      ],
+      "recallDays": [
+        "2026-07-13"
+      ],
+      "conceptTags": [
+        "gateway",
+        "bun.lock",
+        "openclaw-gateway.log",
+        "topics/guangzhou26",
+        "local-only",
+        "pre-lobster",
+        "daily-news-tech",
+        "daily-news-tech-site"
+      ]
+    },
+    "memory:memory/2026-07-10.md:21:52": {
+      "key": "memory:memory/2026-07-10.md:21:52",
+      "path": "memory/2026-07-10.md",
+      "startLine": 21,
+      "endLine": 52,
+      "source": "memory",
+      "snippet": "- `~/topics/` — Jack's topic repos (local git, no remote except root which has none) - `~/works/` — Lobster Automation + novel_fuzzy-weights (active) - `~/works/knowledgeGraph/` — has requirements.txt, Jack said keep - `restart-openclaw.sh` — OpenClaw restart script (not mine) ### Also cleaned - `.bashrc` Go entries removed (GOROOT, GOPATH etc) ## wsl-house-clean Workflow Updated (00:58–01:02 AM) After the directory cleanup, updated `wsl-house-clean` scripts to reflect the changed directory structure: ### Scripts Fixed (commit `0713f04`) - `scan-workspaces.ts` — scans `~/works/` instead of deleted `~/code/` - `scan-storage.ts` — scans `~/works/` instead of deleted `~/projects/` + `~/code",
+      "recallCount": 3,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 3,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-13T03:39:49.751Z",
+      "lastRecalledAt": "2026-07-16T14:41:26.736Z",
+      "queryHashes": [
+        "bf991c9b85b6",
+        "8d0ae593fbf4"
+      ],
+      "recallDays": [
+        "2026-07-13",
+        "2026-07-16"
+      ],
+      "conceptTags": [
+        "novel-fuzzy-weights",
+        "works/knowledgegraph",
+        "requirements.txt",
+        "restart-openclaw.sh",
+        "wsl-house-clean",
+        "scan-workspaces.ts",
+        "scan-storage.ts",
+        "topics"
+      ]
+    },
+    "memory:memory/2026-07-02.md:132:163": {
+      "key": "memory:memory/2026-07-02.md:132:163",
+      "path": "memory/2026-07-02.md",
+      "startLine": 132,
+      "endLine": 163,
+      "source": "memory",
+      "snippet": "- **localtunnel `--subdomain` flag** doesn't guarantee the subdomain — service may give different one on restart ## Docs Updated - `README.md` — v0.2 modules documented, `expected_runs` schema, updated project tree - `DEPLOY.md` — v0.2 env vars table, tunnel systemd unit, CLOUDFLARE-TUNNEL.md reference - `server/README.md` — v0.2 endpoints, env vars, module descriptions - `CLOUDFLARE-TUNNEL.md` — Added \"Testing the Tunnel — Correct Way\" section, corrected AI browser limitations # 2026-07-02 — Lobster Automation v0.2 Shipped + Tunnel Troubleshooting ## v0.2 — Robustness Release (commit `06d6c48`, tag `v0.2`) All 3 modules implemented, tested, and pushed to GitHub: ### Module 1: Smart Retr",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-13T03:39:49.751Z",
+      "lastRecalledAt": "2026-07-13T03:39:49.751Z",
+      "queryHashes": [
+        "bf991c9b85b6"
+      ],
+      "recallDays": [
+        "2026-07-13"
+      ],
+      "conceptTags": [
+        "readme.md",
+        "v0.2",
+        "expected-runs",
+        "deploy.md",
+        "cloudflare-tunnel.md",
+        "server/readme.md",
+        "localtunnel",
+        "subdomain"
+      ]
+    },
+    "memory:memory/2026-05-24.md:51:81": {
+      "key": "memory:memory/2026-05-24.md:51:81",
+      "path": "memory/2026-05-24.md",
+      "startLine": 51,
+      "endLine": 81,
+      "source": "memory",
+      "snippet": "**China Southern not showing in Jul 15-Sep 30 results** — may not operate this route for longer stays or dates. ### Jack's Travel Context - Interested in long-haul travel to Georgia (Tbilisi) - Prefers thorough research using browser automation tools - Currency preference: MYR - Specifically asked about Qatar+MH and China Southern routes ## Flight Research: Penang (PEN) ↔ Tbilisi (TBS) Jack requested cheapest and shortest travel options from Penang to Tbilisi and back, July-September 2026 timeframe. ### Key Findings - **No direct flights** exist for PEN↔TBS; all routes require transit - **Cheapest round-trip (7-day trip):** MYR 2,878 via Google Flights calendar view - Best dates: Sunday",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-14T15:40:35.089Z",
+      "lastRecalledAt": "2026-07-14T17:54:58.436Z",
+      "queryHashes": [
+        "e39535027f1f",
+        "241e64bcdf8b"
+      ],
+      "recallDays": [
+        "2026-07-14",
+        "2026-07-15"
+      ],
+      "conceptTags": [
+        "15-sep",
+        "long-haul",
+        "july-september",
+        "round-trip",
+        "7-day",
+        "china",
+        "southern",
+        "not"
+      ]
+    },
+    "memory:memory/2026-05-24.md:1:29": {
+      "key": "memory:memory/2026-05-24.md:1:29",
+      "path": "memory/2026-05-24.md",
+      "startLine": 1,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "## Flight Research: Penang (PEN) ↔ Tbilisi (TBS) Jack requested cheapest and shortest travel options from Penang to Tbilisi and back, July-September 2026 timeframe. ### Key Findings - **No direct flights** exist for PEN↔TBS; all routes require transit - **Cheapest round-trip (7-day trip):** MYR 2,878 via Google Flights calendar view - Best dates: Sundays and mid-week (July 5, 7, 9, 11, 12, 14, 16, 18, 19, 21, 23, 26, 28, 30) - Avoid Mondays (MYR 5,000+) - **Return leg (TBS→PEN, Sep 1→Sep 7):** MYR 3,267 (flydubai via Dubai, 1 stop, 19h) - **Total round-trip estimate:** MYR 6,000–7,000 - **Shortest travel time:** ~18h 45m (Qatar Airways via Doha) - **Best value airline:** flydubai (1 st",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-14T15:40:35.089Z",
+      "lastRecalledAt": "2026-07-14T17:54:58.436Z",
+      "queryHashes": [
+        "e39535027f1f",
+        "241e64bcdf8b"
+      ],
+      "recallDays": [
+        "2026-07-14",
+        "2026-07-15"
+      ],
+      "conceptTags": [
+        "july-september",
+        "round-trip",
+        "7-day",
+        "mid-week",
+        "flight",
+        "research",
+        "penang",
+        "pen"
+      ]
+    },
+    "memory:memory/2026-05-29.md:234:263": {
+      "key": "memory:memory/2026-05-29.md:234:263",
+      "path": "memory/2026-05-29.md",
+      "startLine": 234,
+      "endLine": 263,
+      "source": "memory",
+      "snippet": "- AI prompt now has: \"Only pick articles that are genuinely about AI (artificial intelligence, machine learning, LLMs, AI applications, AI industry)\" ### Test Run #3 — Good Results - **AI (5)**: AWS networking, Micron AI chips, geologic hydrogen ⚠️ (not AI), Steam Deck price hike, modular data centers - **Sci/Tech (3)**: Canada cleanroom VR, Google quantum chip, Signal phishing — all solid - **Local (1)**: Internet rebuilt for machines + SE Asia startup angle ✅ - **1 issue**: geologic hydrogen mining isn't an AI story (LLM selection quality issue, not pipeline) - **1 issue**: some summaries only 1 sentence instead of 2 (LLM adherence issue) ### Remaining Minor Issues (LLM behavior, not pip",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-14T15:40:35.089Z",
+      "lastRecalledAt": "2026-07-14T17:54:58.436Z",
+      "queryHashes": [
+        "e39535027f1f",
+        "241e64bcdf8b"
+      ],
+      "recallDays": [
+        "2026-07-14",
+        "2026-07-15"
+      ],
+      "conceptTags": [
+        "network",
+        "sci/tech",
+        "prompt",
+        "now",
+        "has",
+        "only",
+        "pick",
+        "articles"
+      ]
+    },
+    "memory:memory/2026-05-29.md:219:239": {
+      "key": "memory:memory/2026-05-29.md:219:239",
+      "path": "memory/2026-05-29.md",
+      "startLine": 219,
+      "endLine": 239,
+      "source": "memory",
+      "snippet": "- Added `excludeDomains` to both AI and Tech queries: softpedia.com, pypi.org, globenewswire.com, prnewswire.com, seekingalpha.com, benzinga.com, yahoo.com, bloomberg.com, investing.com, etc. - Reduced AI results from 2753 → 498 articles - Tightened HuggingFace RSS: max 3 items per feed (down from 8), stricter keyword filter ### Fix: PyPI/Niche Tool Filtering - Added NICHE_TOOL_KW regex in AI pre-filter to catch pypi.org URLs, and keywords like \"pypi package\", \"python package\", \"open-source library\" - Added NICHE_KW in tech pre-filter for same (PyPI, HuggingFace URLs) - Initially too aggressive (removed 41/49 articles, left only 5) → fixed to only match URLs, not title/desc text ### Fix: E",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-14T15:40:35.089Z",
+      "lastRecalledAt": "2026-07-14T17:54:58.436Z",
+      "queryHashes": [
+        "e39535027f1f",
+        "241e64bcdf8b"
+      ],
+      "recallDays": [
+        "2026-07-14",
+        "2026-07-15"
+      ],
+      "conceptTags": [
+        "softpedia.com",
+        "pypi.org",
+        "globenewswire.com",
+        "prnewswire.com",
+        "seekingalpha.com",
+        "benzinga.com",
+        "yahoo.com",
+        "bloomberg.com"
+      ]
+    },
+    "memory:memory/2026-05-24.md:74:107": {
+      "key": "memory:memory/2026-05-24.md:74:107",
+      "path": "memory/2026-05-24.md",
+      "startLine": 74,
+      "endLine": 107,
+      "source": "memory",
+      "snippet": "- Browser automation used (Playwright) to navigate Google Flights - Calendar price view worked well; detailed itinerary extraction was partial - Multiple browser timeouts encountered; gateway restarts needed ### KUL→TBS Specific Airline Research (Mid-Jul to End 2026) Jack requested Qatar+MH and China Southern best fares from Mid-Jul to end of 2026. **KUL→TBS Round Trip (Jul 15 dep, Sep 30 ret):** - Emirates + flydubai — MYR 2,895 (1 stop, 13h 20m) — cheapest overall - Turkish Airlines — MYR 3,540 (1 stop via Istanbul, 14h 25m) - Qatar Airways (solo) — MYR 3,614 (1 stop via Doha, 14h 40m) - **MH + Qatar Airways** — MYR 3,658 (1 stop via Doha, 21h 30m long layover) - Turkish Airlines — MYR",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-14T15:40:35.089Z",
+      "lastRecalledAt": "2026-07-14T17:54:58.436Z",
+      "queryHashes": [
+        "e39535027f1f",
+        "241e64bcdf8b"
+      ],
+      "recallDays": [
+        "2026-07-14",
+        "2026-07-15"
+      ],
+      "conceptTags": [
+        "gateway",
+        "mid-jul",
+        "browser",
+        "automation",
+        "used",
+        "playwright",
+        "navigate",
+        "google"
+      ]
+    },
+    "memory:memory/2026-07-07.md:278:301": {
+      "key": "memory:memory/2026-07-07.md:278:301",
+      "path": "memory/2026-07-07.md",
+      "startLine": 278,
+      "endLine": 301,
+      "source": "memory",
+      "snippet": "- `wsl-house-clean/ftp-backup-ewizt.ts` — 300s exec timeout ✅ - `customizable-news/send-email.ts` — 20s per-command FTP timeout ✅ - `server.ts` relay poller — exponential backoff + 130s poll timeout ✅ - `step-runner.ts` — 5min exec timeout ✅ ### Commits This Session Segment - `21dc55f` — Relay poller exponential backoff in server.ts - `64f6331` — README hard rules + traffic budget + audit table - `451763b` — Fixed 4 missing FTP timeouts in customizable-news ### Key Files Modified - `server/src/server.ts` — exponential backoff in relay poller - `README.md` — 🚨 CRITICAL hard rules section at top - `projects-list/customizable-news/scripts/upload-ftp.ts` — timeout - `projects-list/cus",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-16T07:11:37.348Z",
+      "lastRecalledAt": "2026-07-16T07:11:37.348Z",
+      "queryHashes": [
+        "c52715eb878e"
+      ],
+      "recallDays": [
+        "2026-07-16"
+      ],
+      "conceptTags": [
+        "backup",
+        "customizable-news/send-email.ts",
+        "per-command",
+        "server.ts",
+        "step-runner.ts",
+        "customizable-news",
+        "server/src/server.ts",
+        "readme.md"
+      ]
+    },
+    "memory:memory/2026-07-05.md:271:302": {
+      "key": "memory:memory/2026-07-05.md:271:302",
+      "path": "memory/2026-07-05.md",
+      "startLine": 271,
+      "endLine": 302,
+      "source": "memory",
+      "snippet": "## WhatsApp Integration Added to Lobster ### CliHub WhatsApp API - Docs: https://clihub.nole-analytics.com/docs - API base: `https://clihub.nole-analytics.com` - Instance: `trial1_1783249059703` - Token: `934fde9b26b6ccbf9f709fb3d73e534a6dc07e0f653c03966d7f7e0add76a0ec` - Connected number: 60175035492 ### New files - `server/src/integrations/whatsapp.ts` — `sendWhatsAppMessage()`, `sendText()`, `sendImage()`, `sendDocument()`, `getStatus()`, `loadWhatsAppConfigFromEnv()` - `projects-list/whatsapp-nudge/` — new lobster project - `scripts/send.ts` — standalone script that reads trigger payload from LOBSTER_PREVIOUS_RESULTS - `taskflows/whatsapp-nudge.yaml` — webhook trigger `name: whats",
+      "recallCount": 3,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 3,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-16T07:11:37.348Z",
+      "lastRecalledAt": "2026-07-16T14:41:26.736Z",
+      "queryHashes": [
+        "c52715eb878e",
+        "8d0ae593fbf4"
+      ],
+      "recallDays": [
+        "2026-07-16"
+      ],
+      "conceptTags": [
+        "clihub.nole-analytics.com/docs",
+        "clihub.nole-analytics.com",
+        "trial1-1783249059703",
+        "projects-list/whatsapp-nudge",
+        "scripts/send.ts",
+        "lobster-previous-results",
+        "taskflows/whatsapp-nudge.yaml",
+        "whatsapp"
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "host": "ewizt.com",
+  "port": 465,
+  "ssl": true,
+  "user": "bot@ewizt.com",
+  "password": "n59Sun8K8",
+  "from": "bot@ewizt.com",
+  "knownRecipients": [
+    "soonee.ong@gmail.com",
+    "siaw.chen.lee@intel.com"
+  ]
+}

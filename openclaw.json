@@ -1,0 +1,271 @@
+{
+  "gateway": {
+    "auth": {
+      "mode": "token",
+      "token": "d8117d42e1c44c028f74db11a7e6c945d1f2d7c0fde01828"
+    },
+    "mode": "local",
+    "port": 18789,
+    "bind": "loopback",
+    "channelHealthCheckMinutes": 0,
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "controlUi": {
+      "allowInsecureAuth": true
+    }
+  },
+  "meta": {
+    "lastTouchedVersion": "2026.4.15",
+    "lastTouchedAt": "2026-06-03T18:07:19.516Z"
+  },
+  "agents": {
+    "defaults": {
+      "workspace": "/home/ubuntu/.openclaw/workspace",
+      "model": {
+        "primary": "ollama/minimax-m2.7:cloud",
+        "fallbacks": [
+          "ollama/minimax-m3:cloud",
+          "ollama/deepseek-v4-flash:cloud",
+          "ollama/gemma4:31b-cloud",
+          "ollama/kimi-k2.7-code:cloud",
+          "ollama/glm-5.2:cloud"
+        ]
+      },
+      "models": {
+        "ollama/deepseek-v4-flash:cloud": {},
+        "ollama/kimi-k2.6:cloud": {},
+        "ollama/kimi-k2.7-code:cloud": {},
+        "ollama/minimax-m2.7:cloud": {},
+        "ollama/gemma4:31b-cloud": {},
+        "ollama/minimax-m3:cloud": {},
+        "ollama/glm-5.2:cloud": {}
+      }
+    },
+    "list": [
+      {
+        "id": "main",
+        "workspace": "/home/ubuntu/.openclaw/workspace"
+      },
+      {
+        "id": "orchestrator",
+        "workspace": "/home/ubuntu/.openclaw/workspace/admin",
+        "model": {
+          "primary": "ollama/minimax-m2.7:cloud"
+        }
+      }
+    ]
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "tools": {
+    "profile": "coding",
+    "web": {
+      "search": {
+        "provider": "ollama",
+        "enabled": true
+      }
+    },
+    "alsoAllow": [
+      "browser"
+    ]
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "ollama": {
+        "baseUrl": "http://localhost:11434",
+        "api": "ollama",
+        "apiKey": "__OPENCLAW_REDACTED__",
+        "models": [
+          {
+            "id": "deepseek-v4-flash:cloud",
+            "name": "deepseek-v4-flash:cloud",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 1048576,
+            "maxTokens": 384000
+          },
+          {
+            "id": "kimi-k2.6:cloud",
+            "name": "kimi-k2.6:cloud",
+            "reasoning": false,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 128000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "kimi-k2.7-code:cloud",
+            "name": "kimi-k2.7-code:cloud",
+            "reasoning": false,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 128000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "minimax-m2.7:cloud",
+            "name": "minimax-m2.7:cloud",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 128000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "gemma4:31b-cloud",
+            "name": "gemma4:31b-cloud",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 128000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "minimax-m3:cloud",
+            "name": "minimax-m3:cloud",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 128000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "glm-5.2:cloud",
+            "name": "glm-5.2:cloud",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 128000,
+            "maxTokens": 8192
+          }
+        ]
+      }
+    }
+  },
+  "auth": {
+    "profiles": {
+      "ollama:default": {
+        "provider": "ollama",
+        "mode": "api_key"
+      }
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "healthMonitor": {
+        "enabled": false
+      },
+      "groups": {
+        "*": {
+          "requireMention": true
+        }
+      },
+      "botToken": "8399943065:AAGD4XmsRpmxJLDnZxQU-QR6TmwVb_nUKdI",
+      "dmPolicy": "allowlist",
+      "allowFrom": [
+        "8483054608",
+        "8544719045"
+      ]
+    }
+  },
+  "plugins": {
+    "entries": {
+      "ollama": {
+        "enabled": true
+      },
+      "telegram": {
+        "enabled": true
+      },
+      "browser": {
+        "enabled": true
+      }
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    }
+  },
+  "wizard": {
+    "lastRunAt": "2026-04-20T21:30:20.964Z",
+    "lastRunVersion": "2026.4.15",
+    "lastRunCommand": "configure",
+    "lastRunMode": "local"
+  },
+  "browser": {
+    "enabled": true,
+    "headless": true,
+    "executablePath": "/home/ubuntu/.cache/ms-playwright/chromium-1217/chrome-linux64/chrome",
+    "noSandbox": true
+  },
+  "bindings": [
+    {
+      "agentId": "orchestrator",
+      "match": {
+        "channel": "telegram",
+        "peer": {
+          "kind": "group",
+          "id": "-1003926859444:topic:1077"
+        }
+      }
+    }
+  ]
+}

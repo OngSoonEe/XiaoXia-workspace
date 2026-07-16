@@ -1,0 +1,7 @@
+routes:
+- name: Admin_Orchestrator_Route
+  connection: telegram
+  thread_id: '*'
+  workspace_dir: /home/ubuntu/.openclaw/workspace/admin
+  allowed_agents:
+  - orchestrator
