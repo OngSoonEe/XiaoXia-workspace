@@ -32,12 +32,8 @@ The lobster server auto-discovers flows by scanning for `.yaml` files in
 `/home/ubuntu/works/lobster-automation/projects-list/*/taskflows/`. To register a new cron:
 
 1. Write the YAML to the correct path (see Rule 6)
-2. Trigger a flow reload — how depends on the deployment:
-
-| Deployment | How to Reload |
-|---|---|
-| Dev (local) | `openclaw tasks run reload-flows` or restart the server |
-| Production (ewizt.com) | POST to `https://ewizt.com/relay` with the relay token, or trigger via the relay poller |
+2. Trigger a flow reload via `POST /flows/reload`
+3. Verify with `GET /schedules/:name` (see the Verification section below)
 
 There is NO `lobster register-cron` command. There is NO manual step in a web UI.
 **Placement + reload = registration.**
@@ -251,31 +247,210 @@ You MUST also create:
 
 ---
 
-## Workflow: Creating a New Lobster Flow
+## Complete Workflow: Create → Validate → Reload → Verify → Trigger
 
-1. **Read `references/schema.md`** — know the exact field shapes before writing YAML
-2. **Read `references/examples.md`** — copy the closest existing flow as a base
-3. **Place the YAML** at `/home/ubuntu/works/lobster-automation/projects-list/<name>/taskflows/<name>.yaml`
-4. **Create the scripts** in `/home/ubuntu/works/lobster-automation/projects-list/<name>/scripts/`
-5. **Ensure `package.json`** has `tsx` as a devDependency and run `npm install`
-6. **Trigger a reload** — see Rule 1
+> ⚠️ Do NOT copy from `project-template/taskflows/example-flow.yaml` — its `script:` entries
+> are missing the required `cd` step. Always copy from `examples.md` or the template below.
+
+### Step 1 — Write the YAML
+
+Follow all 10 rules above. Use `references/schema.md` for exact field shapes.
+Use `references/examples.md` for real working YAML to copy from.
+
+### Step 2 — Validate Before Committing
+
+**Always validate before writing the YAML to disk.** Call the `/validate` endpoint:
+
+```
+POST http://localhost:3099/validate
+Content-Type: application/json
+
+{ "yaml": "<full YAML content as a string>" }
+```
+
+Example:
+```bash
+curl -s -X POST http://localhost:3099/validate \
+  -H "Content-Type: application/json" \
+  -d '{"yaml": "name: my-flow\ndescription: ...\nschedule:\n  cron: \"30 23 * * *\"\n  timezone: Asia/Kuala_Lumpur\nsteps:\n  - name: step1\n    script: cd /home/ubuntu/works/lobster-automation/projects-list/my-project && npx tsx scripts/step1.ts\non_failure:\n  notify: telegram\n  message: \"⚠️ my-flow failed\""}'
+
+# ✅ Expected response:
+# { "ok": true, "flow": { ...parsed flow... } }
+
+# ❌ If errors:
+# { "ok": false, "errors": ["steps.0.script: required", "schedule.cron: invalid cron expression"] }
+```
+
+**Fix all errors before proceeding.** Do not write the YAML to disk if `/validate` returns errors.
+
+### Step 3 — Place the YAML Correctly
+
+```
+/home/ubuntu/works/lobster-automation/projects-list/<project-name>/taskflows/<flow-name>.yaml
+```
+
+If the project or directories don't exist, create them:
+```
+projects-list/
+  my-project/
+    taskflows/
+    scripts/
+    package.json
+```
+
+### Step 4 — Ensure Dependencies
+
+In the project directory:
+```bash
+cd /home/ubuntu/works/lobster-automation/projects-list/my-project
+npm install   # installs tsx, googleapis, etc.
+```
+
+The `package.json` must have `tsx` as a devDependency (for `npx tsx`).
+
+### Step 5 — Reload the Registry
+
+```bash
+curl -s -X POST http://localhost:3099/flows/reload | python3 -m json.tool
+```
+
+This tells the server to rescan all `taskflows/` directories and pick up the new YAML.
+Response:
+```json
+{
+  "ok": true,
+  "loaded": 12,
+  "flow_count": 12,
+  "flows": ["my-flow", "daily-mytasks-backup", ...],
+  "errors": []
+}
+```
+
+### Step 6 — Verify the Flow Is Registered
+
+**Check 1 — Flow appears in the registry:**
+```bash
+curl -s http://localhost:3099/flows | python3 -m json.tool
+# Should include your flow name
+```
+
+**Check 2 — Schedule is registered (if scheduled):**
+```bash
+curl -s http://localhost:3099/schedules | python3 -m json.tool
+# Look for your flow name. Check that next_run_at is NOT "unknown"
+```
+
+If `next_run_at` is `"unknown"`, the cron expression may have failed to parse.
+Check the cron is 5 fields (Rule 2) and the timezone is a valid IANA string.
+
+**Check 3 — Full schedule details:**
+```bash
+curl -s http://localhost:3099/schedules/my-flow | python3 -m json.tool
+```
+
+This returns:
+- `schedule.name` — flow name
+- `schedule.cron` — the cron expression
+- `schedule.timezone` — timezone
+- `schedule.next_run_at` — next scheduled run (ISO string, not "unknown")
+- `schedule.enabled` — whether the schedule is active
+- `schedule.last_run_status` — result of last run (if any)
+- `recent_runs` — last 20 run records
+
+### Step 7 — Test-Fire the Flow
+
+**For scheduled flows (any flow with `schedule:`):**
+```bash
+curl -s -X POST http://localhost:3099/schedules/my-flow/run | python3 -m json.tool
+# Response: { "run_id": "abc-123" }
+```
+
+**For flows with `triggers:` section:**
+```bash
+curl -s -X POST http://localhost:3099/run/my-flow | python3 -m json.tool
+# Response: { "run_id": "abc-123" }
+```
+
+### Step 8 — Check Run Results
+
+```bash
+# Get run status and step results
+curl -s http://localhost:3099/runs/<run_id> | python3 -m json.tool
+```
+
+This returns:
+- `run.status` — `running` | `success` | `fail` | `cancelled`
+- `steps` — array of each step with `step_name`, `status`, `output_result`, `error_message`, `duration_ms`
+
+**If a step failed:**
+```bash
+# Replay from the failed step (keeps previous step results)
+curl -s -X POST http://localhost:3099/runs/<run_id>/replay | python3 -m json.tool
+```
+
+---
+
+## Server Endpoints Reference
+
+Base URL: `http://localhost:3099` (local dev) or `https://ewizt.com/lobster` (production)
+
+| Method | Endpoint | What It Does |
+|--------|----------|--------------|
+| `GET` | `/flows` | List all registered flow names |
+| `POST` | `/flows/reload` | Rescan taskflows/ directories — reloads registry |
+| `POST` | `/validate` | Validate YAML without loading it. Body: `{ yaml: "..." }` |
+| `GET` | `/schedules` | List all scheduled flows with status and next run time |
+| `GET` | `/schedules/:name` | Full details for one scheduled flow + recent runs |
+| `POST` | `/schedules/:name/run` | Fire a scheduled flow immediately (test fire) |
+| `POST` | `/schedules/:name/enable` | Enable a disabled schedule |
+| `POST` | `/schedules/:name/disable` | Disable a schedule (skips next cron tick) |
+| `POST` | `/run/:name` | Fire any flow by name (manual or webhook trigger) |
+| `GET` | `/runs` | List recent runs (limit via `?limit=N`) |
+| `GET` | `/runs/:id` | Full run details including step results |
+| `POST` | `/runs/:id/replay` | Replay from first failed step |
+| `GET` | `/health` | Server health check |
+
+---
+
+## Troubleshooting
+
+**`/validate` returns errors:**
+- Read the error list carefully — each error says exactly which field is wrong
+- Common causes: missing `script:` key, wrong `backoff_mode` spelling, invalid cron
+- **Always fix YAML errors before writing to disk**
+
+**Flow doesn't appear in `/flows`:**
+- YAML is not in `projects-list/*/taskflows/*.yaml` — check the path (Rule 6)
+- Did you call `POST /flows/reload` after adding the file?
+- Check the lobster server logs for YAML parse errors
+
+**`next_run_at: "unknown"` in `/schedules`:**
+- Cron expression is 5 fields only — did you accidentally add a 6th field (seconds)?
+- Timezone must be a valid IANA string like `Asia/Kuala_Lumpur` — not `MYT` or `GMT+8`
+- Check the lobster server logs for cron parse warnings
+
+**Step fails with "missing deps":**
+- Every name in `depends_on` must exactly match an earlier step's `name` (Rule 9)
+- Check for typos and case sensitivity
+- Look for circular dependencies (A→B→C→A)
+
+**Step always fails but works when run manually:**
+- The `cd` path in `script:` is probably wrong (Rule 5)
+- `node_modules` not installed — run `npm install` in the project directory
+- Script has a hardcoded working directory assumption
+
+**Step fails with "script not found":**
+- The `npx tsx` command can't find the script file
+- Check the path after `cd` is correct and the `.ts` file exists there
 
 ---
 
 ## When Something Goes Wrong
 
-**YAML won't load or cron doesn't fire:**
-- Run the validator: check `references/schema.md` against what you wrote
-- Make sure the YAML is in `/home/ubuntu/works/lobster-automation/projects-list/*/taskflows/*.yaml`
-- Make sure cron is 5 fields only (Rule 2)
+1. **Start with `/validate`** — paste your YAML and fix all errors
+2. **Check `/flows`** — is the flow name there?
+3. **Check `/schedules/:name`** — is `next_run_at` a real ISO time, not "unknown"?
+4. **Check `/runs/:id`** — which exact step failed and what was the error?
+5. **Read the lobster server logs** — they're the source of truth for parse failures
 
-**Step fails with "missing deps":**
-- Check that every name in `depends_on` matches an earlier step's `name` exactly (Rule 9)
-- Check for circular dependencies (Rule 9)
-
-**Step always fails but works manually:**
-- Check the `cd` path in `script:` is correct (Rule 5)
-- Check `node_modules` are installed (`npm install` was run in the project dir)
-- Add `retry:` to handle transient failures (Rule 3 + Rule 4)
-
-**Don't guess.** If you're unsure, read the reference files first.
+**Don't guess.** Walk through this sequence in order.
