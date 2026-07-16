@@ -29,7 +29,7 @@ here, ask before proceeding.
 **You do NOT need to run any CLI command to register a cron.**
 
 The lobster server auto-discovers flows by scanning for `.yaml` files in
-`projects-list/*/taskflows/`. To register a new cron:
+`/home/ubuntu/works/lobster-automation/projects-list/*/taskflows/`. To register a new cron:
 
 1. Write the YAML to the correct path (see Rule 6)
 2. Trigger a flow reload — how depends on the deployment:
@@ -79,7 +79,7 @@ schedule:
 # ✅ CORRECT — retry is a property of the script step
 steps:
   - name: fetch-data
-    script: npm run fetch
+    script: cd /home/ubuntu/works/lobster-automation/projects-list/my-project && npm run fetch
     retry:
       max_attempts: 3
       backoff_ms: [5000, 15000, 30000]
@@ -105,7 +105,7 @@ retry:
   backoff_mode: exponential
 
 # ❌ WRONG — these all fail validation
-backoff_mode: "exponential"   # quoted string still works but don't quote
+backoff_mode: "exponential"   # quoted string is unnecessary
 backoff_mode: "exp"           # wrong value
 backoff_mode: true            # wrong type
 ```
@@ -136,29 +136,35 @@ steps:
   - name: backup
     script: cd /home/ubuntu/works/lobster-automation/projects-list/MyTasks && npx tsx scripts/backup-tasks.ts
 
-# ❌ WRONG — relative path, no cd
+# ❌ WRONG — no cd
     script: npx tsx scripts/backup-tasks.ts
 
 # ❌ WRONG — assumes cwd is already the project dir
     script: npm run backup
 ```
 
-**Rule: every `script:` must start with `cd <absolute-path> && `**
+**Rule: every `script:` must start with `cd /home/ubuntu/works/lobster-automation/projects-list/<PROJECT> && `**
 
 ---
 
-### Rule 6 — YAML File Location Is Part of the Contract
+### Rule 6 — YAML File Location and Full Path Is Part of the Contract
 
-Flows are auto-discovered from: `projects-list/<project-name>/taskflows/<flow-name>.yaml`
+The lobster server auto-discovers flows from:
+```
+/home/ubuntu/works/lobster-automation/projects-list/<project-name>/taskflows/<flow-name>.yaml
+```
+
+The full path is `/home/ubuntu/works/lobster-automation/projects-list/`. Do NOT use relative
+paths like `./projects-list/` or `~/projects-list/` or any variation.
 
 ```
-projects-list/
+/home/ubuntu/works/lobster-automation/projects-list/
   my-project/
     taskflows/
       my-flow.yaml      ← server loads this
     scripts/
       doThing.ts
-    package.json
+    package.json         ← must have tsx as devDependency
 ```
 
 If the YAML is not in a `taskflows/` subdirectory of a project folder, the server **will not find it**.
@@ -201,7 +207,8 @@ on_success:
   notify: "slackbot"  # not a valid enum value
 ```
 
-The `{step}` placeholder in failure messages is replaced with the failed step name.
+The `{step}` placeholder in `on_failure` messages is replaced with the name of the step
+that failed. `notify` is optional — if omitted, no notification is sent.
 
 ---
 
@@ -212,13 +219,13 @@ Steps run sequentially by default. Use `depends_on` to run in parallel:
 ```yaml
 steps:
   - name: fetch-ai
-    script: cd ... && npm run fetch:ai
+    script: cd /home/ubuntu/works/lobster-automation/projects-list/my-project && npm run fetch:ai
 
   - name: fetch-tech
-    script: cd ... && npm run fetch:tech
+    script: cd /home/ubuntu/works/lobster-automation/projects-list/my-project && npm run fetch:tech
 
   - name: merge          # runs AFTER both fetch steps complete
-    script: cd ... && npm run merge
+    script: cd /home/ubuntu/works/lobster-automation/projects-list/my-project && npm run merge
     depends_on: [fetch-ai, fetch-tech]
 ```
 
@@ -233,13 +240,13 @@ Writing the YAML is not enough. **Every `script:` command must correspond to a r
 If you write:
 ```yaml
 - name: do-something
-  script: cd /path/to/project && npx tsx scripts/do-something.ts
+  script: cd /home/ubuntu/works/lobster-automation/projects-list/my-project && npx tsx scripts/do-something.ts
 ```
 
 You MUST also create:
 ```
-projects-list/my-project/scripts/do-something.ts
-projects-list/my-project/package.json   ← must list this as a script or have tsx available
+/home/ubuntu/works/lobster-automation/projects-list/my-project/scripts/do-something.ts
+/home/ubuntu/works/lobster-automation/projects-list/my-project/package.json   ← must have tsx as devDependency
 ```
 
 ---
@@ -248,11 +255,10 @@ projects-list/my-project/package.json   ← must list this as a script or have t
 
 1. **Read `references/schema.md`** — know the exact field shapes before writing YAML
 2. **Read `references/examples.md`** — copy the closest existing flow as a base
-3. **Place the YAML** in `projects-list/<name>/taskflows/<name>.yaml`
-4. **Create the scripts** referenced in the YAML under `projects-list/<name>/scripts/`
-5. **Ensure `package.json`** has the necessary dependencies (at minimum `tsx`)
-6. **Run `npm install`** in the project directory
-7. **Trigger a reload** — see Rule 1
+3. **Place the YAML** at `/home/ubuntu/works/lobster-automation/projects-list/<name>/taskflows/<name>.yaml`
+4. **Create the scripts** in `/home/ubuntu/works/lobster-automation/projects-list/<name>/scripts/`
+5. **Ensure `package.json`** has `tsx` as a devDependency and run `npm install`
+6. **Trigger a reload** — see Rule 1
 
 ---
 
@@ -260,7 +266,7 @@ projects-list/my-project/package.json   ← must list this as a script or have t
 
 **YAML won't load or cron doesn't fire:**
 - Run the validator: check `references/schema.md` against what you wrote
-- Make sure the YAML is in `projects-list/*/taskflows/*.yaml`
+- Make sure the YAML is in `/home/ubuntu/works/lobster-automation/projects-list/*/taskflows/*.yaml`
 - Make sure cron is 5 fields only (Rule 2)
 
 **Step fails with "missing deps":**
@@ -269,7 +275,7 @@ projects-list/my-project/package.json   ← must list this as a script or have t
 
 **Step always fails but works manually:**
 - Check the `cd` path in `script:` is correct (Rule 5)
-- Check `node_modules` are installed (`npm install` was run)
+- Check `node_modules` are installed (`npm install` was run in the project dir)
 - Add `retry:` to handle transient failures (Rule 3 + Rule 4)
 
 **Don't guess.** If you're unsure, read the reference files first.
