@@ -1,0 +1,26 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Car body -->
+  <path d="M80 180 L80 150 Q80 120 110 120 L190 120 Q220 120 220 150 L220 180 L80 180 Z" fill="none" stroke="#333" stroke-width="3"/>
+  
+  <!-- Car top -->
+  <path d="M110 120 L110 90 L190 90 L190 120" fill="none" stroke="#333" stroke-width="3"/>
+  
+  <!-- Car details -->
+  <rect x="100" y="100" width="20" height="10" fill="none" stroke="#333" stroke-width="2"/>
+  <rect x="180" y="100" width="20" height="10" fill="none" stroke="#333" stroke-width="2"/>
+  
+  <!-- Windows -->
+  <path d="M120 110 L170 110 L170 135 L120 135 Z" fill="none" stroke="#333" stroke-width="2"/>
+  
+  <!-- Wheels -->
+  <circle cx="110" cy="200" r="25" fill="none" stroke="#333" stroke-width="3"/>
+  <circle cx="190" cy="200" r="25" fill="none" stroke="#333" stroke-width="3"/>
+  
+  <!-- Wheel details -->
+  <circle cx="110" cy="200" r="15" fill="none" stroke="#333" stroke-width="2"/>
+  <circle cx="190" cy="200" r="15" fill="none" stroke="#333" stroke-width="2"/>
+  
+  <!-- Bumper -->
+  <path d="M70 160 L80 170 L70 170 Z" fill="none" stroke="#333" stroke-width="2"/>
+  <path d="M230 160 L220 170 L230 170 Z" fill="none" stroke="#333" stroke-width="2"/>
+</svg>

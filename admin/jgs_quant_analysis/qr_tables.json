@@ -1,0 +1,4791 @@
+[
+  {
+    "table_idx": 0,
+    "rows": [
+      [
+        "Date",
+        "Revision #",
+        "Author",
+        "Description"
+      ],
+      [
+        "7/10/2025",
+        "0.1",
+        "Yi Liu, Mengni Wang, Xin He, Tai Huang, Wenhua Cheng, and Haihao Shen",
+        "Initial document structure, overview"
+      ],
+      [
+        "7/22/2025",
+        "0.1.1",
+        "Tai Huang",
+        "Correct error in block UE4M3 scale formula"
+      ],
+      [
+        "7/24/2025",
+        "0.2",
+        "Mengni Wang, and Tai Huang",
+        "Add SDPA workflow, low precision data type recommend table. Update Llama3.1 70B model recipe with acc result"
+      ],
+      [
+        "7/25/2025",
+        "0.3",
+        "Haihao Shen",
+        "Add scale format, refine the recipe document, move SDPA to other recipe section, and unify the term of scale format"
+      ],
+      [
+        "7/28/2025",
+        "0.4",
+        "Yi Liu, Weiwei Zhang",
+        "Updated the NVFP4 results for DeepSeek"
+      ],
+      [
+        "7/29/2025",
+        "0.4.1",
+        "Yi Liu, Tai Huang",
+        "Added the rounding method and updated the NVFP4 formula"
+      ],
+      [
+        "8/5/2025",
+        "0.4.2",
+        "Haihao Shen, Tai Huang",
+        "Add overall status for recipe readiness"
+      ],
+      [
+        "8/8/2025",
+        "0.5",
+        "Mengni Wang",
+        "Add recipes for Llama4 Scout and Flux"
+      ],
+      [
+        "8/13/2025",
+        "0.5.1",
+        "Yi Liu, Weiwei Zhang",
+        "Updated the NVFP4 recipe, reference, and test results for DeepSeek"
+      ],
+      [
+        "8/16/2025",
+        "0.5.2",
+        "Mengni Wang",
+        "Add FP8 KV cache recipe"
+      ],
+      [
+        "8/18/2025",
+        "0.5.3",
+        "Yi Liu, Weiwei Zhang",
+        "Updated the MXFP4/MXFP8 results for DeepSeek"
+      ],
+      [
+        "8/19/2025",
+        "0.5.4",
+        "Mengni Wang, Kaokao Lv",
+        "Add gpt-oss model evaluation results: bf16/mxfp4/int4 (autoround)/int4 with kv quant"
+      ],
+      [
+        "8/21/2025",
+        "0.5.5",
+        "Kaokao Lv",
+        "Add low precision finetuning recipes for bf16/fp8/mxfp8"
+      ],
+      [
+        "8/26/2025",
+        "0.5.6",
+        "Yi Liu, Weiwei Zhang",
+        "Updated the MXFP4 recipe and result for DeepSeek"
+      ],
+      [
+        "8/27/2025",
+        "0.5.7",
+        "Mengni Wang",
+        "Add NVFP4 KV cache"
+      ],
+      [
+        "9/2/2025",
+        "0.5.8",
+        "Xin He",
+        "Update MXFP4 recipe for Llama 3 3 70B"
+      ],
+      [
+        "9/2/2025",
+        "0.5.9",
+        "Yi Liu",
+        "Updated the recipes and results for QWen-235B"
+      ],
+      [
+        "9/4/2025",
+        "0.6",
+        "Mengni Wang, Tai Huang",
+        "Update Flux recipes and overall status"
+      ],
+      [
+        "9/18/2025",
+        "0.6.1",
+        "Tai Huang",
+        "Separate global scale formula for NVFP4+"
+      ],
+      [
+        "9/19/2025",
+        "0.6.2",
+        "Yi Liu",
+        "Updated the MXFP4 results for QWen-235B"
+      ],
+      [
+        "9/22/2025",
+        "0.6.3",
+        "Kaokao Lv",
+        "Updated the low precision finetuning results for Llama3.1-70B-Instruct"
+      ],
+      [
+        "9/23/2025",
+        "0.6.4",
+        "Xin He",
+        "Add MXFP4 recipe and results of Llama 3.1 8B; Update MXFP4 recipe and results of Llama 3 3 70B with lower bits; Update table of content;"
+      ],
+      [
+        "9/26/2025",
+        "0.6.5",
+        "Xin He",
+        "Add Intel MXFP8 recipe for Llama3.1 8B"
+      ],
+      [
+        "9/29/2025",
+        "0.6.6",
+        "Xin He",
+        "Add MXFP8, NVFP4, NVFP4+ recipe results of llama 3.1 70B"
+      ],
+      [
+        "10/10/2025",
+        "0.6.7",
+        "Xin He",
+        "Remove NVFP4 recipe content of 3.1 8b and 3.3 70b; Add NVFP4+ recipe content of llama 3.1 70B"
+      ],
+      [
+        "10/17/2025",
+        "0.6.8",
+        "Yi Liu",
+        "Add MXFP8 and BF16 results for Llama405B"
+      ],
+      [
+        "10/17/2025",
+        "0.6.9",
+        "Xin He",
+        "Update NVFP4+ recipe content of llama3.1 70B"
+      ],
+      [
+        "10/22/2025",
+        "0.7",
+        "Haihao Shen",
+        "Format and fix minor doc issues"
+      ],
+      [
+        "10/22/2025",
+        "0.7.1",
+        "Xin He",
+        "Update llama3.1 8B and llama3.3 70B accuracy with recipe for activation"
+      ],
+      [
+        "10/23/2025",
+        "0.7.2",
+        "Yi Liu, Haihao Shen",
+        "Add Layout and Shapes for Quantized Linear"
+      ],
+      [
+        "10/24/2025",
+        "0.7.3",
+        "Yi Liu",
+        "Move Llama405B results to appendix"
+      ],
+      [
+        "10/24/2025",
+        "0.7.4",
+        "Yi Liu",
+        "Add MXFP4(W4A4) results for GPT-OSS 120B"
+      ],
+      [
+        "10/24/2025",
+        "0.7.5",
+        "Xin He, Haihao Shen",
+        "Update average bits without scale bits, fix typo."
+      ],
+      [
+        "11/10/2025",
+        "0.7.6",
+        "Haihao Shen, Mengni Wang",
+        "Format all the recipes; add workflow diagram of FP8 KV Cache"
+      ],
+      [
+        "11/12/2025",
+        "0.7.7",
+        "Mengni Wang",
+        "Add FP8 recipe and BF16/FP8 result for FramePack"
+      ],
+      [
+        "11/14/2025",
+        "0.7.8",
+        "Haihao Shen",
+        "Format the recipe table"
+      ],
+      [
+        "11/24/2025",
+        "0.7.9",
+        "Xin He, Tai Huang",
+        "Update llama quant algo to avoid misleading"
+      ],
+      [
+        "11/24/2025",
+        "0.8",
+        "Mengni Wang, Haihao Shen",
+        "Add SDPA/KV cache support matrix"
+      ],
+      [
+        "11/24/2025",
+        "0.8.1",
+        "Mengni Wang",
+        "Add Flux T5 MXFP8 result"
+      ],
+      [
+        "12/04/2025",
+        "0.8.2",
+        "Tai Huang, Haihao Shen",
+        "Update to re-prioritize NVFP4 for JGS"
+      ],
+      [
+        "12/07/2025",
+        "0.8.3",
+        "Tai Huang, Haihao Shen",
+        "Update table1, add notes for UE4M3 and move scale numeric to appendix"
+      ],
+      [
+        "12/22/2025",
+        "0.8.4",
+        "Kaokao Lv",
+        "Add mxfp4 finetuning recipe"
+      ],
+      [
+        "1/5/2026",
+        "0.8.5",
+        "Xin He",
+        "Update llama3 accuracy tested with vLLM;\nlm_head is not quantized for all llama3 models since vLLM doesn\u2019t support it;\nChange dataset from [gsm8k, mmlu] to [gsm8k_llama, mmlu_llama];\nLlama3.1 8b MXFP8 recipe changes from AutoRound to RTN;\nLlama3.3 70b NVFP4 recipe changes from RTN to AutoRound;"
+      ],
+      [
+        "1/23/2026",
+        "0.8.6",
+        "Xin He",
+        "Update round method with FLOOR and CREIL for Llama3"
+      ],
+      [
+        "1/24/2026",
+        "0.8.7",
+        "Yi Liu",
+        "Update round method for DeepSeek and Qwen"
+      ],
+      [
+        "2/26/2026",
+        "0.8.8",
+        "Yi Liu, Suyue",
+        "Updated the results of DS/QWEN using v2 recipe (FP8KV/ Attn)"
+      ],
+      [
+        "3/4/2026",
+        "0.8.9",
+        "XinHe, Suyue",
+        "Updated the results of llama 3.1 8B and llama3.3 70B using v2 recipe (FP8KV/ Attn)"
+      ],
+      [
+        "3/18/2026",
+        "0.9.0",
+        "Mengni Wang, Haihao Shen",
+        "Update SDPA using BF16, and change the order of KV Cache and SDPA"
+      ],
+      [
+        "3/23/2026",
+        "0.9.1",
+        "Xin He, Haihao Shen",
+        "Update quantized ops for Llama3"
+      ],
+      [
+        "3/24/2026",
+        "0.9.2",
+        "Tai, Huang",
+        "Update all v2 recipes (with FP8 KV/Attn) to consistent contents"
+      ],
+      [
+        "3/30/2026",
+        "0.9.3",
+        "Yi Liu, Suyue",
+        "Updated the QWEN RULER results using the v2 recipe"
+      ],
+      [
+        "4/8/2026",
+        "0.9.4",
+        "Tai, Huang",
+        "Move common definitions to \u201cDefinitions in Low Precision Recipe\u201d doc and refer to it"
+      ],
+      [
+        "4/20/2026",
+        "0.9.5",
+        "Mengni Wang",
+        "Add Wan2.2-T2V-A14B/ Wan2.2-I2V-A14B FP8 recipe and accuracy results"
+      ],
+      [
+        "4/22/2026",
+        "0.9.6",
+        "Yi Liu, Mengni Wang, Haihao Shen",
+        "Update the output dtype of GEMM"
+      ],
+      [
+        "4/26/2026",
+        "0.9.7",
+        "Mengni Wang",
+        "Add Wan2.2-T2V-A14B /Wan2.2-I2V-A14B MXFP8 recipe and accuracy results"
+      ]
+    ],
+    "cols": 4
+  },
+  {
+    "table_idx": 1,
+    "rows": [
+      [
+        "",
+        "Native Model",
+        "Best Model w/ Quantization Dtype (Element Dtype)",
+        "Scale Type"
+      ],
+      [
+        "CRI",
+        "BF16 / FP16 / FP8",
+        "MXFP4 (E2M1)",
+        "E8M0"
+      ],
+      [
+        "CRI",
+        "BF16 / FP16",
+        "MXFP8 (E4M3)",
+        "E8M0"
+      ],
+      [
+        "JGS",
+        "BF16 / FP16 / FP8",
+        "NVFP4 (E2M1)",
+        "UE4M3"
+      ],
+      [
+        "JGS",
+        "BF16 / FP16",
+        "MXFP8 (E4M3)",
+        "E8M0"
+      ]
+    ],
+    "cols": 4
+  },
+  {
+    "table_idx": 2,
+    "rows": [
+      [
+        "CRI Key Models",
+        "MXFP8",
+        "MXFP8",
+        "MXFP4",
+        "MXFP4"
+      ],
+      [
+        "CRI Key Models",
+        "Recipe",
+        "Model",
+        "Recipe",
+        "Model"
+      ],
+      [
+        "Llama 3.3 70B",
+        "\u221a",
+        "Link",
+        "\u221a",
+        ""
+      ],
+      [
+        "Qwen3-30B-A3B",
+        "\u221a",
+        "Link",
+        "Not required",
+        "Not required"
+      ],
+      [
+        "Llama4 Scout",
+        "Not required",
+        "Not required",
+        "\u221a",
+        "Link"
+      ],
+      [
+        "Flux",
+        "\u221a",
+        "",
+        "Not required",
+        "Not required"
+      ],
+      [
+        "DeepSeek-R1",
+        "\u221a",
+        "",
+        "\u221a",
+        "Link"
+      ],
+      [
+        "Llama 3.1 8B",
+        "\u221a",
+        "Link",
+        "\u221a",
+        ""
+      ],
+      [
+        "GPT-OSS-120B",
+        "Not required",
+        "Not required (native)",
+        "Not required (native)",
+        "Not required (native)"
+      ],
+      [
+        "Qwen-235B",
+        "\u221a",
+        "",
+        "\u221a",
+        "Link"
+      ],
+      [
+        "Qwen3-32B",
+        "",
+        "",
+        "Not required",
+        "Not required"
+      ],
+      [
+        "WAN 2.2 T2V-14B",
+        "\u221a",
+        "",
+        "Not required",
+        "Not required"
+      ],
+      [
+        "Wan2.2-I2V-14B-720P",
+        "\u221a",
+        "",
+        "Not required",
+        "Not required"
+      ],
+      [
+        "WAN 2.2 S2V-14B",
+        "\u221a",
+        "",
+        "Not required",
+        "Not required"
+      ],
+      [
+        "FramePack",
+        "\u221a",
+        "",
+        "Not required",
+        "Not required"
+      ]
+    ],
+    "cols": 5
+  },
+  {
+    "table_idx": 3,
+    "rows": [
+      [
+        "JGS Key Models",
+        "MXFP8",
+        "MXFP8",
+        "NVFP4",
+        "NVFP4"
+      ],
+      [
+        "JGS Key Models",
+        "Recipe",
+        "Model",
+        "Recipe",
+        "Model"
+      ],
+      [
+        "Llama 3.1 70B",
+        "\u221a",
+        "",
+        "\u221a",
+        ""
+      ],
+      [
+        "DeepSeek-R1",
+        "\u221a",
+        "",
+        "\u221a",
+        ""
+      ],
+      [
+        "Llama4 Maverik",
+        "Not required",
+        "Not required",
+        "WIP",
+        ""
+      ],
+      [
+        "Flux",
+        "\u221a",
+        "",
+        "Not started yet",
+        "Not started yet"
+      ],
+      [
+        "DLRM",
+        "WIP",
+        "",
+        "WIP",
+        ""
+      ]
+    ],
+    "cols": 5
+  },
+  {
+    "table_idx": 4,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "RTN"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear, KV Cache, Attention"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "MXFP8"
+      ],
+      [
+        "",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "",
+        "Scheme",
+        "Weight \u2013 MXFP8, Activation \u2013 MXFP8"
+      ],
+      [
+        "",
+        "Weight scheme",
+        "Static, block-wise, FLOOR"
+      ],
+      [
+        "",
+        "Activation scheme",
+        "Dynamic, block-wise, RCEIL"
+      ],
+      [
+        "",
+        "Block size",
+        "32"
+      ],
+      [
+        "",
+        "Scale type",
+        "FP8 E8M0"
+      ],
+      [
+        "",
+        "Scale method",
+        "1D block-wise scaling for MXFP8"
+      ],
+      [
+        "",
+        "Exclude layers",
+        "lm_head"
+      ],
+      [
+        "KV cache",
+        "Data type",
+        "FP8"
+      ],
+      [
+        "KV cache",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "KV cache",
+        "Scheme",
+        "Static, Per-tensor, RNE"
+      ],
+      [
+        "KV cache",
+        "Scale type",
+        "FP32"
+      ],
+      [
+        "Attention",
+        "Data type",
+        "FP8"
+      ],
+      [
+        "Attention",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "Attention",
+        "Scheme",
+        "Static, Per-tensor, RNE"
+      ],
+      [
+        "Attention",
+        "Scale type",
+        "FP32"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 5,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "AutoRound"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "MXFP4, MXFP8 (Average bits=7.55)"
+      ],
+      [
+        "",
+        "Element format",
+        "E2M1, E4M3"
+      ],
+      [
+        "",
+        "Scheme",
+        "Weight \u2013 MXFP4, Activation \u2013 MXFP4;\nWeight \u2013 MXFP8, Activation \u2013 MXFP8;"
+      ],
+      [
+        "",
+        "Weight scheme",
+        "Static, block-wise, FLOOR"
+      ],
+      [
+        "",
+        "Activation scheme",
+        "Dynamic, block-wise, RCEIL"
+      ],
+      [
+        "",
+        "Block size",
+        "32"
+      ],
+      [
+        "",
+        "Scale type",
+        "FP8 E8M0"
+      ],
+      [
+        "",
+        "Scale method",
+        "1D block-wise scaling for MXFP4;\n1D block-wise scaling for MXFP8;"
+      ],
+      [
+        "",
+        "Exclude layers",
+        "lm_head"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 6,
+    "rows": [
+      [
+        "Llama-3.1-8B-Instruct",
+        "Gsm8k_llama \n (strict)",
+        "Mmlu_llama",
+        "Piqa",
+        "Hellaswag",
+        "Average",
+        "Ratio",
+        "Bits per weight (no scale bits)"
+      ],
+      [
+        "BF16",
+        "0.8264",
+        "0.6763",
+        "0.8014",
+        "0.5976",
+        "0.7254",
+        "/",
+        "16"
+      ],
+      [
+        "MXFP8 (RTN)",
+        "0.8203",
+        "0.6779",
+        "0.8009",
+        "0.5979",
+        "0.72425",
+        "99.84%",
+        "8"
+      ],
+      [
+        "MXFP4 (RTN)",
+        "0.695",
+        "0.615",
+        "0.78",
+        "0.567",
+        "0.66435",
+        "91.58%",
+        "4"
+      ],
+      [
+        "MXFP4 (Intel)",
+        "0.818",
+        "0.6737",
+        "0.7971",
+        "0.5959",
+        "0.7212",
+        "99.42%",
+        "7.55"
+      ]
+    ],
+    "cols": 8
+  },
+  {
+    "table_idx": 7,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "RTN"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "MXFP8"
+      ],
+      [
+        "Linear",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "Linear",
+        "Scheme",
+        "Weight \u2013 MXFP8, Activation \u2013 MXFP8"
+      ],
+      [
+        "Linear",
+        "Weight scheme",
+        "Static, block-wise, FLOOR"
+      ],
+      [
+        "Linear",
+        "Activation scheme",
+        "Dynamic, block-wise, RCEIL"
+      ],
+      [
+        "Linear",
+        "Block size",
+        "32"
+      ],
+      [
+        "Linear",
+        "Scale type",
+        "FP8 E8M0"
+      ],
+      [
+        "Linear",
+        "Scale method",
+        "1D block-wise scaling for MXFP8"
+      ],
+      [
+        "Linear",
+        "Exclude layers",
+        "lm_head"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 8,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "AutoRound"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "NVFP4"
+      ],
+      [
+        "Linear",
+        "Element format",
+        "E2M1"
+      ],
+      [
+        "Linear",
+        "Scheme",
+        "Weight \u2013 NVFP4, Activation \u2013 NVFP4"
+      ],
+      [
+        "Linear",
+        "Weight scheme",
+        "Static, block-wise, FLOOR"
+      ],
+      [
+        "Linear",
+        "Activation scheme",
+        "Dynamic, block-wise, FLOOR, static global scale"
+      ],
+      [
+        "Linear",
+        "Block size",
+        "16"
+      ],
+      [
+        "Linear",
+        "Scale type",
+        "FP8 E4M3"
+      ],
+      [
+        "Linear",
+        "Scale method",
+        "1D block-wise scaling for NVFP4"
+      ],
+      [
+        "Linear",
+        "Extra tensor scaling",
+        "Static FP32 global scale"
+      ],
+      [
+        "Linear",
+        "Exclude layers",
+        "lm_head"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 9,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "RTN"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "NVFP4+"
+      ],
+      [
+        "Linear",
+        "Element format",
+        "E2M1"
+      ],
+      [
+        "Linear",
+        "Scheme",
+        "Weight \u2013 NVFP4+, Activation \u2013 NVFP4+"
+      ],
+      [
+        "Linear",
+        "Weight scheme",
+        "Static, block-wise, FLOOR"
+      ],
+      [
+        "Linear",
+        "Activation scheme",
+        "Dynamic, block-wise, FLOOR, static global scale"
+      ],
+      [
+        "Linear",
+        "Block size",
+        "16"
+      ],
+      [
+        "Linear",
+        "Scale type",
+        "FP8 E5M3"
+      ],
+      [
+        "Linear",
+        "Scale method",
+        "1D block-wise scaling for NVFP4+"
+      ],
+      [
+        "Linear",
+        "Extra tensor scaling",
+        "No global scale"
+      ],
+      [
+        "Linear",
+        "Exclude layers",
+        "/"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 10,
+    "rows": [
+      [
+        "Llama-3.1-70B-Instruct",
+        "Gsm8k_llama \n (strict)",
+        "Mmlu_llama",
+        "Piqa",
+        "Hellaswag",
+        "Average",
+        "Ratio",
+        "Bits per weight (no scale bits)"
+      ],
+      [
+        "BF16",
+        "0.9522",
+        "0.8388",
+        "0.8357",
+        "0.6609",
+        "0.8219",
+        "/",
+        "16"
+      ],
+      [
+        "MXFP8 \n(RTN)",
+        "0.95",
+        "0.8367",
+        "0.8379",
+        "0.6612",
+        "0.8215",
+        "99.95%",
+        "8"
+      ],
+      [
+        "NVFP4 \n(RTN)",
+        "0.9242",
+        "0.8267",
+        "0.8362",
+        "0.6582",
+        "0.81132",
+        "98.71%",
+        "4"
+      ],
+      [
+        "NVFP4\n(Intel)",
+        "0.9401",
+        "0.8311",
+        "0.8303",
+        "0.6547",
+        "0.8141",
+        "99.05%",
+        "4"
+      ]
+    ],
+    "cols": 8
+  },
+  {
+    "table_idx": 11,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "RTN"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear, KV Cache, Attention"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "MXFP8"
+      ],
+      [
+        "Linear",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "Linear",
+        "Scheme",
+        "Weight \u2013 MXFP8, Activation \u2013 MXFP8"
+      ],
+      [
+        "Linear",
+        "Weight scheme",
+        "Static, block-wise, FLOOR"
+      ],
+      [
+        "Linear",
+        "Activation scheme",
+        "Dynamic, block-wise, RCEIL"
+      ],
+      [
+        "Linear",
+        "Block size",
+        "32"
+      ],
+      [
+        "Linear",
+        "Scale type",
+        "FP8 E8M0"
+      ],
+      [
+        "Linear",
+        "Scale method",
+        "1D block-wise scaling for MXFP8"
+      ],
+      [
+        "Linear",
+        "Exclude layers",
+        "lm_head"
+      ],
+      [
+        "KV cache",
+        "Data type",
+        "FP8"
+      ],
+      [
+        "KV cache",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "KV cache",
+        "Scheme",
+        "Static, Per-tensor, RNE"
+      ],
+      [
+        "KV cache",
+        "Scale type",
+        "FP32"
+      ],
+      [
+        "Attention",
+        "Data type",
+        "FP8"
+      ],
+      [
+        "Attention",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "Attention",
+        "Scheme",
+        "Static, Per-tensor, RNE"
+      ],
+      [
+        "Attention",
+        "Scale type",
+        "FP32"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 12,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "AutoRound"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear, KV Cache"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "MXFP4, MXFP8 (Average bits=5.55)"
+      ],
+      [
+        "Linear",
+        "Element format",
+        "E2M1, E4M3"
+      ],
+      [
+        "Linear",
+        "Scheme",
+        "Weight \u2013 MXFP4, Activation \u2013 MXFP4;\nWeight \u2013 MXFP8, Activation \u2013 MXFP8;"
+      ],
+      [
+        "Linear",
+        "Weight scheme",
+        "Static, block-wise, FLOOR"
+      ],
+      [
+        "Linear",
+        "Activation scheme",
+        "Dynamic, block-wise, RCEIL"
+      ],
+      [
+        "Linear",
+        "Block size",
+        "32"
+      ],
+      [
+        "Linear",
+        "Scale type",
+        "FP8 E8M0"
+      ],
+      [
+        "Linear",
+        "Scale method",
+        "1D block-wise scaling for MXFP4;\n1D block-wise scaling for MXFP8;"
+      ],
+      [
+        "Linear",
+        "Exclude layers",
+        "lm_head"
+      ],
+      [
+        "KV cache",
+        "Data type",
+        "FP8"
+      ],
+      [
+        "KV cache",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "KV cache",
+        "Scheme",
+        "Static, Per-tensor, RNE"
+      ],
+      [
+        "KV cache",
+        "Scale type",
+        "FP32"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 13,
+    "rows": [
+      [
+        "Llama-3.3-70B-Instruct",
+        "Gsm8k_llama \n (strict)",
+        "Mmlu_llama",
+        "Piqa",
+        "Hellaswag",
+        "Average",
+        "Ratio",
+        "Bits per weight (no scale bits)"
+      ],
+      [
+        "BF16",
+        "0.9492",
+        "0.8336",
+        "0.8357",
+        "0.6661",
+        "0.8211",
+        "/",
+        "16"
+      ],
+      [
+        "MXFP8 \n(RTN)",
+        "0.944",
+        "0.833",
+        "0.832",
+        "0.666",
+        "0.8187",
+        "99.71%",
+        "8"
+      ],
+      [
+        "MXFP4\n (RTN)",
+        "0.93",
+        "0.807",
+        "0.815",
+        "0.643",
+        "0.7986",
+        "97.26%",
+        "4"
+      ],
+      [
+        "MXFP4 \n(Intel)",
+        "0.942",
+        "0.829",
+        "0.8303",
+        "0.6567",
+        "0.8144",
+        "99.18%",
+        "5.55"
+      ]
+    ],
+    "cols": 8
+  },
+  {
+    "table_idx": 14,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "RTN"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear, KV Cache, Attention"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "MXFP8"
+      ],
+      [
+        "Linear",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "Linear",
+        "Scheme",
+        "Weight \u2013 MXFP8, Activation \u2013 MXFP8"
+      ],
+      [
+        "Linear",
+        "Weight scheme",
+        "Static, block-wise, RCEIL"
+      ],
+      [
+        "Linear",
+        "Activation scheme",
+        "Dynamic, block-wise, RCEIL"
+      ],
+      [
+        "Linear",
+        "Block size",
+        "32"
+      ],
+      [
+        "Linear",
+        "Scale type",
+        "FP8 E8M0"
+      ],
+      [
+        "Linear",
+        "Scale method",
+        "1D block-wise scaling for MXFP8"
+      ],
+      [
+        "Linear",
+        "Exclude layers",
+        "lm_head, mlp.gate"
+      ],
+      [
+        "KV cache",
+        "Data type",
+        "FP8"
+      ],
+      [
+        "KV cache",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "KV cache",
+        "Scheme",
+        "Static, Per-tensor, RNE"
+      ],
+      [
+        "KV cache",
+        "Scale type",
+        "FP32"
+      ],
+      [
+        "Attention",
+        "Data type",
+        "FP8"
+      ],
+      [
+        "Attention",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "Attention",
+        "Scheme",
+        "Static, Per-tensor, RNE"
+      ],
+      [
+        "Attention",
+        "Scale type",
+        "FP32"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 15,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "RTN"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear, KV Cache, Attention"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "MXFP4"
+      ],
+      [
+        "Linear",
+        "Element format",
+        "E2M1"
+      ],
+      [
+        "Linear",
+        "Scheme",
+        "Weight \u2013 MXFP4, Activation \u2013 MXFP4"
+      ],
+      [
+        "Linear",
+        "Weight scheme",
+        "Static, block-wise, RCEIL"
+      ],
+      [
+        "Linear",
+        "Activation scheme",
+        "Dynamic, block-wise, RCEIL"
+      ],
+      [
+        "Linear",
+        "Block size",
+        "32"
+      ],
+      [
+        "Linear",
+        "Scale type",
+        "FP8 E8M0"
+      ],
+      [
+        "Linear",
+        "Scale method",
+        "1D block-wise scaling for MXFP4"
+      ],
+      [
+        "Linear",
+        "Exclude layers",
+        "lm_head; mlp.gate; Linears before and after attention score computation within attention module"
+      ],
+      [
+        "KV cache",
+        "Data type",
+        "FP8"
+      ],
+      [
+        "KV cache",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "KV cache",
+        "Scheme",
+        "Static, Per-tensor, RNE"
+      ],
+      [
+        "KV cache",
+        "Scale type",
+        "FP32"
+      ],
+      [
+        "Attention",
+        "Data type",
+        "FP8"
+      ],
+      [
+        "Attention",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "Attention",
+        "Scheme",
+        "Static, Per-tensor, RNE"
+      ],
+      [
+        "Attention",
+        "Scale type",
+        "FP32"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 16,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "RTN"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "NVFP4"
+      ],
+      [
+        "Linear",
+        "Element format",
+        "E2M1"
+      ],
+      [
+        "Linear",
+        "Scheme",
+        "Weight \u2013 NVFP4, Activation \u2013 NVFP4"
+      ],
+      [
+        "Linear",
+        "Weight scheme",
+        "Static, block-wise"
+      ],
+      [
+        "Linear",
+        "Activation scheme",
+        "Dynamic, block-wise"
+      ],
+      [
+        "Linear",
+        "Block size",
+        "16"
+      ],
+      [
+        "Linear",
+        "Scale type",
+        "FP8 UE4M3"
+      ],
+      [
+        "Linear",
+        "Scale method",
+        "1D block-wise scaling for NVFP4"
+      ],
+      [
+        "Linear",
+        "Extra tensor scaling",
+        "FP32 static global scale"
+      ],
+      [
+        "Linear",
+        "Exclude layers",
+        "lm_head, embedding; mlp.gate; Linears (q_a_proj, q_b_proj, kv_a_proj_with_mqa, kv_b_proj, o_proj for projection on hidden states) before and after attention score computation within attention module"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 17,
+    "rows": [
+      [
+        "DeepSeek R1",
+        "Gsm8k \n(strict)",
+        "Mmlu",
+        "Piqa",
+        "Hellaswag",
+        "AVG.",
+        "comments"
+      ],
+      [
+        "Official Model (DeepseekAI)",
+        "0.9568",
+        "0.8489",
+        "0.8319",
+        "0.6903",
+        "0.8320",
+        "deepseek-ai/DeepSeek-R1"
+      ],
+      [
+        "MXFP8(Intel)",
+        "0.9591",
+        "0.8513",
+        "0.8324",
+        "0.6917",
+        "0.8336",
+        ""
+      ],
+      [
+        "MXFP4(Intel)",
+        "0.9560",
+        "0.8480",
+        "0.8275",
+        "0.6840",
+        "0.8289",
+        "RTN;  All self-attn modules are kept in FP8"
+      ],
+      [
+        "NVFP4(Intel)",
+        "0.9545",
+        "0.8472",
+        "0.8281",
+        "0.6902",
+        "0.8300",
+        "RTN;  All self-attn modules are kept in FP8"
+      ],
+      [
+        "NVFP4 (Nvidia)",
+        "0.9598",
+        "0.8468",
+        "0.8248",
+        "0.6916",
+        "0.8308",
+        "nvidia/DeepSeek-R1-FP4; All self-attn modules are kept in FP8"
+      ]
+    ],
+    "cols": 7
+  },
+  {
+    "table_idx": 18,
+    "rows": [
+      [
+        "DeepSeek R1",
+        "Gsm8k \n(strict)",
+        "",
+        ""
+      ],
+      [
+        "MXFP8(Intel) + BF16 KV",
+        "0.9591",
+        "",
+        ""
+      ],
+      [
+        "MXFP8(Intel) + FP8 KV",
+        "0.9553",
+        "",
+        ""
+      ],
+      [
+        "MXFP8(Intel) + FP8 KV + FP8 Attention",
+        "0.9606",
+        "",
+        ""
+      ],
+      [
+        "MXFP4(Intel) + BF16 KV",
+        "0.9560",
+        "",
+        ""
+      ],
+      [
+        "MXFP4(Intel) + FP8 KV",
+        "0.9583",
+        "",
+        ""
+      ],
+      [
+        "MXFP4(Intel) + FP8 KV + FP8 Attention",
+        "0.9591",
+        "",
+        ""
+      ]
+    ],
+    "cols": 4
+  },
+  {
+    "table_idx": 19,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "RTN"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear, KV Cache, Attention"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "MXFP8"
+      ],
+      [
+        "Linear",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "Linear",
+        "Scheme",
+        "Weight \u2013 MXFP8, Activation \u2013 MXFP8"
+      ],
+      [
+        "Linear",
+        "Weight scheme",
+        "Static, block-wise, RCEIL"
+      ],
+      [
+        "Linear",
+        "Activation scheme",
+        "Dynamic, block-wise, RCEIL"
+      ],
+      [
+        "Linear",
+        "Block size",
+        "32"
+      ],
+      [
+        "Linear",
+        "Scale type",
+        "FP8 E8M0"
+      ],
+      [
+        "Linear",
+        "Scale method",
+        "1D block-wise scaling for MXFP8"
+      ],
+      [
+        "Linear",
+        "Exclude layers",
+        "lm-head, mlp.gate"
+      ],
+      [
+        "KV cache",
+        "Data type",
+        "FP8"
+      ],
+      [
+        "KV cache",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "KV cache",
+        "Scheme",
+        "Static, Per-tensor, RNE"
+      ],
+      [
+        "KV cache",
+        "Scale type",
+        "FP32"
+      ],
+      [
+        "Attention",
+        "Data type",
+        "FP8"
+      ],
+      [
+        "Attention",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "Attention",
+        "Scheme",
+        "Static, Per-tensor, RNE"
+      ],
+      [
+        "Attention",
+        "Scale type",
+        "FP32"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 20,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "Auto-round Tuning"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear, KV Cache, Attention"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "MXFP4"
+      ],
+      [
+        "Linear",
+        "Element format",
+        "E2M1"
+      ],
+      [
+        "Linear",
+        "Scheme",
+        "Weight \u2013 MXFP4, Activation \u2013 MXFP4"
+      ],
+      [
+        "Linear",
+        "Weight scheme",
+        "Static, block-wise, RCEIL"
+      ],
+      [
+        "Linear",
+        "Activation scheme",
+        "Dynamic, block-wise, RCEIL"
+      ],
+      [
+        "Linear",
+        "Block size",
+        "32"
+      ],
+      [
+        "Linear",
+        "Scale type",
+        "FP8 E8M0"
+      ],
+      [
+        "Linear",
+        "Scale method",
+        "1D block-wise scaling for MXFP4"
+      ],
+      [
+        "Linear",
+        "Exclude layers",
+        "lm_head; all Linears within attention part, mlp.gate"
+      ],
+      [
+        "KV cache",
+        "Data type",
+        "FP8"
+      ],
+      [
+        "KV cache",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "KV cache",
+        "Scheme",
+        "Static, Per-tensor, RNE"
+      ],
+      [
+        "KV cache",
+        "Scale type",
+        "FP32"
+      ],
+      [
+        "Attention",
+        "Data type",
+        "FP8"
+      ],
+      [
+        "Attention",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "Attention",
+        "Scheme",
+        "Static, Per-tensor, RNE"
+      ],
+      [
+        "Attention",
+        "Scale type",
+        "FP32"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 21,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "RTN"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "NVFP4"
+      ],
+      [
+        "Linear",
+        "Element format",
+        "E2M1"
+      ],
+      [
+        "Linear",
+        "Scheme",
+        "Weight \u2013 NVFP4, Activation \u2013 NVFP4"
+      ],
+      [
+        "Linear",
+        "Weight scheme",
+        "Static, block-wise"
+      ],
+      [
+        "Linear",
+        "Activation scheme",
+        "Dynamic, block-wise"
+      ],
+      [
+        "Linear",
+        "Block size",
+        "16"
+      ],
+      [
+        "Linear",
+        "Scale type",
+        "FP8 UE4M3"
+      ],
+      [
+        "Linear",
+        "Scale method",
+        "1D block-wise scaling for NVFP4"
+      ],
+      [
+        "Linear",
+        "Extra tensor scaling",
+        "FP32 static global scale"
+      ],
+      [
+        "Linear",
+        "Exclude layers",
+        "lm_head, embedding, all Linears in attention, mlp.gate"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 22,
+    "rows": [
+      [
+        "Qwen-235B",
+        "Gsm8k\n(strict)",
+        "Mmlu",
+        "Piqa",
+        "Hellaswag",
+        "AVG."
+      ],
+      [
+        "BF16 (Qwen.ai)",
+        "0.9242",
+        "0.8492",
+        "0.8177",
+        "0.6794",
+        "0.8176"
+      ],
+      [
+        "MXFP8 (Intel)",
+        "0.9303",
+        "0.8486",
+        "0.8215",
+        "0.6782",
+        "0.8197"
+      ],
+      [
+        "MXFP4 (Intel)",
+        "0.9393",
+        "0.8423",
+        "0.8237",
+        "0.6686",
+        "0.8185"
+      ],
+      [
+        "NVFP4 (Intel)",
+        "0.9416",
+        "0.8438",
+        "0.8079",
+        "0.6691",
+        "0.8156"
+      ]
+    ],
+    "cols": 6
+  },
+  {
+    "table_idx": 23,
+    "rows": [
+      [
+        "Qwen-235B",
+        "Gsm8k \n(strict)\n(re",
+        "RULER (niah_multiquery\n) / 64k",
+        "RULER (niah_multiquery\n) /128k"
+      ],
+      [
+        "BF16 (Qwen.ai)",
+        "0.9318",
+        "0.9990",
+        "0.5140"
+      ],
+      [
+        "MXFP8(Intel) + FP8 KV",
+        "0.9272",
+        "0.9995",
+        "0.5040"
+      ],
+      [
+        "MXFP8(Intel) + FP8 KV + FP8 Attention",
+        "0.9265",
+        "0.9965",
+        "0.5020"
+      ],
+      [
+        "MXFP4(Intel) + FP8 KV",
+        "0.9318",
+        "0.9920",
+        "0.4745"
+      ],
+      [
+        "MXFP4(Intel) + FP8 KV + FP8 Attention",
+        "0.9416",
+        "0.9935",
+        "0.4820"
+      ]
+    ],
+    "cols": 4
+  },
+  {
+    "table_idx": 24,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "RTN"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "MXFP4"
+      ],
+      [
+        "Linear",
+        "Element format",
+        "E2M1"
+      ],
+      [
+        "Linear",
+        "Scheme",
+        "Weight \u2013 MXFP4, Activation \u2013 MXFP4"
+      ],
+      [
+        "Linear",
+        "Weight scheme",
+        "Static, block-wise"
+      ],
+      [
+        "Linear",
+        "Activation scheme",
+        "Dynamic, block-wise"
+      ],
+      [
+        "Linear",
+        "Block size",
+        "32"
+      ],
+      [
+        "Linear",
+        "Scale type",
+        "FP8 E8M0"
+      ],
+      [
+        "Linear",
+        "Scale method",
+        "1D block-wise scaling for MXFP4"
+      ],
+      [
+        "Linear",
+        "Exclude layers",
+        "lm_head; all Linears within attention part"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 25,
+    "rows": [
+      [
+        "GPT-OSS 120B",
+        "gsm8k",
+        "aime25",
+        "gpqa",
+        "mmlu",
+        "Avg"
+      ],
+      [
+        "MXFP4 (W4A8, official)",
+        "0.9401",
+        "0.5375",
+        "0.6509",
+        "0.8579",
+        "0.741088"
+      ],
+      [
+        "MXFP4 (W4A4, official)",
+        "0.9409",
+        "0.4917",
+        "0.6540",
+        "0.8557",
+        "0.735575"
+      ]
+    ],
+    "cols": 6
+  },
+  {
+    "table_idx": 26,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "RTN"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "FP8"
+      ],
+      [
+        "Linear",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "Linear",
+        "Scheme",
+        "Weight - E4M3, Activation - E4M3"
+      ],
+      [
+        "Linear",
+        "Weight scheme",
+        "Static, channel-wise, RNE"
+      ],
+      [
+        "Linear",
+        "Activation scheme",
+        "Dynamic, token-wise, RNE"
+      ],
+      [
+        "Linear",
+        "Scale type",
+        "FP32"
+      ],
+      [
+        "Linear",
+        "Scaling method",
+        "Channel-wise scaling for FP8"
+      ],
+      [
+        "Linear",
+        "Exclude layers",
+        "lm_head, self_attn, router, vision_model, multi_modal_projector, shared_expert, feed_forward.gate_proj, feed_forward.up_proj,\nfeed_forward.down_proj"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 27,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "AutoRound"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "NVFP4"
+      ],
+      [
+        "Linear",
+        "Element format",
+        "E2M1"
+      ],
+      [
+        "Linear",
+        "Scheme",
+        "Weight \u2013 NVFP4, Activation \u2013 NVFP4"
+      ],
+      [
+        "Linear",
+        "Weight scheme",
+        "Static, block-wise, RNE"
+      ],
+      [
+        "Linear",
+        "Activation scheme",
+        "Dynamic, block-wise, RNE"
+      ],
+      [
+        "Linear",
+        "Block size",
+        "16"
+      ],
+      [
+        "Linear",
+        "Scale type",
+        "FP8 UE4M3"
+      ],
+      [
+        "Linear",
+        "Scale method",
+        "1D block-wise scaling for NVFP4"
+      ],
+      [
+        "Linear",
+        "Extra tensor scaling",
+        "FP32 global scale"
+      ],
+      [
+        "Linear",
+        "Exclude layers",
+        "lm_head, self_attn, router, vision_model, multi_modal_projector, shared_expert, feed_forward.gate_proj, feed_forward.up_proj,\nfeed_forward.down_proj"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 28,
+    "rows": [
+      [
+        "Llama-4-Maverick-17B-128E-Instruct",
+        "hellaswag",
+        "piqa",
+        "mmlu",
+        "gsm8k",
+        "chartqa",
+        "mmmu",
+        "AVG."
+      ],
+      [
+        "FP8",
+        "0.6855",
+        "0.8215",
+        "0.8532",
+        "0.9325",
+        "0.8892",
+        "0.5444",
+        "0.7877"
+      ],
+      [
+        "NVFP4 (RTN + static global scale)",
+        "0.6823",
+        "0.8215",
+        "0.8566",
+        "0.9219",
+        "0.8904",
+        "0.5378",
+        "0.7851"
+      ]
+    ],
+    "cols": 8
+  },
+  {
+    "table_idx": 29,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "RTN"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear , KV cache, Attention"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "MXFP4"
+      ],
+      [
+        "Linear",
+        "Element format",
+        "E2M1"
+      ],
+      [
+        "Linear",
+        "Scheme",
+        "Weight \u2013 MXFP4, Activation \u2013 MXFP4"
+      ],
+      [
+        "Linear",
+        "Weight scheme",
+        "Static, block-wise, FLOOR"
+      ],
+      [
+        "Linear",
+        "Activation scheme",
+        "Dynamic, block-wise, RCEIL"
+      ],
+      [
+        "Linear",
+        "Block size",
+        "32"
+      ],
+      [
+        "Linear",
+        "Scale type",
+        "FP8 E8M0"
+      ],
+      [
+        "Linear",
+        "Scale method",
+        "1D block-wise scaling for MXFP4"
+      ],
+      [
+        "Linear",
+        "Exclude layers",
+        "lm_head, self_attn, router, vision_model, multi_modal_projector, shared_expert"
+      ],
+      [
+        "KV cache",
+        "Data type",
+        "FP8"
+      ],
+      [
+        "KV cache",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "KV cache",
+        "Scheme",
+        "Static, Per-tensor, RNE"
+      ],
+      [
+        "KV cache",
+        "Scale type",
+        "FP32"
+      ],
+      [
+        "Attention",
+        "Data type",
+        "FP8"
+      ],
+      [
+        "Attention",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "Attention",
+        "Scheme",
+        "Static, Per-tensor, RNE"
+      ],
+      [
+        "Attention",
+        "Scale type",
+        "FP32"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 30,
+    "rows": [
+      [
+        "Llama-4-Scout-17B-16E-Instruct",
+        "hellaswag",
+        "piqa",
+        "mmlu",
+        "gsm8k\n(strict)",
+        "Chartqa\n(relaxed)",
+        "mmmu",
+        "AVG."
+      ],
+      [
+        "BF16",
+        "0.6389",
+        "0.8156",
+        "0.7997",
+        "0.9090",
+        "0.8900",
+        "0.5989",
+        "0.7754"
+      ],
+      [
+        "MXFP4 \n(Intel)",
+        "0.6382",
+        "0.7971",
+        "0.7943",
+        "0.8939",
+        "0.8840",
+        "0.5822",
+        "0.7650"
+      ],
+      [
+        "NVFP4 \n(NV reference)",
+        "0.6204",
+        "0.7992",
+        "0.7822",
+        "0.8817",
+        "0",
+        "0.2433",
+        "0.7331"
+      ],
+      [
+        "NVFP4 \n(redhatAI",
+        "0.6218",
+        "0.8009",
+        "0.774",
+        "0.8984",
+        "0.8892",
+        "0.5400",
+        "0.7541"
+      ]
+    ],
+    "cols": 8
+  },
+  {
+    "table_idx": 31,
+    "rows": [
+      [
+        "Llama-4-Scout-17B-16E-Instruct",
+        "gsm8k(strict)",
+        "longbench"
+      ],
+      [
+        "MXFP4 + BF16 KV Cache + BF16 Attention",
+        "0.9075",
+        "0.4285"
+      ],
+      [
+        "MXFP4 + FP8 KV Cache",
+        "0.9083",
+        "0.4283"
+      ],
+      [
+        "MXFP4 + FP8 Attention",
+        "0.9045",
+        "0.4299"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 32,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "RTN"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear, EmbeddingBag"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "FP8"
+      ],
+      [
+        "Linear",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "Linear",
+        "Scheme",
+        "Weight - E4M3, Activation - E4M3"
+      ],
+      [
+        "Linear",
+        "Weight scheme",
+        "Static, tensor-wise"
+      ],
+      [
+        "Linear",
+        "Activation scheme",
+        "Static, tensor-wise"
+      ],
+      [
+        "Linear",
+        "Scale type",
+        "FP32"
+      ],
+      [
+        "Linear",
+        "Scale method",
+        "MaxAbs"
+      ],
+      [
+        "EmbeddingBag",
+        "Data type",
+        "FP8"
+      ],
+      [
+        "EmbeddingBag",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "EmbeddingBag",
+        "Scheme",
+        "Weight-only FP8"
+      ],
+      [
+        "EmbeddingBag",
+        "Weight scheme",
+        "Static, tensor-wise"
+      ],
+      [
+        "EmbeddingBag",
+        "Activation scheme",
+        "/"
+      ],
+      [
+        "EmbeddingBag",
+        "Scale type",
+        "FP32"
+      ],
+      [
+        "EmbeddingBag",
+        "Scale method",
+        "Tensor-wise scaling for FP8"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 33,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "RTN"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear, EmbeddingBag"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "NVFP4"
+      ],
+      [
+        "Linear",
+        "Element format",
+        "E2M1"
+      ],
+      [
+        "Linear",
+        "Scheme",
+        "Weight \u2013 NVFP4, Activation \u2013 NVFP4"
+      ],
+      [
+        "Linear",
+        "Weight scheme",
+        "Static, block-wise"
+      ],
+      [
+        "Linear",
+        "Activation scheme",
+        "Dynamic, block-wise"
+      ],
+      [
+        "Linear",
+        "Block size",
+        "16"
+      ],
+      [
+        "Linear",
+        "Scale type",
+        "FP8 UE4M3"
+      ],
+      [
+        "Linear",
+        "Scale method",
+        "MaxAbs"
+      ],
+      [
+        "Linear",
+        "Extra tensor scaling",
+        "FP32 global scale"
+      ],
+      [
+        "EmbeddingBag",
+        "Data type",
+        "NVFP4"
+      ],
+      [
+        "EmbeddingBag",
+        "Element format",
+        "E2M1"
+      ],
+      [
+        "EmbeddingBag",
+        "Scheme",
+        "Weight-only NVFP4"
+      ],
+      [
+        "EmbeddingBag",
+        "Weight scheme",
+        "Static, block-wise"
+      ],
+      [
+        "EmbeddingBag",
+        "Activation scheme",
+        "/"
+      ],
+      [
+        "EmbeddingBag",
+        "Block size",
+        "16"
+      ],
+      [
+        "EmbeddingBag",
+        "Scale type",
+        "FP8 UE4M3"
+      ],
+      [
+        "EmbeddingBag",
+        "Scale method",
+        "1D block-wise scaling for NVFP4"
+      ],
+      [
+        "EmbeddingBag",
+        "Extra tensor scaling",
+        "FP32 global scale"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 34,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "RTN"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "FP8"
+      ],
+      [
+        "Linear",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "Linear",
+        "Scheme",
+        "Weight \u2013 E4M3, Activation \u2013 E4M3"
+      ],
+      [
+        "Linear",
+        "Weight scheme",
+        "Static, tensor-wise, RNE"
+      ],
+      [
+        "Linear",
+        "Activation scheme",
+        "Dynamic, tensor-wise, RNE"
+      ],
+      [
+        "Linear",
+        "Scale type",
+        "FP32"
+      ],
+      [
+        "Linear",
+        "Exclude layers",
+        "/"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 35,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "AutoRound"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "MXFP8"
+      ],
+      [
+        "Linear",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "Linear",
+        "Scheme",
+        "Weight \u2013 MXFP8, Activation \u2013 MXFP8"
+      ],
+      [
+        "Linear",
+        "Weight scheme",
+        "Static, block-wise, FLOOR"
+      ],
+      [
+        "Linear",
+        "Activation scheme",
+        "Dynamic, block-wise, RCEIL"
+      ],
+      [
+        "Linear",
+        "Block size",
+        "32"
+      ],
+      [
+        "Linear",
+        "Scale type",
+        "FP8 E8M0"
+      ],
+      [
+        "Linear",
+        "Scale method",
+        "1D block-wise scaling for MXFP8"
+      ],
+      [
+        "Linear",
+        "Exclude layers",
+        "time_text_embed, context_embedder, x_embedder, norm_out, proj_out"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 36,
+    "rows": [
+      [
+        "Flux.1-dev",
+        "CLIP",
+        "CLIP-IQA",
+        "ImageReward"
+      ],
+      [
+        "BF16",
+        "26.0515",
+        "0.9545",
+        "1.0133"
+      ],
+      [
+        "FP8",
+        "26.0123",
+        "0.9555",
+        "1.0370"
+      ],
+      [
+        "MXFP8",
+        "26.0031",
+        "0.9546",
+        "1.0112"
+      ]
+    ],
+    "cols": 4
+  },
+  {
+    "table_idx": 37,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "RTN"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear (in lllyasviel/FramePackI2V_HY)"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "FP8"
+      ],
+      [
+        "Linear",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "Linear",
+        "Scheme",
+        "Weight \u2013 E4M3, Activation \u2013 E4M3"
+      ],
+      [
+        "Linear",
+        "Weight scheme",
+        "Static, tensor-wise, RNE"
+      ],
+      [
+        "Linear",
+        "Activation scheme",
+        "Dynamic, tensor -wise, RNE"
+      ],
+      [
+        "Linear",
+        "Scale type",
+        "FP32"
+      ],
+      [
+        "Linear",
+        "Exclude layers",
+        "context_embedder, proj_in, time_text_embed, norm_out, proj_out"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 38,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "RTN"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear (in lllyasviel/FramePackI2V_HY)"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "MXFP8"
+      ],
+      [
+        "Linear",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "Linear",
+        "Scheme",
+        "Weight \u2013 MXFP8, Activation \u2013 MXFP8"
+      ],
+      [
+        "Linear",
+        "Weight scheme",
+        "Static, block-wise, FLOOR"
+      ],
+      [
+        "Linear",
+        "Activation scheme",
+        "Dynamic, block -wise, RCEIL"
+      ],
+      [
+        "Linear",
+        "Block size",
+        "32"
+      ],
+      [
+        "Linear",
+        "Scale type",
+        "FP8 E8M0"
+      ],
+      [
+        "Linear",
+        "Exclude layers",
+        "context_embedder, proj_in, time_text_embed, norm_out, proj_out"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 39,
+    "rows": [
+      [
+        "FramePackI2V_HY",
+        "Quality Score",
+        "I2V Score",
+        "Total Score"
+      ],
+      [
+        "BF16",
+        "0.8051",
+        "0.9731",
+        "0.8891"
+      ],
+      [
+        "FP8",
+        "0.8015",
+        "0.9726",
+        "0.8870"
+      ],
+      [
+        "MXFP8",
+        "0.8027",
+        "0.9733",
+        "0.8880"
+      ]
+    ],
+    "cols": 4
+  },
+  {
+    "table_idx": 40,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "RTN"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear, KV Cache, Attention"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "MXFP8"
+      ],
+      [
+        "Linear",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "Linear",
+        "Scheme",
+        "Weight \u2013 MXFP8, Activation \u2013 MXFP8"
+      ],
+      [
+        "Linear",
+        "Weight scheme",
+        "Static, block-wise, RCEIL"
+      ],
+      [
+        "Linear",
+        "Activation scheme",
+        "Dynamic, block-wise, RCEIL"
+      ],
+      [
+        "Linear",
+        "Block size",
+        "32"
+      ],
+      [
+        "Linear",
+        "Scale type",
+        "FP8 E8M0"
+      ],
+      [
+        "Linear",
+        "Scale method",
+        "1D block-wise scaling for MXFP8"
+      ],
+      [
+        "Linear",
+        "Exclude layers",
+        "lm-head, mlp.gate"
+      ],
+      [
+        "KV cache",
+        "Data type",
+        "FP8"
+      ],
+      [
+        "KV cache",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "KV cache",
+        "Scheme",
+        "Static, Per-tensor, RNE"
+      ],
+      [
+        "KV cache",
+        "Scale type",
+        "FP32"
+      ],
+      [
+        "Attention",
+        "Data type",
+        "FP8"
+      ],
+      [
+        "Attention",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "Attention",
+        "Scheme",
+        "Static, Per-tensor, RNE"
+      ],
+      [
+        "Attention",
+        "Scale type",
+        "FP32"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 41,
+    "rows": [
+      [
+        "Qwen3-30B-A3B-Instruct-2507",
+        "Gsm8k\n(strict)",
+        "Mmlu",
+        "Piqa",
+        "Hellaswag",
+        "AVG."
+      ],
+      [
+        "BF16 (Qwen.ai)",
+        "0.9363",
+        "0.8011",
+        "0.8030",
+        "0.6118",
+        "0.78805"
+      ],
+      [
+        "MXFP8 (Intel)",
+        "0.9348",
+        "0.8006",
+        "0.8079",
+        "0.6084",
+        "0.78792"
+      ],
+      [
+        "MXFP8(Intel) + FP8 KV",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "MXFP8(Intel) + FP8 KV + FP8 Attention",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    ],
+    "cols": 6
+  },
+  {
+    "table_idx": 42,
+    "rows": [
+      [
+        "Qwen3-30B-A3B-Instruct-2507-FP8",
+        "Math500",
+        "MMLU"
+      ],
+      [
+        "FP8(fp8 kv)",
+        "95.6",
+        "88.69"
+      ],
+      [
+        "FP8(turboquant, k8v4)",
+        "95.8",
+        "88.61"
+      ],
+      [
+        "FP8(turboquant, 4bit and nc)",
+        "97",
+        "88.19"
+      ],
+      [
+        "FP8(turboquant, k4v3 and nc)",
+        "90.6",
+        "87.08"
+      ],
+      [
+        "FP8(turboquant, 3bit and nc)",
+        "92.2",
+        "86.49"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 43,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "AutoRound"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "INT4"
+      ],
+      [
+        "Linear",
+        "Scheme",
+        "Weight \u2013 INT4, Activation - FP16"
+      ],
+      [
+        "Linear",
+        "Weight scheme",
+        "Static, block-wise"
+      ],
+      [
+        "Linear",
+        "Activation scheme",
+        "/"
+      ],
+      [
+        "Linear",
+        "Block size",
+        "128"
+      ],
+      [
+        "Linear",
+        "Scale type",
+        "FP16"
+      ],
+      [
+        "Linear",
+        "Scale method",
+        "1D block-wise scaling"
+      ],
+      [
+        "Linear",
+        "Exclude layers",
+        "self_attn, router, lm_head"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 44,
+    "rows": [
+      [
+        "GPT-OSS 20B",
+        "gsm8k",
+        "aime25",
+        "gpqa",
+        "mmlu"
+      ],
+      [
+        "BF16",
+        "0.919636",
+        "0.379166",
+        "0.579545",
+        "0.806509"
+      ],
+      [
+        "MXFP4 (official)",
+        "0.910538",
+        "0.391666",
+        "0.574494",
+        "0.80309"
+      ],
+      [
+        "INT4",
+        "0.915087",
+        "0.391666",
+        "0.55808",
+        "0.807648"
+      ],
+      [
+        "INT4 + FP8 E4M3 KV",
+        "0.918878",
+        "",
+        "",
+        ""
+      ]
+    ],
+    "cols": 5
+  },
+  {
+    "table_idx": 45,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "AutoRound"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "INT4"
+      ],
+      [
+        "Linear",
+        "Scheme",
+        "Weight \u2013 INT4, Activation - FP16"
+      ],
+      [
+        "Linear",
+        "Weight scheme",
+        "Static, block-wise"
+      ],
+      [
+        "Linear",
+        "Activation scheme",
+        "/"
+      ],
+      [
+        "Linear",
+        "Block size",
+        "128"
+      ],
+      [
+        "Linear",
+        "Scale type",
+        "FP16"
+      ],
+      [
+        "Linear",
+        "Scale method",
+        "1D block-wise scaling"
+      ],
+      [
+        "Linear",
+        "Exclude layers",
+        "self_attn, router, lm_head"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 46,
+    "rows": [
+      [
+        "GPT-OSS 120B",
+        "gsm8k",
+        "aime25",
+        "gpqa",
+        "mmlu"
+      ],
+      [
+        "BF16",
+        "0.946929",
+        "0.5375",
+        "0.658459",
+        "0.859279"
+      ],
+      [
+        "MXFP4 (official)",
+        "0.9433",
+        "0.508333",
+        "0.63952",
+        "0.858923"
+      ],
+      [
+        "INT4",
+        "0.948445",
+        "0.5375",
+        "0.629419",
+        "0.8523"
+      ],
+      [
+        "INT4 + FP8 E4M3 KV",
+        "0.943139",
+        "",
+        "",
+        ""
+      ]
+    ],
+    "cols": 5
+  },
+  {
+    "table_idx": 47,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "RTN"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "MXFP8"
+      ],
+      [
+        "Linear",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "Linear",
+        "Scheme",
+        "Weight \u2013 MXFP8, Activation \u2013 MXFP8"
+      ],
+      [
+        "Linear",
+        "Weight scheme",
+        "Static, block-wise"
+      ],
+      [
+        "Linear",
+        "Activation scheme",
+        "Dynamic, block-wise"
+      ],
+      [
+        "Linear",
+        "Block size",
+        "32"
+      ],
+      [
+        "Linear",
+        "Scale type",
+        "FP8 E8M0"
+      ],
+      [
+        "Linear",
+        "Scale method",
+        "1D block-wise scaling for MXFP8"
+      ],
+      [
+        "Linear",
+        "Exclude layers",
+        "lm-head"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 48,
+    "rows": [
+      [
+        "Llama 3.1 405B",
+        "Gsm8k\n(strict)",
+        "Mmlu",
+        "Piqa",
+        "Hellaswag",
+        "AVG."
+      ],
+      [
+        "BF16",
+        "0.8901",
+        "0.8042",
+        "0.8406",
+        "0.7028",
+        "0.8094"
+      ],
+      [
+        "MXFP8 (Intel)",
+        "0.8855",
+        "0.8044",
+        "0.8357",
+        "0.7025",
+        "0.8070"
+      ]
+    ],
+    "cols": 6
+  },
+  {
+    "table_idx": 49,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "RTN"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "FP8"
+      ],
+      [
+        "Linear",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "Linear",
+        "Scheme",
+        "Weight \u2013 E4M3, Activation \u2013 E4M3"
+      ],
+      [
+        "Linear",
+        "Weight scheme",
+        "Static, tensor-wise, RNE"
+      ],
+      [
+        "Linear",
+        "Activation scheme",
+        "Dynamic, tensor-wise, RNE"
+      ],
+      [
+        "Linear",
+        "Scale type",
+        "FP32"
+      ],
+      [
+        "Linear",
+        "Exclude layers",
+        "condition_embedder, proj_out"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 50,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "AutoRound"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "MXFP8"
+      ],
+      [
+        "Linear",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "Linear",
+        "Scheme",
+        "Weight \u2013 MXFP8, Activation \u2013 MXFP8"
+      ],
+      [
+        "Linear",
+        "Weight scheme",
+        "Static, block-wise, FLOOR"
+      ],
+      [
+        "Linear",
+        "Activation scheme",
+        "Dynamic, block-wise, RCEIL"
+      ],
+      [
+        "Linear",
+        "Block size",
+        "32"
+      ],
+      [
+        "Linear",
+        "Scale type",
+        "FP8 E8M0"
+      ],
+      [
+        "Linear",
+        "Scale method",
+        "1D block-wise scaling for MXFP8"
+      ],
+      [
+        "Linear",
+        "Exclude layers",
+        "condition_embedder, proj_out"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 51,
+    "rows": [
+      [
+        "Wan2.2-T2V-A14B",
+        "subject_\nconsistency",
+        "motion_\nsmoothness",
+        "aesthetic_\nquality",
+        "aesthetic_\nquality",
+        "imaging_\nquality",
+        "overall_\nconsistency"
+      ],
+      [
+        "BF16",
+        "0.9422",
+        "0.9730",
+        "0.6454",
+        "0.6454",
+        "0.6605",
+        "0.2564"
+      ],
+      [
+        "FP8",
+        "0.9496",
+        "0.9732",
+        "0.6480",
+        "0.6480",
+        "0.6630",
+        "0.2613"
+      ],
+      [
+        "MXFP8",
+        "0.9508",
+        "0.9730",
+        "0.6424",
+        "0.6640",
+        "0.2604",
+        "0.2604"
+      ]
+    ],
+    "cols": 7
+  },
+  {
+    "table_idx": 52,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "RTN"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "FP8"
+      ],
+      [
+        "Linear",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "Linear",
+        "Scheme",
+        "Weight \u2013 E4M3, Activation \u2013 E4M3"
+      ],
+      [
+        "Linear",
+        "Weight scheme",
+        "Static, tensor-wise, RNE"
+      ],
+      [
+        "Linear",
+        "Activation scheme",
+        "Dynamic, tensor-wise, RNE"
+      ],
+      [
+        "Linear",
+        "Scale type",
+        "FP32"
+      ],
+      [
+        "Linear",
+        "Exclude layers",
+        "Vae, audio_encoder, text_encoder"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 53,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "RTN"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "MXFP8"
+      ],
+      [
+        "Linear",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "Linear",
+        "Scheme",
+        "Weight \u2013 MXFP8, Activation \u2013 MXFP8"
+      ],
+      [
+        "Linear",
+        "Weight scheme",
+        "Static, block-wise"
+      ],
+      [
+        "Linear",
+        "Activation scheme",
+        "Dynamic, block-wise"
+      ],
+      [
+        "Linear",
+        "Block size",
+        "32"
+      ],
+      [
+        "Linear",
+        "Scale type",
+        "FP8 E8M0"
+      ],
+      [
+        "Linear",
+        "Scale method",
+        "1D block-wise scaling for MXFP8"
+      ],
+      [
+        "Linear",
+        "Exclude layers",
+        "Vae, audio_encoder, text_encoder"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 54,
+    "rows": [
+      [
+        "Wan2.2-S2V-A14B",
+        "SSIM\u2b06",
+        "PSNR\u2b06",
+        "Sync-C\u2b06",
+        "HKC\u2b06",
+        "HKV\u2b06",
+        "CSIM\u2b06"
+      ],
+      [
+        "BF16",
+        "0.636",
+        "19.552",
+        "0.104",
+        "0.107",
+        "3.075",
+        "0.837"
+      ],
+      [
+        "FP8",
+        "0.615",
+        "19.156",
+        "0.169",
+        "0.121",
+        "3.507",
+        "0.831"
+      ],
+      [
+        "MXFP8",
+        "0.616",
+        "19.134",
+        "0.164",
+        "0.164",
+        "0.111",
+        "3.134",
+        "0.834"
+      ]
+    ],
+    "cols": 8
+  },
+  {
+    "table_idx": 55,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "RTN"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "FP8"
+      ],
+      [
+        "Linear",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "Linear",
+        "Scheme",
+        "Weight \u2013 E4M3, Activation \u2013 E4M3"
+      ],
+      [
+        "Linear",
+        "Weight scheme",
+        "Static, tensor-wise, RNE"
+      ],
+      [
+        "Linear",
+        "Activation scheme",
+        "Dynamic, tensor-wise, RNE"
+      ],
+      [
+        "Linear",
+        "Scale type",
+        "FP32"
+      ],
+      [
+        "Linear",
+        "Exclude layers",
+        "condition_embedder, proj_out"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 56,
+    "rows": [
+      [
+        "Recipe",
+        "Recipe",
+        "Config/Setting"
+      ],
+      [
+        "Quant approach",
+        "Quant approach",
+        "PTQ"
+      ],
+      [
+        "Quant algo",
+        "Quant algo",
+        "AutoRound"
+      ],
+      [
+        "Quantized ops",
+        "Quantized ops",
+        "Linear"
+      ],
+      [
+        "Linear",
+        "Data type",
+        "MXFP8"
+      ],
+      [
+        "Linear",
+        "Element format",
+        "E4M3"
+      ],
+      [
+        "Linear",
+        "Scheme",
+        "Weight \u2013 MXFP8, Activation \u2013 MXFP8"
+      ],
+      [
+        "Linear",
+        "Weight scheme",
+        "Static, block-wise, FLOOR"
+      ],
+      [
+        "Linear",
+        "Activation scheme",
+        "Dynamic, block-wise, RCEIL"
+      ],
+      [
+        "Linear",
+        "Block size",
+        "32"
+      ],
+      [
+        "Linear",
+        "Scale type",
+        "FP8 E8M0"
+      ],
+      [
+        "Linear",
+        "Scale method",
+        "1D block-wise scaling for MXFP8"
+      ],
+      [
+        "Linear",
+        "Exclude layers",
+        "condition_embedder, proj_out"
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 57,
+    "rows": [
+      [
+        "Wan2.2-I2V-A14B",
+        "i2v_background",
+        "i2v_subject",
+        "subject_\nconsistency",
+        "background_\nconsistency",
+        "motion_\nsmoothness"
+      ],
+      [
+        "BF16",
+        "0.9920",
+        "0.9834",
+        "0.9651",
+        "0.9796",
+        "0.9878"
+      ],
+      [
+        "FP8",
+        "0.9900",
+        "0.9807",
+        "0.9629",
+        "0.9792",
+        "0.9877"
+      ],
+      [
+        "MXFP8",
+        "0.9921",
+        "0.9818",
+        "0.9645",
+        "0.9812",
+        "0.9883"
+      ]
+    ],
+    "cols": 6
+  },
+  {
+    "table_idx": 58,
+    "rows": [
+      [
+        "config",
+        "values",
+        "comments"
+      ],
+      [
+        "optimizer",
+        "adam, -adam-beta1 0.9 --adam-beta2 0.95 --adam-eps 1e-5",
+        "high precision (FP32) when updating weights"
+      ],
+      [
+        "Learning rate",
+        "2e-5, min-lr=1e-6",
+        "lr-decay-style= cosine"
+      ],
+      [
+        "Weight decay",
+        "0.1",
+        ""
+      ],
+      [
+        "Batch size",
+        "global batch size=8, micro batch size=2",
+        ""
+      ],
+      [
+        "Training steps",
+        "6400",
+        ""
+      ],
+      [
+        "dataset",
+        "Total examples=27k, sequence length=8k",
+        ""
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 59,
+    "rows": [
+      [
+        "config",
+        "values",
+        "comments"
+      ],
+      [
+        "recipes",
+        "FP8",
+        ""
+      ],
+      [
+        "quantized layers",
+        "linear",
+        ""
+      ],
+      [
+        "exclude layers",
+        "embedding, lm_head",
+        ""
+      ],
+      [
+        "FP8 format",
+        "hybrid (E4M3 forward, E5M2 backward)",
+        ""
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 60,
+    "rows": [
+      [
+        "config",
+        "values",
+        "comments"
+      ],
+      [
+        "recipes",
+        "MXFP8",
+        ""
+      ],
+      [
+        "quantized layers",
+        "linear",
+        ""
+      ],
+      [
+        "exclude layers",
+        "embedding, lm_head",
+        ""
+      ],
+      [
+        "FP8 format",
+        "hybrid (E4M3 forward, E5M2 backward)",
+        ""
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 61,
+    "rows": [
+      [
+        "Training mode",
+        "Precision",
+        "gpqa_diamond",
+        "math500",
+        "gsm8k"
+      ],
+      [
+        "Reference",
+        "BF16",
+        "0.2576",
+        "0.366",
+        "0.7233"
+      ],
+      [
+        "SFT-BF16",
+        "BF16",
+        "0.2727",
+        "0.496",
+        "0.834"
+      ],
+      [
+        "SFT-FP8",
+        "BF16",
+        "0.2727",
+        "0.498",
+        "0.8302"
+      ],
+      [
+        "SFT-MXFP8",
+        "BF16",
+        "0.2726",
+        "0.53",
+        "0.8476"
+      ]
+    ],
+    "cols": 5
+  },
+  {
+    "table_idx": 62,
+    "rows": [
+      [
+        "Training mode",
+        "Precision",
+        "hellaswag",
+        "Piqa",
+        "mmlu",
+        "gsm8k"
+      ],
+      [
+        "Reference",
+        "BF16",
+        "0.591",
+        "0.7998",
+        "0.6812",
+        "0.7619"
+      ],
+      [
+        "SFT-BF16",
+        "BF16",
+        "0.5717",
+        "0.7797",
+        "0.6101",
+        "0.7225"
+      ],
+      [
+        "SFT-FP8",
+        "BF16",
+        "0.5667",
+        "0.7753",
+        "0.6098",
+        "0.7263"
+      ],
+      [
+        "SFT-MXFP8",
+        "BF16",
+        "0.5704",
+        "0.7775",
+        "0.6139",
+        "0.7202"
+      ]
+    ],
+    "cols": 6
+  },
+  {
+    "table_idx": 63,
+    "rows": [
+      [
+        "config",
+        "values",
+        "comments"
+      ],
+      [
+        "recipes",
+        "MXFP4",
+        ""
+      ],
+      [
+        "quantized layers",
+        "linear",
+        ""
+      ],
+      [
+        "exclude layers",
+        "embedding, lm_head",
+        ""
+      ],
+      [
+        "FP8 format",
+        "MXFP4 forward, MXFP4 backward",
+        ""
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 64,
+    "rows": [
+      [
+        "config",
+        "values",
+        "comments"
+      ],
+      [
+        "optimizer",
+        "adam, -adam-beta1 0.9 --adam-beta2 0.95 --adam-eps 1e-5",
+        "high precision (FP32) when updating weights"
+      ],
+      [
+        "Learning rate",
+        "1e-5, min-lr=1e-7",
+        "lr-decay-style= cosine"
+      ],
+      [
+        "Weight decay",
+        "0.01",
+        ""
+      ],
+      [
+        "Batch size",
+        "global batch size=8, micro batch size=1",
+        ""
+      ],
+      [
+        "Training steps",
+        "3200",
+        ""
+      ],
+      [
+        "dataset",
+        "Total examples=27k, sequence length=4k",
+        ""
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 65,
+    "rows": [
+      [
+        "config",
+        "values",
+        "comments"
+      ],
+      [
+        "recipes",
+        "FP8",
+        ""
+      ],
+      [
+        "quantized layers",
+        "linear",
+        ""
+      ],
+      [
+        "exclude layers",
+        "embedding, lm_head",
+        ""
+      ],
+      [
+        "FP8 format",
+        "hybrid (E4M3 forward, E5M2 backward)",
+        ""
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 66,
+    "rows": [
+      [
+        "config",
+        "values",
+        "comments"
+      ],
+      [
+        "recipes",
+        "MXFP8",
+        ""
+      ],
+      [
+        "quantized layers",
+        "linear",
+        ""
+      ],
+      [
+        "exclude layers",
+        "embedding, lm_head",
+        ""
+      ],
+      [
+        "FP8 format",
+        "hybrid (E4M3 forward, E5M2 backward)",
+        ""
+      ]
+    ],
+    "cols": 3
+  },
+  {
+    "table_idx": 67,
+    "rows": [
+      [
+        "Training mode",
+        "Precision",
+        "gpqa_diamond",
+        "math500",
+        "gsm8k"
+      ],
+      [
+        "Reference",
+        "BF16",
+        "0.4394",
+        "0.62",
+        "0.9189"
+      ],
+      [
+        "SFT-BF16",
+        "BF16",
+        "0.4242",
+        "0.718",
+        "0.9325"
+      ],
+      [
+        "SFT-FP8",
+        "BF16",
+        "0.4444",
+        "0.736",
+        "0.9409"
+      ],
+      [
+        "SFT-MXFP8",
+        "BF16",
+        "0.4425",
+        "0.731",
+        "0.9426"
+      ]
+    ],
+    "cols": 5
+  },
+  {
+    "table_idx": 68,
+    "rows": [
+      [
+        "Training mode",
+        "Precision",
+        "hellaswag",
+        "piqa",
+        "mmlu",
+        "gsm8k"
+      ],
+      [
+        "Reference",
+        "BF16",
+        "0.6521",
+        "0.8319",
+        "0.8237",
+        "0.8893"
+      ],
+      [
+        "SFT-BF16",
+        "BF16",
+        "0.6413",
+        "0.8275",
+        "0.8049",
+        "0.9272"
+      ],
+      [
+        "SFT-FP8",
+        "BF16",
+        "0.6323",
+        "0.8205",
+        "0.806",
+        "0.9280"
+      ],
+      [
+        "SFT-MXFP8",
+        "BF16",
+        "0.6345",
+        "0.8231",
+        "0.801",
+        "0.9277"
+      ]
+    ],
+    "cols": 6
+  },
+  {
+    "table_idx": 69,
+    "rows": [
+      [
+        "Qwen-235B",
+        "Gsm8k\n(strict)",
+        "Mmlu",
+        "Piqa",
+        "Hellaswag",
+        "AVG."
+      ],
+      [
+        "BF16 (Qwen.ai)",
+        "0.9242",
+        "0.8492",
+        "0.8177",
+        "0.6794",
+        "0.8176"
+      ],
+      [
+        "MXFP4 (RTN)",
+        "0.9378",
+        "0.8395",
+        "0.8166",
+        "0.6680",
+        "0.8155"
+      ]
+    ],
+    "cols": 6
+  },
+  {
+    "table_idx": 70,
+    "rows": [
+      [
+        "Llama-4-Scout-17B-16E-Instruct",
+        "hellaswag",
+        "piqa",
+        "mmlu",
+        "gsm8k",
+        "chartqa",
+        "mmmu",
+        "AVG"
+      ],
+      [
+        "BF16",
+        "0.6389",
+        "0.8156",
+        "0.7997",
+        "0.909",
+        "0.89",
+        "0.5989",
+        "0.7754"
+      ],
+      [
+        "MXFP4 (Intel)",
+        "0.6382",
+        "0.7971",
+        "0.7943",
+        "0.8939",
+        "0.884",
+        "0.5822",
+        "0.7650"
+      ],
+      [
+        "MXFP4 (tuning)",
+        "",
+        "",
+        "",
+        "0.8961",
+        "",
+        "0.5700",
+        "0.7331"
+      ],
+      [
+        "NVFP4 (NV reference)",
+        "0.6204",
+        "0.7992",
+        "0.7822",
+        "0.8817",
+        "0",
+        "0.2433",
+        "0.5545"
+      ],
+      [
+        "NVFP4 (redhatAI)",
+        "0.6218",
+        "0.8009",
+        "0.774",
+        "0.8984",
+        "0.8892",
+        "0.5400",
+        "0.7541"
+      ],
+      [
+        "MXFP4 (align redhat tuning)",
+        "0.6274",
+        "0.7933",
+        "0.7845",
+        "0.8923",
+        "0.8828",
+        "0.5722",
+        "0.7588"
+      ]
+    ],
+    "cols": 8
+  },
+  {
+    "table_idx": 71,
+    "rows": [
+      [
+        "Flux.1-dev",
+        "CLIP",
+        "CLIP-IQA",
+        "ImageReward",
+        "Comments"
+      ],
+      [
+        "BF16 (NV)",
+        "26.0515",
+        "0.95452",
+        "1.0133",
+        ""
+      ],
+      [
+        "MXFP8 (tuning)",
+        "26.0031",
+        "0.9546",
+        "1.0112",
+        "Only quantize Linears in transformer block"
+      ],
+      [
+        "FP8 (RTN)",
+        "26.0105",
+        "0.9572",
+        "1.0469",
+        "Only quantize Linears in transformer block"
+      ],
+      [
+        "MXFP8 (all linear tuning)",
+        "25.8296",
+        "0.9504",
+        "0.9740",
+        "Quantize all Linears"
+      ],
+      [
+        "FP8 (all linear RTN)",
+        "26.0123",
+        "0.9555",
+        "1.0370",
+        "Quantize all Linears"
+      ],
+      [
+        "MXFP8",
+        "26.0139",
+        "0.9555",
+        "1.0197",
+        "Transformers tuning Linears in block, T5 RTN Linears in block"
+      ]
+    ],
+    "cols": 5
+  },
+  {
+    "table_idx": 72,
+    "rows": [
+      [
+        "",
+        "BF16\n(5 video/\nprompt)",
+        "BF16\n(1 video/\nprompt)",
+        "FP8\n(1 video/\nprompt)",
+        "MXFP8\n(1 video/\nprompt)"
+      ],
+      [
+        "background_consistency",
+        "0.9807",
+        "0.9799",
+        "0.9788",
+        "0.9797"
+      ],
+      [
+        "subject_consistency",
+        "0.9636",
+        "0.9656",
+        "0.9654",
+        "0.9674"
+      ],
+      [
+        "aesthetic_quality",
+        "0.6638",
+        "0.6644",
+        "0.6641",
+        "0.6642"
+      ],
+      [
+        "i2v_subject",
+        "0.9912",
+        "0.9918",
+        "0.9920",
+        "0.9917"
+      ],
+      [
+        "motion_smoothness",
+        "0.9945",
+        "0.9950",
+        "0.9952",
+        "0.9951"
+      ],
+      [
+        "i2v_background",
+        "0.9928",
+        "0.9928",
+        "0.9926",
+        "0.9938"
+      ],
+      [
+        "dynamic_degree",
+        "0.3098",
+        "0.2724",
+        "0.2398",
+        "0.2439"
+      ],
+      [
+        "imaging_quality",
+        "0.7019",
+        "0.7036",
+        "0.7014",
+        "0.7023"
+      ],
+      [
+        "camera_motion",
+        "0.6330",
+        "0.6291",
+        "0.6173",
+        "0.6199"
+      ]
+    ],
+    "cols": 5
+  }
+]

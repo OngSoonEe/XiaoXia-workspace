@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ewizt.com — Free Web Apps for Everyone</title>
+    <meta name="description" content="Open and free web apps — task boards, colouring books, personal ledgers, and more. Built with care, free to use.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a26;
+            --bg-card-hover: #222233;
+            --text-primary: #f0f0f5;
+            --text-secondary: #8888a0;
+            --text-muted: #555570;
+            --accent: #6366f1;
+            --accent-light: #818cf8;
+            --accent-glow: rgba(99, 102, 241, 0.15);
+            --border: #2a2a3a;
+            --radius: 16px;
+            --radius-sm: 10px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- Hero --- */
+        .hero {
+            position: relative;
+            padding: 80px 24px 60px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(99,102,241,0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: var(--accent-glow);
+            border: 1px solid rgba(99,102,241,0.2);
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--accent-light);
+            margin-bottom: 28px;
+            letter-spacing: 0.02em;
+        }
+
+        .hero-badge .dot {
+            width: 6px;
+            height: 6px;
+            background: #34d399;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: -0.03em;
+        }
+
+        .hero h1 .gradient {
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: var(--text-secondary);
+            max-width: 540px;
+            margin: 0 auto 40px;
+            font-weight: 400;
+        }
+
+        /* --- Apps Grid --- */
+        .apps-section {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .app-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 32px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .app-card:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(99,102,241,0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.3), 0 0 0 1px rgba(99,102,241,0.1);
+        }
+
+        .app-card .icon {
+            width: 52px;
+            height: 52px;
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+
+        .app-card .icon.wrello { background: rgba(20,184,166,0.12); }
+        .app-card .icon.waccount { background: rgba(99,102,241,0.12); }
+        .app-card .icon.wcolour { background: rgba(249,115,22,0.12); }
+        .app-card .icon.wlight { background: rgba(234,179,8,0.12); }
+
+        .app-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            letter-spacing: -0.01em;
+        }
+
+        .app-card .tag {
+            display: inline-block;
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 3px 8px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+        }
+
+        .tag.live { background: rgba(52,211,153,0.12); color: #34d399; }
+        .tag.coming { background: rgba(99,102,241,0.12); color: #818cf8; }
+
+        .app-card p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+
+        .app-card .arrow {
+            position: absolute;
+            right: 28px;
+            top: 50%;
+            transform: translateY(-50%) translateX(0);
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            transition: all 0.25s ease;
+        }
+
+        .app-card:hover .arrow {
+            color: var(--accent-light);
+            transform: translateY(-50%) translateX(4px);
+        }
+
+        /* --- Footer --- */
+        .footer {
+            text-align: center;
+            padding: 40px 24px;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer p {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        .footer a {
+            color: var(--accent-light);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 700px) {
+            .hero { padding: 60px 20px 40px; }
+            .apps-grid { grid-template-columns: 1fr; }
+            .app-card { padding: 24px; }
+            .app-card .arrow { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <div class="hero-badge"><span class="dot"></span> Free &amp; Open</div>
+    <h1>Simple apps,<br><span class="gradient">made to work.</span></h1>
+    <p>No sign-up walls. No hidden fees. Just free web tools that do what they say — built for everyone, hosted at ewizt.com.</p>
+</section>
+
+<section class="apps-section">
+    <div class="section-label">Our Apps</div>
+    <div class="apps-grid">
+
+        <!-- Wrello -->
+        <a href="/wrello/" class="app-card">
+            <div class="icon wrello">📋</div>
+            <h3>Wrello</h3>
+            <span class="tag live">Live</span>
+            <p>Personal Kanban board. Organise tasks into columns, drag &amp; drop, stay on track. Your to-do list, but better.</p>
+            <span class="arrow">→</span>
+        </a>
+
+        <!-- Wlight -->
+        <a href="/Wlight/" class="app-card">
+            <div class="icon wlight">💡</div>
+            <h3>Wlight</h3>
+            <span class="tag live">Live</span>
+            <p>Measure and record light intensity using your phone's ambient light sensor. Handy for photographers, growers, and curious minds.</p>
+            <span class="arrow">→</span>
+        </a>
+
+        <!-- Waccount -->
+        <a href="#" class="app-card" style="cursor:default;">
+            <div class="icon waccount">📒</div>
+            <h3>Waccount</h3>
+            <span class="tag coming">Coming Soon</span>
+            <p>Personal ledger for tracking income, expenses, and savings. No bank logins — just you and your numbers.</p>
+            <span class="arrow">→</span>
+        </a>
+
+        <!-- Wcolour -->
+        <a href="#" class="app-card" style="cursor:default;">
+            <div class="icon wcolour">🎨</div>
+            <h3>Wcolour</h3>
+            <span class="tag coming">Coming Soon</span>
+            <p>Colouring book for kids (and kids at heart). Pick a drawing, pick your colours, and create — right in the browser.</p>
+            <span class="arrow">→</span>
+        </a>
+
+    </div>
+</section>
+
+<footer class="footer">
+    <p>ewizt.com — free apps, built with care. <a href="/wrello/">Open Wrello →</a></p>
+</footer>
+
+</body>
+</html>

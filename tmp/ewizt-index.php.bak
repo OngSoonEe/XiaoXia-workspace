@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>🎨 Kid Coloring Book</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1 class="header-title">🎨 Kid Coloring Book</h1>
+        <div class="header-buttons">
+            <button id="saveBtn" class="btn btn-primary" title="Save your coloring">💾 Save</button>
+            <button id="clearBtn" class="btn btn-danger" title="Clear canvas">🗑️ Clear</button>
+        </div>
+    </header>
+
+    <!-- Main Canvas Area -->
+    <main class="canvas-area">
+        <div class="canvas-container">
+            <div id="cursorPreview" class="cursor-preview"></div>
+            <canvas id="drawingCanvas" width="800" height="600"></canvas>
+        </div>
+    </main>
+
+    <!-- Bottom Tool Bar -->
+    <nav class="toolbar">
+        <!-- Color Palette -->
+        <div class="color-palette" id="colorPalette"></div>
+
+        <!-- Brush Size Slider -->
+        <div class="brush-size-control">
+            <label for="brushSize" class="brush-label">🖌️ Size: <span id="brushSizeValue">15</span>px</label>
+            <input type="range" id="brushSize" min="5" max="50" value="15" class="brush-slider">
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <button id="undoBtn" class="btn btn-icon" title="Undo" disabled>↩️ Undo</button>
+            <button id="redoBtn" class="btn btn-icon" title="Redo" disabled>↪️ Redo</button>
+        </div>
+
+        <!-- Image Selector -->
+        <div class="image-selector" id="imageSelector"></div>
+    </nav>
+
+    <script src="app.js"></script>
+</body>
+</html>

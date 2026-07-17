@@ -1,0 +1,158 @@
+{
+  "images": [
+    {
+      "id": "cat",
+      "name": "Cute Cat",
+      "category": "animals",
+      "url": "assets/images/line-art/cat.svg",
+      "thumbnail": "assets/images/line-art/cat.svg"
+    },
+    {
+      "id": "tree",
+      "name": "Big Tree",
+      "category": "nature",
+      "url": "assets/images/line-art/tree.svg",
+      "thumbnail": "assets/images/line-art/tree.svg"
+    },
+    {
+      "id": "car",
+      "name": "Race Car",
+      "category": "vehicles",
+      "url": "assets/images/line-art/car.svg",
+      "thumbnail": "assets/images/line-art/car.svg"
+    },
+    {
+      "id": "unicorn",
+      "name": "Magic Unicorn",
+      "category": "fantasy",
+      "url": "assets/images/line-art/unicorn.svg",
+      "thumbnail": "assets/images/line-art/unicorn.svg"
+    },
+    {
+      "id": "flower",
+      "name": "Beautiful Flower",
+      "category": "nature",
+      "url": "assets/images/line-art/flower.svg",
+      "thumbnail": "assets/images/line-art/flower.svg"
+    },
+    {
+      "id": "dog",
+      "name": "Happy Dog",
+      "category": "animals",
+      "url": "assets/images/line-art/dog.svg",
+      "thumbnail": "assets/images/line-art/dog.svg"
+    },
+    {
+      "id": "butterfly",
+      "name": "Colorful Butterfly",
+      "category": "animals",
+      "url": "assets/images/line-art/butterfly.svg",
+      "thumbnail": "assets/images/line-art/butterfly.svg"
+    },
+    {
+      "id": "house",
+      "name": "Cozy House",
+      "category": "nature",
+      "url": "assets/images/line-art/house.svg",
+      "thumbnail": "assets/images/line-art/house.svg"
+    },
+    {
+      "id": "rocket",
+      "name": "Space Rocket",
+      "category": "vehicles",
+      "url": "assets/images/line-art/rocket.svg",
+      "thumbnail": "assets/images/line-art/rocket.svg"
+    },
+    {
+      "id": "dragon",
+      "name": "Friendly Dragon",
+      "category": "fantasy",
+      "url": "assets/images/line-art/dragon.svg",
+      "thumbnail": "assets/images/line-art/dragon.svg"
+    },
+    {
+      "id": "elephant",
+      "name": "Big Elephant",
+      "category": "animals",
+      "url": "assets/images/line-art/elephant.svg",
+      "thumbnail": "assets/images/line-art/elephant.svg"
+    },
+    {
+      "id": "mountain",
+      "name": "Tall Mountain",
+      "category": "nature",
+      "url": "assets/images/line-art/mountain.svg",
+      "thumbnail": "assets/images/line-art/mountain.svg"
+    },
+    {
+      "id": "airplane",
+      "name": "Fast Airplane",
+      "category": "vehicles",
+      "url": "assets/images/line-art/airplane.svg",
+      "thumbnail": "assets/images/line-art/airplane.svg"
+    },
+    {
+      "id": "fairy",
+      "name": "Sparkling Fairy",
+      "category": "fantasy",
+      "url": "assets/images/line-art/fairy.svg",
+      "thumbnail": "assets/images/line-art/fairy.svg"
+    },
+    {
+      "id": "fish",
+      "name": "Swimming Fish",
+      "category": "animals",
+      "url": "assets/images/line-art/fish.svg",
+      "thumbnail": "assets/images/line-art/fish.svg"
+    },
+    {
+      "id": "sun",
+      "name": "Sunny Sun",
+      "category": "nature",
+      "url": "assets/images/line-art/sun.svg",
+      "thumbnail": "assets/images/line-art/sun.svg"
+    },
+    {
+      "id": "bicycle",
+      "name": "Cool Bicycle",
+      "category": "vehicles",
+      "url": "assets/images/line-art/bicycle.svg",
+      "thumbnail": "assets/images/line-art/bicycle.svg"
+    },
+    {
+      "id": "wizard",
+      "name": " Wise Wizard",
+      "category": "fantasy",
+      "url": "assets/images/line-art/wizard.svg",
+      "thumbnail": "assets/images/line-art/wizard.svg"
+    },
+    {
+      "id": "bird",
+      "name": "Flying Bird",
+      "category": "animals",
+      "url": "assets/images/line-art/bird.svg",
+      "thumbnail": "assets/images/line-art/bird.svg"
+    },
+    {
+      "id": "cloud",
+      "name": "Soft Cloud",
+      "category": "nature",
+      "url": "assets/images/line-art/cloud.svg",
+      "thumbnail": "assets/images/line-art/cloud.svg"
+    },
+    {
+      "id": "train",
+      "name": "Fast Train",
+      "category": "vehicles",
+      "url": "assets/images/line-art/train.svg",
+      "thumbnail": "assets/images/line-art/train.svg"
+    },
+    {
+      "id": "castle",
+      "name": "Magic Castle",
+      "category": "fantasy",
+      "url": "assets/images/line-art/castle.svg",
+      "thumbnail": "assets/images/line-art/castle.svg"
+    }
+  ]
+}

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wlight — Light Intensity Logger</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+            background: #0a0a0f;
+            color: #f0f0f5;
+            min-height: 100vh;
+            padding: 0;
+        }
+
+        .header {
+            background: linear-gradient(135deg, rgba(234,179,8,0.08) 0%, transparent 60%);
+            border-bottom: 1px solid #2a2a3a;
+            padding: 24px 20px 16px;
+        }
+
+        .header h1 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .header h1 span {
+            background: linear-gradient(135deg, #eab308, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            font-size: 0.85rem;
+            color: #8888a0;
+            margin-top: 4px;
+        }
+
+        .status-bar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: #12121a;
+            border-bottom: 1px solid #1a1a26;
+            font-size: 0.82rem;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #555;
+            flex-shrink: 0;
+        }
+
+        .status-dot.active { background: #34d399; animation: pulse 2s infinite; }
+        .status-dot.fallback { background: #eab308; animation: pulse 2s infinite; }
+        .status-dot.inactive { background: #ef4444; }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .status-text { color: #8888a0; }
+        .status-text.active { color: #34d399; }
+        .status-text.fallback { color: #eab308; }
+
+        /* Big number display */
+        .reading {
+            text-align: center;
+            padding: 28px 20px 16px;
+        }
+
+        .reading-value {
+            font-size: 4rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1;
+            color: #eab308;
+            transition: color 0.3s;
+        }
+
+        .reading-value.low { color: #6366f1; }
+        .reading-value.medium { color: #34d399; }
+        .reading-value.high { color: #eab308; }
+        .reading-value.very-high { color: #ef4444; }
+
+        .reading-unit {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #8888a0;
+            margin-top: 4px;
+        }
+
+        .reading-label {
+            font-size: 0.75rem;
+            color: #555570;
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        /* Chart */
+        .chart-container {
+            padding: 0 16px 16px;
+        }
+
+        .chart-wrap {
+            background: #1a1a26;
+            border: 1px solid #2a2a3a;
+            border-radius: 12px;
+            padding: 16px 12px 8px;
+            height: 320px;
+            position: relative;
+        }
+
+        .chart-wrap canvas {
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        /* Controls */
+        .controls {
+            padding: 0 16px 24px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #eab308, #f59e0b);
+            color: #000;
+        }
+
+        .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(234,179,8,0.3); }
+        .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
+
+        .btn-secondary {
+            background: #1a1a26;
+            color: #f0f0f5;
+            border: 1px solid #2a2a3a;
+        }
+
+        .btn-secondary:hover { background: #222233; border-color: #3a3a4a; }
+
+        /* Stats row */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 0 16px 20px;
+        }
+
+        .stat-card {
+            background: #1a1a26;
+            border: 1px solid #2a2a3a;
+            border-radius: 10px;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .stat-card .stat-value {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #f0f0f5;
+        }
+
+        .stat-card .stat-label {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #555570;
+            margin-top: 2px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 16px;
+            border-top: 1px solid #1a1a26;
+            font-size: 0.75rem;
+            color: #555570;
+        }
+
+        .footer a { color: #818cf8; text-decoration: none; }
+
+        video { display: none; }
+
+        @media (max-width: 400px) {
+            .reading-value { font-size: 3rem; }
+            .chart-wrap { height: 260px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1><span>Wlight</span></h1>
+        <p>Light Intensity Monitor</p>
+    </div>
+
+    <div class="status-bar">
+        <div class="status-dot" id="statusDot"></div>
+        <span class="status-text" id="statusText">Initializing...</span>
+    </div>
+
+    <div class="reading">
+        <div class="reading-value" id="intensityValue">—</div>
+        <div class="reading-unit" id="intensityUnit">lux</div>
+        <div class="reading-label" id="readingLabel">Waiting for sensor</div>
+    </div>
+
+    <div class="chart-container">
+        <div class="chart-wrap">
+            <canvas id="luxChart"></canvas>
+        </div>
+    </div>
+
+    <div class="stats">
+        <div class="stat-card">
+            <div class="stat-value" id="statMin">—</div>
+            <div class="stat-label">Min</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value" id="statAvg">—</div>
+            <div class="stat-label">Average</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value" id="statMax">—</div>
+            <div class="stat-label">Max</div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button class="btn btn-primary" id="startCameraBtn" style="display:none;">📷 Use Camera Fallback</button>
+        <button class="btn btn-secondary" id="clearBtn">Clear Data</button>
+    </div>
+
+    <video id="video" autoplay playsinline></video>
+
+    <div class="footer">
+        <a href="/">← ewizt.com</a>
+    </div>
+
+    <script>
+        const statusDot = document.getElementById('statusDot');
+        const statusText = document.getElementById('statusText');
+        const intensityDisplay = document.getElementById('intensityValue');
+        const intensityUnit = document.getElementById('intensityUnit');
+        const readingLabel = document.getElementById('readingLabel');
+        const cameraBtn = document.getElementById('startCameraBtn');
+        const clearBtn = document.getElementById('clearBtn');
+        const statMin = document.getElementById('statMin');
+        const statAvg = document.getElementById('statAvg');
+        const statMax = document.getElementById('statMax');
+
+        const MAX_POINTS = 120; // 4 minutes at 2s interval
+        let chartData = { labels: [], values: [] };
+        let allValues = [];
+        let luxMin = Infinity, luxMax = -Infinity, luxSum = 0, luxCount = 0;
+        let currentLux = 0;
+        let isUsingSensor = false;
+        let isUsingCamera = false;
+
+        // Chart setup
+        const ctx = document.getElementById('luxChart').getContext('2d');
+        const gradient = ctx.createLinearGradient(0, 0, 0, 280);
+        gradient.addColorStop(0, 'rgba(234, 179, 8, 0.3)');
+        gradient.addColorStop(1, 'rgba(234, 179, 8, 0.0)');
+
+        const chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [],
+                datasets: [{
+                    label: 'Light Intensity',
+                    data: [],
+                    borderColor: '#eab308',
+                    backgroundColor: gradient,
+                    borderWidth: 2,
+                    pointRadius: 0,
+                    pointHoverRadius: 4,
+                    pointHoverBackgroundColor: '#eab308',
+                    fill: true,
+                    tension: 0.3,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                animation: { duration: 300 },
+                interaction: {
+                    intersect: false,
+                    mode: 'index',
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: '#1a1a26',
+                        borderColor: '#2a2a3a',
+                        borderWidth: 1,
+                        titleColor: '#f0f0f5',
+                        bodyColor: '#eab308',
+                        padding: 10,
+                        displayColors: false,
+                        callbacks: {
+                            label: function(context) {
+                                return context.parsed.y + ' lux';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: { color: 'rgba(42,42,58,0.5)', drawBorder: false },
+                        ticks: { color: '#555570', maxTicksLimit: 6, maxRotation: 0 },
+                    },
+                    y: {
+                        grid: { color: 'rgba(42,42,58,0.5)', drawBorder: false },
+                        ticks: { color: '#555570' },
+                        beginAtZero: true,
+                        suggestedMax: 100,
+                    }
+                }
+            }
+        });
+
+        function formatTime(date) {
+            return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+        }
+
+        function getIntensityClass(value) {
+            if (value < 50) return 'low';
+            if (value < 500) return 'medium';
+            if (value < 2000) return 'high';
+            return 'very-high';
+        }
+
+        function updateDisplay(value, unit) {
+            currentLux = value;
+            const display = value < 10 ? value.toFixed(2) : value < 100 ? value.toFixed(1) : Math.round(value);
+            intensityDisplay.textContent = display;
+            intensityUnit.textContent = unit;
+            intensityDisplay.className = 'reading-value ' + (unit === 'lux' ? getIntensityClass(value) : '');
+
+            if (unit === 'lux') {
+                if (value < 10) readingLabel.textContent = 'Very dim';
+                else if (value < 50) readingLabel.textContent = 'Dim indoor light';
+                else if (value < 200) readingLabel.textContent = 'Typical indoor';
+                else if (value < 500) readingLabel.textContent = 'Bright indoor';
+                else if (value < 1000) readingLabel.textContent = 'Overcast outdoor';
+                else if (value < 2000) readingLabel.textContent = 'Daylight';
+                else readingLabel.textContent = 'Direct sunlight';
+            } else {
+                readingLabel.textContent = 'Estimated brightness';
+            }
+        }
+
+        function addDataPoint(value) {
+            const now = new Date();
+            const timeLabel = formatTime(now);
+
+            chartData.labels.push(timeLabel);
+            chartData.values.push(value);
+
+            // Trim to max points
+            if (chartData.labels.length > MAX_POINTS) {
+                chartData.labels.shift();
+                chartData.values.shift();
+            }
+
+            // Stats
+            allValues.push(value);
+            luxSum += value;
+            luxCount++;
+            if (value < luxMin) luxMin = value;
+            if (value > luxMax) luxMax = value;
+
+            statMin.textContent = luxMin < 10 ? luxMin.toFixed(1) : Math.round(luxMin);
+            statAvg.textContent = luxCount > 0 ? (luxSum / luxCount < 10 ? (luxSum / luxCount).toFixed(1) : Math.round(luxSum / luxCount)) : '—';
+            statMax.textContent = luxMax < 10 ? luxMax.toFixed(1) : Math.round(luxMax);
+
+            // Update chart data
+            chart.data.labels = [...chartData.labels];
+            chart.data.datasets[0].data = [...chartData.values];
+
+            // Adaptive Y-axis: set range based on observed data with padding
+            const dataMin = Math.min(...chartData.values);
+            const dataMax = Math.max(...chartData.values);
+            const range = dataMax - dataMin;
+            const padding = range * 0.15; // 15% headroom
+
+            if (range < 5) {
+                // Very small range — use fixed band around the data so fluctuations are visible
+                const center = (dataMax + dataMin) / 2;
+                const halfBand = Math.max(2, center * 0.1);
+                chart.options.scales.y.min = Math.max(0, Math.floor(center - halfBand));
+                chart.options.scales.y.max = Math.ceil(center + halfBand);
+            } else {
+                // Normal range — start from zero with headroom above max
+                chart.options.scales.y.min = 0;
+                chart.options.scales.y.max = Math.ceil(dataMax + padding);
+            }
+            // Clear suggestedMax so our min/max take effect
+            chart.options.scales.y.suggestedMax = undefined;
+
+            chart.update('none');
+        }
+
+        // --- METHOD 1: Dedicated Ambient Light Sensor ---
+        if ('AmbientLightSensor' in window) {
+            try {
+                const sensor = new AmbientLightSensor();
+
+                sensor.addEventListener('reading', () => {
+                    const lux = sensor.illuminance;
+                    isUsingSensor = true;
+                    statusDot.className = 'status-dot active';
+                    statusText.className = 'status-text active';
+                    statusText.textContent = 'Hardware Light Sensor';
+                    cameraBtn.style.display = 'none';
+                    updateDisplay(lux, 'lux');
+                    addDataPoint(lux);
+                });
+
+                sensor.addEventListener('error', (event) => {
+                    statusDot.className = 'status-dot inactive';
+                    statusText.textContent = 'Sensor unavailable — try camera fallback';
+                    cameraBtn.style.display = 'block';
+                });
+
+                sensor.start();
+
+            } catch (err) {
+                statusDot.className = 'status-dot inactive';
+                statusText.textContent = 'Sensor permission denied';
+                cameraBtn.style.display = 'block';
+            }
+        } else {
+            statusDot.className = 'status-dot inactive';
+            statusText.textContent = 'Hardware sensor not supported — use camera fallback';
+            cameraBtn.style.display = 'block';
+        }
+
+        // --- METHOD 2: Camera-based Luminance Estimation ---
+        cameraBtn.addEventListener('click', async () => {
+            const video = document.getElementById('video');
+            const canvas = document.createElement('canvas');
+            const ctx2 = canvas.getContext('2d', { willReadFrequently: true });
+
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({
+                    video: { facingMode: 'environment' }
+                });
+                video.srcObject = stream;
+
+                // Wait for video to be ready
+                await new Promise(resolve => {
+                    video.onloadedmetadata = () => {
+                        video.play();
+                        resolve();
+                    };
+                });
+
+                isUsingCamera = true;
+                statusDot.className = 'status-dot fallback';
+                statusText.className = 'status-text fallback';
+                statusText.textContent = 'Camera brightness estimation';
+                cameraBtn.style.display = 'none';
+                readingLabel.textContent = 'Estimating from camera...';
+
+                setInterval(() => {
+                    if (video.videoWidth === 0) return;
+
+                    canvas.width = video.videoWidth;
+                    canvas.height = video.videoHeight;
+                    ctx2.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+                    const imageData = ctx2.getImageData(0, 0, canvas.width, canvas.height);
+                    const data = imageData.data;
+                    let totalLuminance = 0;
+
+                    for (let i = 0; i < data.length; i += 4) {
+                        totalLuminance += (0.299 * data[i] + 0.587 * data[i+1] + 0.114 * data[i+2]);
+                    }
+
+                    const avgBrightness = (totalLuminance / (data.length / 4)).toFixed(1);
+                    updateDisplay(parseFloat(avgBrightness), '/ 255');
+                    addDataPoint(parseFloat(avgBrightness));
+                }, 2000);
+
+            } catch (err) {
+                statusDot.className = 'status-dot inactive';
+                statusText.textContent = `Camera access denied: ${err.message}`;
+            }
+        });
+
+        // Clear button
+        clearBtn.addEventListener('click', () => {
+            chartData = { labels: [], values: [] };
+            allValues = [];
+            luxMin = Infinity;
+            luxMax = -Infinity;
+            luxSum = 0;
+            luxCount = 0;
+            chart.data.labels = [];
+            chart.data.datasets[0].data = [];
+            chart.options.scales.y.min = 0;
+            chart.options.scales.y.max = undefined;
+            chart.options.scales.y.suggestedMax = 100;
+            chart.update();
+            statMin.textContent = '—';
+            statAvg.textContent = '—';
+            statMax.textContent = '—';
+            intensityDisplay.textContent = '—';
+            readingLabel.textContent = 'Data cleared';
+        });
+    </script>
+</body>
+</html>

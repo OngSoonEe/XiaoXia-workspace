@@ -1,0 +1,31 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Unicorn head -->
+  <path d="M150 100 C120 100 100 130 90 160 C80 190 100 210 130 200 L150 200 C170 200 190 200 210 160 C220 130 200 100 150 100 Z" 
+        fill="none" stroke="#333" stroke-width="3"/>
+  
+  <!-- Unicorn horn -->
+  <path d="M150 80 L150 30 L165 55 L150 80 Z" fill="none" stroke="#333" stroke-width="2"/>
+  <path d="M150 30 L140 40 L150 50 L160 40 Z" fill="none" stroke="#333" stroke-width="1"/>
+  
+  <!-- Unicorn mane -->
+  <path d="M90 160 C70 140 50 150 30 140" fill="none" stroke="#333" stroke-width="2"/>
+  <path d="M90 170 C70 150 50 160 30 150" fill="none" stroke="#333" stroke-width="2"/>
+  <path d="M90 180 C70 160 50 170 30 160" fill="none" stroke="#333" stroke-width="2"/>
+  
+  <!-- Unicorn face details -->
+  <circle cx="135" cy="145" r="5" fill="none" stroke="#333" stroke-width="2"/>
+  <circle cx="165" cy="145" r="5" fill="none" stroke="#333" stroke-width="2"/>
+  <path d="M150 160 L145 170 L155 170 Z" fill="none" stroke="#333" stroke-width="2"/>
+  
+  <!-- Neck and body -->
+  <path d="M130 200 L130 250 L170 250 L170 200 Z" fill="none" stroke="#333" stroke-width="3"/>
+  
+  <!-- Legs -->
+  <path d="M130 250 L130 280" fill="none" stroke="#333" stroke-width="3"/>
+  <path d="M170 250 L170 280" fill="none" stroke="#333" stroke-width="3"/>
+  <path d="M140 250 L140 280" fill="none" stroke="#333" stroke-width="3"/>
+  <path d="M160 250 L160 280" fill="none" stroke="#333" stroke-width="3"/>
+  
+  <!-- Tail -->
+  <path d="M150 250 C130 270 110 260 90 280" fill="none" stroke="#333" stroke-width="2"/>
+</svg>

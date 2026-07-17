@@ -1,0 +1,56 @@
+App_nini2 - Requirements
+=========================
+
+## PHP Requirements
+
+- PHP 7.4 or higher
+- GD extension enabled (for image processing)
+- JSON extension enabled
+- File upload support enabled
+
+## Server Requirements
+
+- Web server (Apache, Nginx, or built-in PHP server)
+- Write permissions for assets/images/saved/ directory
+- Read permissions for all assets directories
+
+## Browser Requirements
+
+- Modern web browser with HTML5 Canvas support
+- JavaScript enabled
+- Touch support for mobile devices (optional)
+
+## File Structure Requirements
+
+The following directories must exist and be writable:
+- assets/images/saved/ - For saving user drawings
+- assets/images/line-art/ - For line art SVG files
+
+## Optional Requirements
+
+- GD extension for image manipulation
+- Exif extension for image metadata (optional)
+
+## Installation
+
+1. Ensure PHP 7.4+ is installed
+2. Enable GD extension in php.ini:
+   - Linux: Uncomment `extension=gd`
+   - Windows: Uncomment `extension=gd`
+3. Set proper permissions on assets directories:
+   ```bash
+   chmod -R 755 assets/
+   ```
+4. Access the application through a web browser
+
+## Testing
+
+To verify GD extension is enabled:
+```bash
+php -m | grep gd
+```
+
+To test file permissions:
+```bash
+touch assets/images/saved/test.txt && rm assets/images/saved/test.txt
+```
