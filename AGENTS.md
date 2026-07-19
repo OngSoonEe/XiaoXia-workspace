@@ -296,6 +296,7 @@ Commands:
 
 ### Lobster Automation (`~/works/lobster-automation/projects-list/MyTasks/`)
 
+- **BEFORE creating any new Lobster project or flow, read `~/works/lobster-automation/PROJECT-GUIDE.md`** — it contains hard boundaries, mandatory structure, and common AI mistakes to avoid.
 - Backup runs daily at **11:30 PM MYT** (via Lobster `daily-mytasks-backup` workflow)
 - Backup exports all Google Tasks lists to JSON + uploads to Google Drive `MyTasksBackup/`
 - Activity log (`activity-log.csv`) is appended on every command execution
