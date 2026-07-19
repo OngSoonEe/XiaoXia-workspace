@@ -266,9 +266,33 @@ These override any previous instructions for the MyTasks project (`~/works/mytas
 - Birthday date format: `[DDmmm]` e.g. `[14-Jul]`, `[30-Sep]` — day 0-padded, month 3-letter capitalize first letter
 - Tasks with wrong format should be flagged to the user, not auto-corrected without permission
 
-### MyTasks Project Location
+### MyTasks Project — ALWAYS use `run_task_cmd.py`
 
-`~/works/mytasks/` — contains `run_task_cmd.py`, `task_commands.py`, `RULES.md`
+**CRITICAL: For ALL task bot commands, use `run_task_cmd.py` — never implement them directly.**
+
+```bash
+python3 ~/works/mytasks/run_task_cmd.py <cmd> [args]
+```
+
+Commands:
+- `dis` — interactive task dispositioning (Step 1: show overdue+today with recommendations; Step 2: process user decisions)
+- `today [list]` — today's tasks via `run_task_cmd.py today [list]`
+- `today a` — strategic brief (LLM-generated daily brief of today's tasks)
+- `job <free text>` — search/operate on tasks via LLM
+- `add <free text>` — add new task via LLM
+- `send-reminder-inline` — generate and send strategic brief to MyTasks Telegram topic
+
+**When `/task-dis` is triggered in Telegram:**
+1. Call `python3 ~/works/mytasks/run_task_cmd.py dis` via exec
+2. Return the result text verbatim to the user
+
+**When `/task-adv` (or `/taskadv`) is triggered in Telegram:**
+1. Call `python3 ~/works/mytasks/run_task_cmd.py send-reminder-inline` via exec
+2. Return the result text verbatim to the user
+
+**When `/task-today a` is triggered in Telegram:**
+1. Call `python3 ~/works/mytasks/run_task_cmd.py today a` via exec
+2. Return the result text verbatim to the user
 
 ### Lobster Automation (`~/works/lobster-automation/projects-list/MyTasks/`)
 
