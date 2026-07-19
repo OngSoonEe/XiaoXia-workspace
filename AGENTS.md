@@ -294,9 +294,10 @@ Commands:
 1. Call `python3 ~/works/mytasks/run_task_cmd.py today a` via exec
 2. Return the result text verbatim to the user
 
-### Lobster Automation (`~/works/lobster-automation/projects-list/MyTasks/`)
+### Lobster Automation (`~/works/lobster-automation/`)
 
-- **BEFORE creating any new Lobster project or flow, read `~/works/lobster-automation/PROJECT-GUIDE.md`** — it contains hard boundaries, mandatory structure, and common AI mistakes to avoid.
+- **BEFORE creating any new Lobster project or flow, read `~/works/lobster-automation/AGENTS.md` and `~/works/lobster-automation/PROJECT-GUIDE.md`** — they contain hard boundaries, mandatory structure, and common AI mistakes to avoid. The repo's own `AGENTS.md` travels with the code if re-implemented elsewhere.
+- MyTasks project lives at `~/works/lobster-automation/projects-list/MyTasks/`
 - Backup runs daily at **11:30 PM MYT** (via Lobster `daily-mytasks-backup` workflow)
 - Backup exports all Google Tasks lists to JSON + uploads to Google Drive `MyTasksBackup/`
 - Activity log (`activity-log.csv`) is appended on every command execution
