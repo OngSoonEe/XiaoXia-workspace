@@ -287,8 +287,9 @@ Commands:
 2. Return the result text verbatim to the user
 
 **When `/task-adv` (or `/taskadv`) is triggered in Telegram:**
-1. Call `python3 ~/works/mytasks/run_task_cmd.py send-reminder-inline` via exec
+1. Call `python3 ~/works/mytasks/run_task_cmd.py adv` via exec
 2. Return the result text verbatim to the user
+3. Do NOT try `run_task_cmd.py task-adv` or any other variation — the command is `adv`
 
 **When `/task-today a` is triggered in Telegram:**
 1. Call `python3 ~/works/mytasks/run_task_cmd.py today a` via exec
