@@ -274,26 +274,17 @@ These override any previous instructions for the MyTasks project (`~/works/mytas
 python3 ~/works/mytasks/run_task_cmd.py <cmd> [args]
 ```
 
-Commands:
-- `dis` — interactive task dispositioning (Step 1: show overdue+today with recommendations; Step 2: process user decisions)
-- `today [list]` — today's tasks via `run_task_cmd.py today [list]`
-- `today a` — strategic brief (LLM-generated daily brief of today's tasks)
-- `job <free text>` — search/operate on tasks via LLM
-- `add <free text>` — add new task via LLM
-- `send-reminder-inline` — generate and send strategic brief to MyTasks Telegram topic
+Commands: `dis`, `today [list]`, `today a`, `job <text>`, `add <text>`, `adv`, `send-reminder-inline`
 
-**When `/task-dis` is triggered in Telegram:**
-1. Call `python3 ~/works/mytasks/run_task_cmd.py dis` via exec
-2. Return the result text verbatim to the user
+**Telegram routing:**
+- `/task-dis` → `run_task_cmd.py dis`
+- `/task-adv` or `/taskadv` → `run_task_cmd.py adv` (NOT `task-adv` or `send-reminder-inline`)
+- `/task-today a` → `run_task_cmd.py today a`
+- `/task-today` → `run_task_cmd.py today`
+- `/task-job <text>` → `run_task_cmd.py job "<text>"`
+- `/task-add <text>` → `run_task_cmd.py add "<text>"`
 
-**When `/task-adv` (or `/taskadv`) is triggered in Telegram:**
-1. Call `python3 ~/works/mytasks/run_task_cmd.py adv` via exec
-2. Return the result text verbatim to the user
-3. Do NOT try `run_task_cmd.py task-adv` or any other variation — the command is `adv`
-
-**When `/task-today a` is triggered in Telegram:**
-1. Call `python3 ~/works/mytasks/run_task_cmd.py today a` via exec
-2. Return the result text verbatim to the user
+Return result text verbatim to the user. Do NOT try other command variations.
 
 ### Lobster Automation (`~/works/lobster-automation/`)
 
