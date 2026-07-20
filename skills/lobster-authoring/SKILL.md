@@ -4,10 +4,10 @@ description: >
   Use when creating, modifying, or fixing Lobster automation workflows (taskflow YAML files
   in lobster-automation projects). Triggers on: "create a lobster workflow", "add a cron
   schedule", "build an automation", "fix the taskflow", "lobster automation", "workflow
-  YAML", "step runner", or when asked to author/edit any .yaml file under
-  projects-list/*/taskflows/. This skill is the single source of truth for lobster
-  authoring — any AI working on lobster workflows must read this skill before writing
-  ANY YAML.
+  YAML", "step runner", "add a webhook", "external webhook", "Telegram webhook", or when
+  asked to author/edit any .yaml file under projects-list/*/taskflows/. This skill is the
+  single source of truth for lobster authoring — any AI working on lobster workflows
+  must read this skill before writing ANY YAML.
 ---
 
 # Lobster Authoring — Single Source of Truth
@@ -167,7 +167,129 @@ If the YAML is not in a `taskflows/` subdirectory of a project folder, the serve
 
 ---
 
-### Rule 7 — Five Step Types Exist (and Only These)
+### Rule 7 — `triggers` Is for Webhook and Manual, Not Cron
+
+Cron triggers are automatic from `schedule:` — you don't add them to `triggers`. The `triggers` section is only for:
+- `webhook` — external services call the flow via HTTP
+- `manual` — fire the flow manually via `POST /run/<name>`
+
+```yaml
+# ✅ Correct — webhook trigger for external calls
+triggers:
+  - type: webhook
+    name: my-webhook-flow
+
+# ❌ Wrong — cron in triggers (cron comes from schedule: at flow level)
+triggers:
+  - type: cron
+    name: my-cron
+```
+
+---
+
+## Webhooks via ewizt.com Relay (The Right Way)
+
+**The Problem:** Lobster runs on `localhost:3099` behind WSL2, which has no public IP. You cannot expose it directly to the internet.
+
+**The Solution:** The ewizt relay system. It's already running and is the preferred way to receive webhooks from external services (Telegram, GitHub, etc.).
+
+### How It Works
+
+```
+External Service (Telegram, GitHub, etc.)
+    │
+    ▼ POST to:
+https://ewizt.com/relay/webhook/<flow-name>
+    │
+    ▼ (immediate 202 response)
+PHP webhook receiver (ewizt-backup-repo/webroot/relay/webhook.php)
+    │
+    ▼ writes to SQLite queue
+/home/ubuntu/works/lobster-automation/projects-list/wsl-house-clean/ewizt-backup-repo/webroot/relay/queue.sqlite
+    │
+    │  (meanwhile, immediately returns 202 to Telegram)
+    │
+Lobster relay poller (server/src/server.ts) — long-polls ewizt.com/relay/poll
+    │
+    ▼ receives {flow_name, payload, run_id}
+Lobster executes the flow, passing payload as trigger_payload
+    │
+    ▼ (if Telegram reply needed)
+Script step sends reply via Telegram Bot API directly
+```
+
+**Key insight:** The flow's script step is responsible for sending any reply back to Telegram. The webhook is fire-and-forget from Telegram's perspective — Telegram gets a 202 immediately, and the flow handles the response asynchronously.
+
+### The Relay Endpoints
+
+| URL | What It Does |
+|-----|-------------|
+| `https://ewizt.com/relay/webhook/<flow-name>` | External services POST here. Writes to queue, returns immediately. |
+| `https://ewizt.com/relay/poll` | Lobster long-polls this. Returns queued webhooks. |
+| `https://ewizt.com/relay/result/<run_id>` | Script posts result back (optional, for async result tracking). |
+
+**Relay token:** `NsufkdwqJWfr4GwFko7R` (used in `X-Relay-Token` header for poll/result).
+
+### Setting Up a New Webhook Flow
+
+**Step 1 — Create the YAML with a webhook trigger:**
+
+```yaml
+name: my-webhook-flow
+description: Handles incoming commands from Telegram via ewizt relay.
+
+triggers:
+  - type: webhook
+    name: my-webhook-flow
+    secret: ""  # optional, used if you want to validate requests
+
+steps:
+  - name: handle
+    script: cd /home/ubuntu/works/lobster-automation/projects-list/<project> && npx tsx scripts/my-handler.ts
+    timeout_seconds: 55
+    # Note: the webhook payload is available as the trigger_payload in the run record.
+    # The script should read it from stdin, a temp file, or the script can fetch the
+    # Telegram update from the Bot API directly.
+
+on_failure:
+  notify: telegram
+  message: "⚠️ my-webhook-flow failed"
+```
+
+**Step 2 — Register the flow (automatic on reload):**
+```bash
+curl -s -X POST http://localhost:3099/flows/reload | python3 -m json.tool
+```
+
+**Step 3 — Point the external service at ewizt:**
+
+```bash
+# Example: set Telegram bot webhook
+curl -s -X POST "https://api.telegram.org/bot<BOT_TOKEN>/setWebhook"
+  -d "url=https://ewizt.com/relay/webhook/my-webhook-flow&allowed_updates=message,callback_query"
+```
+
+**For Telegram specifically:** The bot token and allowed chat IDs are configured in the script that handles the command. The ewizt relay just passes the webhook POST through — Telegram never talks directly to lobster.
+
+### Important Constraints for Webhook Flows
+
+1. **Telegram requires 60s response time.** Lobster's relay poller returns the webhook to lobster quickly, but the flow's `timeout_seconds` should be ≤55s to be safe.
+
+2. **Telegram replies go through Bot API directly.** The flow's script must call `https://api.telegram.org/bot<TOKEN>/sendMessage` itself. Lobster does not relay Telegram responses.
+
+3. **The trigger_payload is stored in the run record.** It's available to lobster's internal processing but NOT automatically passed to script steps as env vars or args. If your script needs the webhook payload, either:
+   - Have the external service include a `run_id` that maps to stored data
+   - Or design the script to fetch the data it needs (e.g., Telegram Bot API `getUpdates`)
+
+4. **Do NOT try to expose lobster directly via cloudflared/ngrok tunnels.** The ewizt relay exists precisely to avoid this. Use the relay.
+
+### Existing Webhook Flow Reference
+
+The `MyTasks/task-commands.yaml` flow receives `/task-today`, `/task-dis`, etc. via the ewizt relay. Its handler script (`telegram-command-handler.ts`) receives the Telegram update and sends replies directly via the Bot API.
+
+---
+
+## Five Step Types Exist (and Only These)
 
 Read `references/schema.md` for the exact shape of each. The short version:
 
@@ -442,6 +564,14 @@ Base URL: `http://localhost:3099` (local dev) or `https://ewizt.com/lobster` (pr
 **Step fails with "script not found":**
 - The `npx tsx` command can't find the script file
 - Check the path after `cd` is correct and the `.ts` file exists there
+
+**Webhook flow not receiving events:**
+- **Never try cloudflared/ngrok/localtunnel** to expose lobster directly — use the ewizt relay
+- Did you point the external service at `https://ewizt.com/relay/webhook/<flow-name>`?
+- Check `https://ewizt.com/relay/relay-log.jsonl` for incoming webhook events
+- Check lobster server logs for relay poller activity
+- Telegram bot: verify webhook is set with `GET https://api.telegram.org/bot<TOKEN>/getWebhookInfo`
+- Telegram requires ≤60s response — ensure `timeout_seconds` on webhook steps is ≤55
 
 ---
 

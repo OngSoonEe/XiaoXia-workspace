@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-16T14:41:26.736Z",
+  "updatedAt": "2026-07-18T13:28:23.124Z",
   "entries": {
     "memory:memory/2026-06-07.md:1:26": {
       "key": "memory:memory/2026-06-07.md:1:26",
@@ -1562,18 +1562,20 @@
       "endLine": 30,
       "source": "memory",
       "snippet": "# 2026-07-10 Daily Notes ## Home Directory Cleanup Session (00:36–01:02 AM) Jack asked to review and clean up `~/` directory. Significant cleanup done: ### Deleted - `bun.lock` — leftover bun lockfile - `openclaw-gateway.log` — old OpenClaw gateway log (May 5) - `go/`, `goinst/`, `gopath/` — ~2 GB of unused Go installations (no Go projects exist, Go not used) - `intelephense/` — empty PHP IntelliSense cache - `data/` — old simplecms SQLite DB (979 KB, May 4) - `~/topics/guangzhou26/` — local-only git repo, no remote - `~/projects/` — all old pre-Lobster projects (daily-news-tech, daily-news-tech-site, daily-news-esg, daily-news-general, daily-news-general-site, SiNova, .trash-context-clea",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 2,
       "maxScore": 1,
       "firstRecalledAt": "2026-07-13T03:39:49.751Z",
-      "lastRecalledAt": "2026-07-13T03:39:49.751Z",
+      "lastRecalledAt": "2026-07-18T13:28:23.124Z",
       "queryHashes": [
-        "bf991c9b85b6"
+        "bf991c9b85b6",
+        "8c5efe732c1f"
       ],
       "recallDays": [
-        "2026-07-13"
+        "2026-07-13",
+        "2026-07-18"
       ],
       "conceptTags": [
         "gateway",
@@ -1593,20 +1595,22 @@
       "endLine": 52,
       "source": "memory",
       "snippet": "- `~/topics/` — Jack's topic repos (local git, no remote except root which has none) - `~/works/` — Lobster Automation + novel_fuzzy-weights (active) - `~/works/knowledgeGraph/` — has requirements.txt, Jack said keep - `restart-openclaw.sh` — OpenClaw restart script (not mine) ### Also cleaned - `.bashrc` Go entries removed (GOROOT, GOPATH etc) ## wsl-house-clean Workflow Updated (00:58–01:02 AM) After the directory cleanup, updated `wsl-house-clean` scripts to reflect the changed directory structure: ### Scripts Fixed (commit `0713f04`) - `scan-workspaces.ts` — scans `~/works/` instead of deleted `~/code/` - `scan-storage.ts` — scans `~/works/` instead of deleted `~/projects/` + `~/code",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3,
+      "totalScore": 4,
       "maxScore": 1,
       "firstRecalledAt": "2026-07-13T03:39:49.751Z",
-      "lastRecalledAt": "2026-07-16T14:41:26.736Z",
+      "lastRecalledAt": "2026-07-18T13:28:23.124Z",
       "queryHashes": [
         "bf991c9b85b6",
-        "8d0ae593fbf4"
+        "8d0ae593fbf4",
+        "8c5efe732c1f"
       ],
       "recallDays": [
         "2026-07-13",
-        "2026-07-16"
+        "2026-07-16",
+        "2026-07-18"
       ],
       "conceptTags": [
         "novel-fuzzy-weights",
@@ -1876,6 +1880,316 @@
         "lobster-previous-results",
         "taskflows/whatsapp-nudge.yaml",
         "whatsapp"
+      ]
+    },
+    "memory:memory/2026-07-16.md:463:476": {
+      "key": "memory:memory/2026-07-16.md:463:476",
+      "path": "memory/2026-07-16.md",
+      "startLine": 463,
+      "endLine": 476,
+      "source": "memory",
+      "snippet": "- `POST /schedules/daily-mytasks-backup/run` (scheduled) ### Cron Schedule Verified `GET /schedules` shows `daily-mytasks-backup` next run: `2026-07-16T15:30:00.000Z` = 23:30 MYT ✅ ### Drive MyTasksBackup/ Contents (after fixes) - `mytasks-2026-07-16.json` — 38,727 bytes ✅ - `activity-log.csv` — 721 bytes ✅ (cumulative, 5 rows) ### Files Modified This Session - `~/works/lobster-automation/projects-list/MyTasks/scripts/backup-tasks.ts` — full rewrite (compliance checks, change detection, googleapis upload) - `~/works/lobster-automation/projects-list/MyTasks/scripts/log-activity.ts` — googleapis upload fix, merge logic - `~/works/lobster-automation/projects-list/MyTasks/taskflows/daily-myta",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-18T04:01:16.343Z",
+      "lastRecalledAt": "2026-07-18T04:01:16.343Z",
+      "queryHashes": [
+        "b597b84d96e2"
+      ],
+      "recallDays": [
+        "2026-07-18"
+      ],
+      "conceptTags": [
+        "backup",
+        "daily-mytasks-backup",
+        "2026-07-16t15",
+        "00.000z",
+        "mytasks-2026-07-16.json",
+        "activity-log.csv",
+        "post",
+        "schedules"
+      ]
+    },
+    "memory:memory/2026-07-16.md:436:471": {
+      "key": "memory:memory/2026-07-16.md:436:471",
+      "path": "memory/2026-07-16.md",
+      "startLine": 436,
+      "endLine": 471,
+      "source": "memory",
+      "snippet": "### 0-Byte CSV Fix `log-activity.ts` had same multipart bug. Rewritten to: - Use googleapis `drive.files.create/update` with `uploadType: 'media'` for uploads - Use direct `fetch` with Bearer token to read CSV content from Drive - `mergeCSV()` deduplicates by timestamp, appends to single cumulative `activity-log.csv` **Result**: Drive `activity-log.csv` now 721 bytes (5 logged commands) ### Compliance Checks Added to backup-tasks.ts Every backup run now validates: - **Recurrent list**: ✅ 🔁 prefix, ✅ valid `[interval]` tag, ✅ due date present - **Birthday list**: ✅ `name [DDmmm]` format Issues are printed to console and included in the Telegram success message. ### Change Detection Added",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-18T04:01:16.343Z",
+      "lastRecalledAt": "2026-07-18T04:01:16.343Z",
+      "queryHashes": [
+        "b597b84d96e2"
+      ],
+      "recallDays": [
+        "2026-07-18"
+      ],
+      "conceptTags": [
+        "backup",
+        "0-byte",
+        "log-activity.ts",
+        "drive.files.create/update",
+        "activity-log.csv",
+        "backup-tasks.ts",
+        "byte",
+        "csv"
+      ]
+    },
+    "memory:memory/2026-07-17.md:89:118": {
+      "key": "memory:memory/2026-07-17.md:89:118",
+      "path": "memory/2026-07-17.md",
+      "startLine": 89,
+      "endLine": 118,
+      "source": "memory",
+      "snippet": "- Biz: `cEpRU3FBUEd6cFRtQUdmcg` - Intel: `TVZtUzh5RE0yYVJVa1d2WA` - Birthday: `WVRwb25sZW1lMjMyTG00eQ` ### Google Drive backup folder - Folder ID: `1Ypzi2ifGAvNs5kIWErkK_ojPZh2aBLW4` (root \"XiaoXia\" folder) - Backup files: `MyTasksBackup/mytasks-YYYY-MM-DDTHH:MM:SS.json` - Activity log: `MyTasksBackup/activity-log.csv` ### OAuth token - Path: `/home/ubuntu/.config/gdrive/oauth_token.json` - Scopes: `tasks`, `drive`, `calendar` ## MyTasks Bot — Resume & Restore Progress (01:12–01:48 MYT) ### Resume context Jack asked to resume from aborted agent run. He pointed out there was an 11:30 PM backup on Google Drive that is pre-corruption. ### Backup investigation - Searched Drive for `mytasks-",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-18T04:01:16.343Z",
+      "lastRecalledAt": "2026-07-18T04:01:16.343Z",
+      "queryHashes": [
+        "b597b84d96e2"
+      ],
+      "recallDays": [
+        "2026-07-18"
+      ],
+      "conceptTags": [
+        "backup",
+        "ss.json",
+        "mytasksbackup/activity-log.csv",
+        "home/ubuntu",
+        "config/gdrive/oauth-token.json",
+        "pre-corruption",
+        "biz",
+        "cepru3fbued6cfrtqudmcg"
+      ]
+    },
+    "memory:memory/2026-07-17.md:249:278": {
+      "key": "memory:memory/2026-07-17.md:249:278",
+      "path": "memory/2026-07-17.md",
+      "startLine": 249,
+      "endLine": 278,
+      "source": "memory",
+      "snippet": "- Biz: `cEpRU3FBUEd6cFRtQUdmcg` - Intel: `TVZtUzh5RE0yYVJVa1d2WA` - Birthday: `WVRwb25sZW1lMjMyTG00eQ` ### Google Drive backup folder - Folder ID: `1Ypzi2ifGAvNs5kIWErkK_ojPZh2aBLW4` (root \"XiaoXia\" folder) - Backup files: `MyTasksBackup/mytasks-YYYY-MM-DDTHH:MM:SS.json` - Activity log: `MyTasksBackup/activity-log.csv` ### OAuth token - Path: `/home/ubuntu/.config/gdrive/oauth_token.json` - Scopes: `tasks`, `drive`, `calendar` ## MyTasks Bot — Resume & Restore Progress (01:12–01:48 MYT) ### Resume context Jack asked to resume from aborted agent run. He pointed out there was an 11:30 PM backup on Google Drive that is pre-corruption. ### Backup investigation - Searched Drive for `mytasks-",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-18T04:01:16.343Z",
+      "lastRecalledAt": "2026-07-18T04:01:16.343Z",
+      "queryHashes": [
+        "b597b84d96e2"
+      ],
+      "recallDays": [
+        "2026-07-18"
+      ],
+      "conceptTags": [
+        "backup",
+        "ss.json",
+        "mytasksbackup/activity-log.csv",
+        "home/ubuntu",
+        "config/gdrive/oauth-token.json",
+        "pre-corruption",
+        "biz",
+        "cepru3fbued6cfrtqudmcg"
+      ]
+    },
+    "memory:memory/2026-07-16.md:255:292": {
+      "key": "memory:memory/2026-07-16.md:255:292",
+      "path": "memory/2026-07-16.md",
+      "startLine": 255,
+      "endLine": 292,
+      "source": "memory",
+      "snippet": "- Added back 2 missing originals (single-tag versions) - Final: **50 Recurrent tasks** ✅ - **Birthday list**: 45 tasks — left untouched during cleanup - Renamed `Inte;` → `Intel` in Google Tasks (API accepted the rename) ### Hard Rules Established (per Jack's instruction) Written to `~/works/mytasks/RULES.md` and `AGENTS.md`: 1. **Always load from Google Tasks API** — never from memory/cached JSON 2. **Never delete** from Recurrent or Birthday lists (only on explicit \"delete\" command) 3. **\"Done\" on Recurrent** → update `due` to next interval occurrence (Option B) 4. **\"Done\" on Birthday** → update `due` to same date next year 5. **Recurrent format**: `🔁title [interval]` e.g. `🔁Wash c",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-18T04:01:16.343Z",
+      "lastRecalledAt": "2026-07-18T04:01:16.343Z",
+      "queryHashes": [
+        "b597b84d96e2"
+      ],
+      "recallDays": [
+        "2026-07-18"
+      ],
+      "conceptTags": [
+        "single-tag",
+        "works/mytasks/rules.md",
+        "agents.md",
+        "memory/cached",
+        "e.g",
+        "added",
+        "back",
+        "missing"
+      ]
+    },
+    "memory:memory/2026-07-16.md:115:149": {
+      "key": "memory:memory/2026-07-16.md:115:149",
+      "path": "memory/2026-07-16.md",
+      "startLine": 115,
+      "endLine": 149,
+      "source": "memory",
+      "snippet": "The original JSON and current Google Tasks differ: - **8 original Recurrent tasks** are now in OTHER lists (migrated after export): - `🤚 Wolvenix incorporation` → Biz - `🤚Get LEMS access` → Intel - `🤚Ladakh daughter sponsor 2025` → Intel - `📝other projects` → Recurrent (but now has `🔁 ` prefix + `[monthly]` tag) - etc. - **8 new tasks** added to Recurrent after export (e.g. `🔁setup monthly RM2k saving for HLB insurance`) - **Net result**: Recurrent list still has 50 tasks — the extras replaced the migrated ones ### Birthday List - 45 tasks, all intact — original JSON shows all 45 Birthday entries are present in Google Tasks - No changes needed ### Final Recurrent List State",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-18T04:01:16.343Z",
+      "lastRecalledAt": "2026-07-18T04:01:16.343Z",
+      "queryHashes": [
+        "b597b84d96e2"
+      ],
+      "recallDays": [
+        "2026-07-18"
+      ],
+      "conceptTags": [
+        "e.g",
+        "the",
+        "original",
+        "current",
+        "google",
+        "tasks",
+        "differ",
+        "recurrent"
+      ]
+    },
+    "memory:memory/2026-07-16.md:399:417": {
+      "key": "memory:memory/2026-07-16.md:399:417",
+      "path": "memory/2026-07-16.md",
+      "startLine": 399,
+      "endLine": 417,
+      "source": "memory",
+      "snippet": "`[10-days]`, `[2-weekly]`, `[3-daily]`, `[4-daily]`, `[4-monthly]`, `[50-daily]`, `[6-weekly]`, `[7-monthly]`, `[bi-monthly]`, `[bi-weekly]`, `[half-yearly]`, `[monthly]`, `[quarterly]`, `[weekly]`, `[yearly]` ### Files Modified - `~/works/mytasks/task_commands.py` — `compute_next_due()` timezone fix, tables updated, REC_TAG_RE fixed ### Test Results All 16 interval tag types tested with `compute_next_due()` — all return correct next-due dates (Jul 16 → next occurrence, skipping weekends where applicable). ## Critical Lesson: Never Kill the Lobster Server Process The lobster server (`tsx src/server.ts`) running on port 3099 shares the same process tree as OpenClaw. When I kill the lobste",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-18T13:28:23.124Z",
+      "lastRecalledAt": "2026-07-18T13:28:23.124Z",
+      "queryHashes": [
+        "8c5efe732c1f"
+      ],
+      "recallDays": [
+        "2026-07-18"
+      ],
+      "conceptTags": [
+        "10-days",
+        "2-weekly",
+        "3-daily",
+        "4-daily",
+        "4-monthly",
+        "50-daily",
+        "6-weekly",
+        "7-monthly"
+      ]
+    },
+    "memory:memory/2026-07-16.md:190:211": {
+      "key": "memory:memory/2026-07-16.md:190:211",
+      "path": "memory/2026-07-16.md",
+      "startLine": 190,
+      "endLine": 211,
+      "source": "memory",
+      "snippet": "- `~/works/mytasks/task_commands.py` — `compute_next_due()` timezone fix, tables updated, REC_TAG_RE fixed ### Test Results All 16 interval tag types tested with `compute_next_due()` — all return correct next-due dates (Jul 16 → next occurrence, skipping weekends where applicable). ## Critical Lesson: Never Kill the Lobster Server Process The lobster server (`tsx src/server.ts`) running on port 3099 shares the same process tree as OpenClaw. When I kill the lobster server process directly (via `kill`, `pkill`, `fuser` on port 3099, etc.), I also kill OpenClaw itself — it goes dark and requires manual restart. **What happened:** Restarting the lobster server for the `/validate` endpoint up",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-18T13:28:23.124Z",
+      "lastRecalledAt": "2026-07-18T13:28:23.124Z",
+      "queryHashes": [
+        "8c5efe732c1f"
+      ],
+      "recallDays": [
+        "2026-07-18"
+      ],
+      "conceptTags": [
+        "works/mytasks/task-commands.py",
+        "compute-next-due",
+        "rec-tag-re",
+        "next-due",
+        "src/server.ts",
+        "works",
+        "mytasks",
+        "task-commands.py"
+      ]
+    },
+    "memory:memory/2026-07-05.md:222:252": {
+      "key": "memory:memory/2026-07-05.md:222:252",
+      "path": "memory/2026-07-05.md",
+      "startLine": 222,
+      "endLine": 252,
+      "source": "memory",
+      "snippet": "- https://ewizt.com/daily-news/ - GA4 tag: G-J1J3CPH2GX ## notify-telegram.ts Upgrade (20:01-20:11) - Template upgraded to match WhatsApp: Mandarin with top pick title and article count - Added JSON reading (global/asia/malaysia selected) for article count - Total count = global + asia + malaysia articles (no longer -1) - Top pick fallback: global-selected.json article[0] title → hero-image.json → hardcoded default - sendTelegramMessage: openclaw CLI with `-m` flag (message text inline, escaped) - Debug logging: outputDir, file read errors, message preview - openclaw CLI escaping: backslash-replace chars before shell interpolation - Whitespace preserved in message with explicit newlines (n",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-18T13:28:23.124Z",
+      "lastRecalledAt": "2026-07-18T13:28:23.124Z",
+      "queryHashes": [
+        "8c5efe732c1f"
+      ],
+      "recallDays": [
+        "2026-07-18"
+      ],
+      "conceptTags": [
+        "ewizt.com/daily-news",
+        "g-j1j3cph2gx",
+        "notify-telegram.ts",
+        "01-20",
+        "global/asia/malaysia",
+        "global-selected.json",
+        "hero-image.json",
+        "backslash-replace"
+      ]
+    },
+    "memory:memory/2026-07-05.md:117:143": {
+      "key": "memory:memory/2026-07-05.md:117:143",
+      "path": "memory/2026-07-05.md",
+      "startLine": 117,
+      "endLine": 143,
+      "source": "memory",
+      "snippet": "- Added JSON reading (global/asia/malaysia selected) for article count - Total count = global + asia + malaysia articles (no longer -1) - Top pick fallback: global-selected.json article[0] title → hero-image.json → hardcoded default - sendTelegramMessage: openclaw CLI with `-m` flag (message text inline, escaped) - Debug logging: outputDir, file read errors, message preview - openclaw CLI escaping: backslash-replace chars before shell interpolation - Whitespace preserved in message with explicit newlines (not relying on shell) # 2026-07-05 ## ewizt Relay — Long-Poll Optimized ### LiteSpeed Connection Timeout Discovery - ewizt.com runs LiteSpeed (not Apache/nginx) - LiteSpeed has a hard **C",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-07-18T13:28:23.124Z",
+      "lastRecalledAt": "2026-07-18T13:28:23.124Z",
+      "queryHashes": [
+        "8c5efe732c1f"
+      ],
+      "recallDays": [
+        "2026-07-18"
+      ],
+      "conceptTags": [
+        "global/asia/malaysia",
+        "global-selected.json",
+        "hero-image.json",
+        "backslash-replace",
+        "long-poll",
+        "ewizt.com",
+        "apache/nginx",
+        "added"
       ]
     }
   }
